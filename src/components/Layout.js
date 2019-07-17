@@ -8,7 +8,7 @@ import useSiteMetadata from './SiteMetadata'
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <React.Fragment>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -45,9 +45,9 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <main>{children}</main>
       <Footer />
-    </div>
+    </React.Fragment>
   )
 }
 
