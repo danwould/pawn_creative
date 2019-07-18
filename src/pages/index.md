@@ -4,23 +4,21 @@ title: Great coffee with a conscience
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
-manifesto:
-  title: pawn.does
-  description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
 intro:
+  description: >-
+    Goodbye, cruel world. Goodbye, cruel lamp. Goodbye, cruel velvet drapes,
+    lined with what would appear to be some sort of cruel muslin and the cute
+    little pom-pom curtain pull cords. Cruel though they may be… This opera's as
+    lousy as it is brilliant! Your lyrics lack subtlety. You can't just have
+    your characters announce how they feel. That makes me feel angry!
   title: pawn.is
+manifesto:
   description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+    Now, now. Perfectly symmetrical violence never solved anything. And so we
+    say goodbye to our beloved pet, Nibbler, who's gone to a place where I, too,
+    hope one day to go. The toilet. All I want is to be a monkey of moderate
+    intelligence who wears a suit… that's why I'm transferring to business
+    school!
+  title: pawn.does
 ---
+
