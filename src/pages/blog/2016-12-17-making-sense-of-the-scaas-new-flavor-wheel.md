@@ -13,7 +13,7 @@ tags:
 ---
 ![flavor wheel](/img/flavor_wheel.jpg)
 
-Now, now. Perfectly symmetrical violence never solved anything. And so we say goodbye to our beloved pet, Nibbler, who's gone to a place where I, too, hope one day to go. The toilet. All I want is to be a monkey of moderate intelligence who wears a suit… that's why I'm transferring to business school!
+The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
 
 While this is going to be a big change for professional coffee tasters, it means a lot to you as a consumer as well. We’ll explain how the wheel came to be, how pros use it and what the flavors actually mean.
 
