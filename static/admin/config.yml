@@ -19,14 +19,14 @@ collections:
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {label: "Tile Size", name: "tilesize", widget: "select", options: ["xlarge", "large", "medium", "small"]}
       - {label: "Push Right", name: "pushright", widget: "select", options:
-                                                                     [{ label: "None", value: "" }
-                                                                      { label: "Push Right 1", value: "push-right-1" }
-                                                                      { label: "Push Right 2", value: "push-right-2" }
-                                                                      { label: "Push Right 3", value: "push-right-3" }
-                                                                      { label: "Push Right 4", value: "push-right-4" }
-                                                                      { label: "Push Right 5", value: "push-right-5" }
-                                                                      { label: "Push Right 6", value: "push-right-6" }
-                                                                      { label: "Push Right 7", value: "push-right-7" }
+                                                                     [{ label: "None", value: "" },
+                                                                      { label: "Push Right 1", value: "push-right-1" },
+                                                                      { label: "Push Right 2", value: "push-right-2" },
+                                                                      { label: "Push Right 3", value: "push-right-3" },
+                                                                      { label: "Push Right 4", value: "push-right-4" },
+                                                                      { label: "Push Right 5", value: "push-right-5" },
+                                                                      { label: "Push Right 6", value: "push-right-6" },
+                                                                      { label: "Push Right 7", value: "push-right-7" },
                                                                       { label: "Push Right 8", value: "push-right-8" }]
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
