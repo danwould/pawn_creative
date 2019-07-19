@@ -18,7 +18,7 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {label: "Tile Size", name: "tilesize", widget: "string"}
-      - {label: "Push Right", name: "pushright", widget: "boolean"}
+      - {label: "Push Right", name: "pushright", widget: "string"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
