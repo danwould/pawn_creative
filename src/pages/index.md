@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: Pawn Creative
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: Pawn Creative
+subheading: Stuff about pawn creative
 intro:
   description: >-
     Goodbye, cruel world. Goodbye, cruel lamp. Goodbye, cruel velvet drapes,
