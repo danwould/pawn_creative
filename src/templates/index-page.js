@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import BlogRoll from '../components/BlogRoll'
+import CaseStudyRoll from '../components/CaseStudyRoll'
 
 export const IndexPageTemplate = ({
   image,
@@ -39,7 +39,7 @@ export const IndexPageTemplate = ({
           <p className="subtitle">{manifesto.description}</p>
       </section>
     <section className="section">
-       <BlogRoll />
+       <CaseStudyRoll />
     </section>
   </React.Fragment>
 )

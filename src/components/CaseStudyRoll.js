@@ -5,7 +5,7 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 import TransitionLink from 'gatsby-plugin-transition-link'
 import { TimelineMax } from 'gsap'
 
-class BlogRoll extends React.Component {
+class CaseStudyRoll extends React.Component {
   fadePageOut(exit, node) {
     return new TimelineMax()
         .to(node.querySelector('main'), 1, { opacity: 0})
@@ -72,7 +72,7 @@ class BlogRoll extends React.Component {
   }
 }
 
-BlogRoll.propTypes = {
+CaseStudyRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -86,7 +86,7 @@ export default () => (
       query BlogRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          filter: { frontmatter: { templateKey: { eq: "case-study" } } }
         ) {
           edges {
             node {
@@ -116,6 +116,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <CaseStudyRoll data={data} count={count} />}
   />
 )

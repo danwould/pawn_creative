@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: case-study
 title: Test 2
 date: 2019-07-09T22:10:30.018Z
 description: >-
