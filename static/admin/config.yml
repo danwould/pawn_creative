@@ -6,8 +6,8 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
+  - name: "case-study"
+    label: "Case Studies"
     folder: "src/pages/case-study"
     create: true
     slug: "{{slug}}"
