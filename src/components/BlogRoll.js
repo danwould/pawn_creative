@@ -1,9 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import TransitionLink from 'gatsby-plugin-transition-link'
+import { TimelineMax } from 'gsap'
 
 class BlogRoll extends React.Component {
+  fadePageOut(exit, node) {
+    return new TimelineMax()
+        .to(node.querySelector('main'), 1, { opacity: 0})
+  }
+  slideCaseStudyUp(entry, node) {
+    return new TimelineMax()
+        .to(node.querySelector('.case-study'), .5, {y: '0', opacity: 1})
+  }
+
+
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -12,7 +24,7 @@ class BlogRoll extends React.Component {
       <div className="columns is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className={`is-parent column is-6 ${post.frontmatter.tilesize}-tile ${post.frontmatter.pushright ? post.frontmatter.pushright : ''}`} key={post.id}>
+            <div className={`${post.frontmatter.tilesize}-tile ${post.frontmatter.pushright}`} key={post.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
@@ -20,7 +32,7 @@ class BlogRoll extends React.Component {
               >
                 <header>
                   {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
+                    <figure className="featured-thumbnail">
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
@@ -29,29 +41,29 @@ class BlogRoll extends React.Component {
                           }`,
                         }}
                       />
-                    </div>
+                      <figcaption>
+                        <h3>{post.frontmatter.title}</h3>
+                        {post.excerpt}
+                      </figcaption>
+                    </figure>
                   ) : null}
                   <p className="post-meta">
-                    <Link
+                    <TransitionLink
                       className="title has-text-primary is-size-4"
                       to={post.fields.slug}
+                      exit={{
+                        length: .25,
+                        trigger: ({ exit, node }) => this.fadePageOut(exit, node),
+                      }}
+                      entry={{
+                        delay: 0.5,
+                        trigger: ({ entry, node }) => this.slideCaseStudyUp(entry, node),
+                      }}
                     >
                       {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
+                    </TransitionLink>
                   </p>
                 </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
               </article>
             </div>
           ))}
@@ -80,6 +92,7 @@ export default () => (
             node {
               excerpt(pruneLength: 400)
               id
+              html
               fields {
                 slug
               }
