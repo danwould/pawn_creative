@@ -7,6 +7,7 @@ description: >-
   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 featuredpost: true
+order: 3
 pushright: push-right-1
 tilesize: medium
 featuredimage: /img/flavor_wheel.jpg

@@ -3,6 +3,7 @@ templateKey: case-study
 title: 'Just in: small batch of Jamaican Blue Mountain in store next week'
 date: 2017-01-04T15:04:10.000Z
 featuredpost: true
+order: 1
 tilesize: medium
 pushright: push-right-4
 description: >-

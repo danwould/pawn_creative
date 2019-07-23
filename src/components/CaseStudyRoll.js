@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 import TransitionLink from 'gatsby-plugin-transition-link'
-import { TimelineMax } from 'gsap'
+import {TimelineMax, Power1} from 'gsap'
 
 class CaseStudyRoll extends React.Component {
   fadePageOut(exit, node) {
@@ -12,9 +12,9 @@ class CaseStudyRoll extends React.Component {
   }
   slideCaseStudyUp(entry, node) {
     return new TimelineMax()
-        .to(node.querySelector('.case-study'), .5, {y: '0', opacity: 1})
+        .set(node.querySelector('.case-study'), {y: '100vh', opacity: 0})
+        .to(node.querySelector('.case-study'), .5, {y: '0', opacity: 1, ease: Power1.easeInOut,})
   }
-
 
   render() {
     const { data } = this.props
@@ -52,10 +52,11 @@ class CaseStudyRoll extends React.Component {
                       className="title has-text-primary is-size-4"
                       to={post.fields.slug}
                       exit={{
-                        length: .25,
+                        length: 1,
                         trigger: ({ exit, node }) => this.fadePageOut(exit, node),
                       }}
                       entry={{
+                        length: 3,
                         delay: 0.5,
                         trigger: ({ entry, node }) => this.slideCaseStudyUp(entry, node),
                       }}
@@ -85,7 +86,7 @@ export default () => (
     query={graphql`
       query BlogRollQuery {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
+          sort: { order: DESC, fields: [frontmatter___order] }
           filter: { frontmatter: { templateKey: { eq: "case-study" } } }
         ) {
           edges {
@@ -103,6 +104,7 @@ export default () => (
                 featuredpost
                 tilesize
                 pushright
+                order
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 120, quality: 100) {

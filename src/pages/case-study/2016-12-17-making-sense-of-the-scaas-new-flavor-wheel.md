@@ -7,6 +7,7 @@ description: >-
   tasters, has been revised for the first time this year.
 featuredpost: false
 tilesize: large
+order: 6
 pushright: push-right-none
 featuredimage: /img/flavor_wheel.jpg
 tags:

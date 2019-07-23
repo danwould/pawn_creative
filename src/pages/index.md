@@ -4,6 +4,7 @@ title: Pawn Creative
 image: /img/home-jumbotron.jpg
 heading: Pawn Creative
 subheading: Stuff about pawn creative
+order: 0
 intro:
   description: >-
     Goodbye, cruel world. Goodbye, cruel lamp. Goodbye, cruel velvet drapes,
