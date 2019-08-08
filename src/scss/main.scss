@@ -1,8 +1,40 @@
-main {
-  min-height: 100vh;
+@import "reset";
+@import "grid";
+@import "typography";
+@import "layout";
+
+@import "nav";
+@import "hero";
+@import "case-study-roll";
+@import "case-study";
+
+
+html {
+  color: white;
+  background-color: black;
+  min-height: 110vh;
 }
 
-.case-study {
-  height: 100vh;
-  background: red;
+main {
+  min-height: 100vh;
+  position: relative;
+}
+
+.section-work {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+
+  h2 {
+    pointer-events: none;
+  }
+}
+
+.section-case-study {
+  min-height: 100vh;
+  background: black;
+}
+
+a {
+  color: white;
 }

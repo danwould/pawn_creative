@@ -7,8 +7,14 @@ import useSiteMetadata from './SiteMetadata'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
-  return (
-    <React.Fragment>
+
+    if (typeof window !== "undefined") {
+        // eslint-disable-next-line global-require
+        require("smooth-scroll")('a[href*="#"]')
+    }
+
+    return (
+    <div className="page-content">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -47,7 +53,7 @@ const TemplateWrapper = ({ children }) => {
       <Navbar />
       <main>{children}</main>
       <Footer />
-    </React.Fragment>
+    </div>
   )
 }
 

@@ -11,8 +11,8 @@ description: >-
   in culpa qui officia deserunt mollit anim id est laborum.
 featuredpost: true
 order: 2
-tilesize: medium
-pushright: push-right-1
+tilesize: col-10
+pushright: true
 featuredimage: /img/products-grid3.jpg
 tags:
   - test

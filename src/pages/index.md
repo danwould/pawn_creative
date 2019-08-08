@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Pawn Creative
-image: /img/home-jumbotron.jpg
+image: /img/hero.jpg
 heading: Pawn Creative
 subheading: Stuff about pawn creative
 order: 0

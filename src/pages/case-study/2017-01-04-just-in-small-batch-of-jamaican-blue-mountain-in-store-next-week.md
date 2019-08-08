@@ -3,9 +3,9 @@ templateKey: case-study
 title: 'Just in: small batch of Jamaican Blue Mountain in store next week'
 date: 2017-01-04T15:04:10.000Z
 featuredpost: true
+featuredimage: /img/flavor_wheel.jpg
 order: 1
-tilesize: medium
-pushright: push-right-4
+tilesize: col-6
 description: >-
   We’re proud to announce that we’ll be offering a small batch of Jamaica Blue
   Mountain coffee beans in our store next week.

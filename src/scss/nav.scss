@@ -1,0 +1,29 @@
+.main-nav {
+  position: relative;
+  z-index: 1;
+
+  .main-nav-menu {
+      position: fixed;
+      display: flex;
+      right: 3%;
+      top: 35%;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    z-index: 1;
+
+      ul {
+        display: flex;
+        list-style: none;
+
+        li {
+
+        }
+      }
+    }
+
+  .nav-brand {
+    position: absolute;
+    left: 5%;
+    margin-top: 3%;
+  }
+}

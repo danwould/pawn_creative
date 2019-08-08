@@ -1,0 +1,35 @@
+.section-hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .section-intro {
+    display: flex;
+    position: absolute;
+    top: 90%;
+    padding: 0 8.33% 0 13.33%;
+    justify-content: space-between;
+
+    .blurbs {
+      flex-basis: 41.66%;
+    }
+  }
+
+  &-header {
+    width: 100%;
+
+    .underscore {
+      width: 8.33%;
+      height: 1rem;
+      background-color: white;
+      display: inline-block;
+      margin-right: 2%;
+    }
+
+    .headline-content {
+      width: 42rem;
+      display: inline-block;
+    }
+  }
+}

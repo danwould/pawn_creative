@@ -1,14 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+//import PreviewCompatibleImage from './PreviewCompatibleImage'
 import TransitionLink from 'gatsby-plugin-transition-link'
 import {TimelineMax, Power1} from 'gsap'
 
 class CaseStudyRoll extends React.Component {
   fadePageOut(exit, node) {
     return new TimelineMax()
-        .to(node.querySelector('main'), 1, { opacity: 0})
+        .to(node.querySelector('.page-content'), 1, { opacity: 0})
+        .set(node.querySelector('.page-content'), { opacity: 0})
   }
   slideCaseStudyUp(entry, node) {
     return new TimelineMax()
@@ -21,35 +22,15 @@ class CaseStudyRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
-        {posts &&
-          posts.map(({ node: post }) => (
-            <div className={`${post.frontmatter.tilesize}-tile ${post.frontmatter.pushright}`} key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
+        <div className="case-studies-container">
+          {posts &&
+            posts.map(({ node: post }, index) => (
+              <div className={`${post.frontmatter.tilesize} ${post.frontmatter.pushright ? 'push-right' : ''} case-study-tile`}
+                   key={post.id}
               >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <figure className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${
-                            post.title
-                          }`,
-                        }}
-                      />
-                      <figcaption>
-                        <h3>{post.frontmatter.title}</h3>
-                        {post.excerpt}
-                      </figcaption>
-                    </figure>
-                  ) : null}
-                  <p className="post-meta">
-                    <TransitionLink
-                      className="title has-text-primary is-size-4"
+                <article className={`case-study-item tile ${post.frontmatter.featuredpost ? 'is-featured' : ''}`}>
+                  <TransitionLink
+                      className="case-study-item-link"
                       to={post.fields.slug}
                       exit={{
                         length: 1,
@@ -60,15 +41,26 @@ class CaseStudyRoll extends React.Component {
                         delay: 0.5,
                         trigger: ({ entry, node }) => this.slideCaseStudyUp(entry, node),
                       }}
-                    >
-                      {post.frontmatter.title}
-                    </TransitionLink>
-                  </p>
-                </header>
-              </article>
-            </div>
+                  >
+                    <figure className="case-study-img"
+                            style={{
+                              backgroundImage: `url(${
+                                  !!post.frontmatter.featuredimage.childImageSharp ? post.frontmatter.featuredimage.childImageSharp.fluid.src : post.frontmatter.featuredimage
+                                  })`,
+                              backgroundPosition: `top left`,
+                              backgroundSize: `cover`,
+                            }}>
+                      <figcaption>
+                        <h3>{post.frontmatter.title}</h3>
+                        {post.excerpt}
+                      </figcaption>
+                    </figure>
+                  </TransitionLink>
+                  <h4>{index + 1} - {post.frontmatter.title}</h4>
+                </article>
+              </div>
           ))}
-      </div>
+        </div>
     )
   }
 }
@@ -82,8 +74,8 @@ CaseStudyRoll.propTypes = {
 }
 
 export default () => (
-  <StaticQuery
-    query={graphql`
+    <StaticQuery
+        query={graphql`
       query BlogRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___order] }
@@ -91,7 +83,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
+              excerpt(pruneLength: 60)
               id
               html
               fields {
@@ -107,7 +99,7 @@ export default () => (
                 order
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 2048, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }
@@ -118,6 +110,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <CaseStudyRoll data={data} count={count} />}
-  />
+        render={(data, count) => <CaseStudyRoll data={data} count={count} />}
+    />
 )

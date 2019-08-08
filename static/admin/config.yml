@@ -17,8 +17,8 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
-      - {label: "Tile Size", name: "tilesize", widget: "select", options: ["xlarge", "large", "medium", "small"]}
-      - {label: "Push Right", name: "pushright", widget: "select", options: ["push-right-none","push-right-1","push-right-2","push-right-3","push-right-4","push-right-5","push-right-6","push-right-7","push-right-8"]}
+      - {label: "Tile Size", name: "tilesize", widget: "select", options: ["col-12", "col-11", "col-10", "col-9", "col-8", "col-7", "col-6", "col-5", "col-4", "col-3", "col-2", "col-1"]}
+      - {label: "Push Right", name: "pushright", widget: "boolean"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}

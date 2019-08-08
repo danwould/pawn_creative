@@ -8,38 +8,44 @@ import CaseStudyRoll from '../components/CaseStudyRoll'
 export const IndexPageTemplate = ({
   image,
   title,
-  subheading,
+  //subheading,
   intro,
   manifesto,
 }) => (
   <React.Fragment>
-    <header
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
-        <h1>
-          {title}
-        </h1>
-        <h2>
-          {subheading}
-        </h2>
-    </header>
-    <section className="section">
-      <h2 className="title">{intro.title}</h2>
-      <p className="subtitle">{intro.description}</p>
-    </section>
-      <section className="section">
-          <h2 className="title">{manifesto.title}</h2>
-          <p className="subtitle">{manifesto.description}</p>
-      </section>
-    <section className="section">
-       <CaseStudyRoll />
+      <div id="home" className="section-hero"
+           style={{
+               backgroundImage: `url(${
+                   !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+                   })`,
+               backgroundPosition: `top left`,
+               backgroundAttachment: `fixed`,
+               backgroundSize: `cover`,
+           }}
+      >
+          <header className="section-hero-header section-content">
+              <h1>
+                  <span className="outline-text">/01</span>
+                  <span className="underscore"></span>
+                  <span className="headline-content">{title}</span>
+              </h1>
+          </header>
+
+          <section className="section section-intro section-content">
+              <div className="blurbs intro-blurb">
+                  <h3 className="title">{intro.title}</h3>
+                  <p className="subtitle">{intro.description}</p>
+              </div>
+              <div className="blurbs manifesto-blurb">
+                  <h3 className="title">{manifesto.title}</h3>
+                  <p className="subtitle">{manifesto.description}</p>
+              </div>
+          </section>
+      </div>
+
+    <section id="work" className="section section-work">
+        <h2 className="section-content"><span className="outline-text">/02</span> WORK</h2>
+        <CaseStudyRoll />
     </section>
   </React.Fragment>
 )

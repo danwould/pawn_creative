@@ -1,0 +1,43 @@
+.section-work {
+  margin-top: 10rem;
+
+  .case-studies-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .case-study-tile {
+      &:nth-child(odd) {
+        padding-right: 1rem;
+      }
+    }
+
+    .case-study-item {
+      pointer-events: all;
+      height: 35.250rem;
+      padding-bottom: 9.250rem;
+    }
+
+    .case-study-item-link {
+      text-decoration: none;
+
+      &:hover {
+        figcaption {
+          opacity: 1;
+        }
+      }
+    }
+
+    figure {
+      position: relative;
+      height: 100%;
+    }
+
+    figcaption {
+      opacity: 0;
+      transition: opacity .5s ease;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

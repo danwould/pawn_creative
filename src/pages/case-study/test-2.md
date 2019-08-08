@@ -8,8 +8,7 @@ description: >-
   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 featuredpost: true
 order: 5
-tilesize: medium
-pushright: 
+tilesize: col-5
 featuredimage: /img/flavor_wheel.jpg
 tags:
   - Test2
