@@ -11,7 +11,7 @@ export const CaseStudyTemplate = ({
                                       content,
                                       contentComponent,
                                       description,
-                                      //tags,
+                                      tags,
                                       title,
                                       helmet,
                                       nav,
@@ -33,18 +33,13 @@ export const CaseStudyTemplate = ({
                         <PostContent content={content} />
                         {nav}
 
-                        {/*{tags && tags.length ? (*/}
-                        {/*  <div style={{ marginTop: `4rem` }}>*/}
-                        {/*    <h4>Tags</h4>*/}
-                        {/*    <ul className="taglist">*/}
-                        {/*      {tags.map(tag => (*/}
-                        {/*        <li key={tag + `tag`}>*/}
-                        {/*          <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>*/}
-                        {/*        </li>*/}
-                        {/*      ))}*/}
-                        {/*    </ul>*/}
-                        {/*  </div>*/}
-                        {/*) : null}*/}
+                        {tags && tags.length ? (
+                            <ul className="taglist">
+                              {tags.map(tag => (
+                                <li key={tag + `tag`}>{tag}</li>
+                              ))}
+                            </ul>
+                        ) : null}
                     </div>
                 </div>
             </div>
@@ -204,7 +199,6 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
         description
         tags

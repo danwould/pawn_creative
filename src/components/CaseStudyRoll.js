@@ -28,7 +28,7 @@ class CaseStudyRoll extends React.Component {
               <div className={`${post.frontmatter.tilesize} ${post.frontmatter.pushright ? 'push-right' : ''} case-study-tile`}
                    key={post.id}
               >
-                <article className={`case-study-item tile ${post.frontmatter.featuredpost ? 'is-featured' : ''}`}>
+                <article className="case-study-item tile">
                   <TransitionLink
                       className="case-study-item-link"
                       to={post.fields.slug}
@@ -92,8 +92,6 @@ export default () => (
               frontmatter {
                 title
                 templateKey
-                date(formatString: "MMMM DD, YYYY")
-                featuredpost
                 tilesize
                 pushright
                 order
