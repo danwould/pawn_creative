@@ -10,11 +10,10 @@ tags:
   - Art director
   - Strategist
   - Director
-imagegrid:
-  - image1: /img/natgeo_05.jpg
-    image2: /img/hand.jpg
-    image3: /img/mirage.jpg
-    image4: /img/blob.jpg
+image1: /img/natgeo_05.jpg
+image2: /img/hand.jpg
+image3: /img/mirage.jpg
+image4: /img/blob.jpg
 ---
 I was all of history's great robot actors - Acting Unit 0.8; Thespomat; David Duchovny! I had more, but you go ahead. I'm a thing. I decline the title of Iron Cook and accept the lesser title of Zinc Saucier, which I just made up. Uhh… also, comes with double prize money.
 

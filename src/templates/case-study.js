@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-//import { kebabCase } from 'lodash'
+import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
@@ -10,7 +10,11 @@ import TransitionLink from "gatsby-plugin-transition-link"
 export const CaseStudyTemplate = ({
                                       content,
                                       contentComponent,
-                                      description,
+                                      featuredImage,
+                                      image1,
+                                      image2,
+                                      image3,
+                                      image4,
                                       tags,
                                       title,
                                       helmet,
@@ -24,24 +28,43 @@ export const CaseStudyTemplate = ({
             {helmet || ''}
             <div className="container content case-study">
                 {close}
-                <div className="columns">
-                    <div className="column is-10 is-offset-1">
-                        <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-                            {title}
-                        </h1>
-                        <p>{description}</p>
-                        <PostContent content={content} />
-                        {nav}
-
+                <article className="columns">
+                    <header>
+                        <h1>{title}</h1>
+                        <figure className="case-study-img"
+                                style={{
+                                    backgroundImage: `url(${featuredImage})`,
+                                    backgroundPosition: `top left`,
+                                    backgroundSize: `cover`,
+                                }}>
+                        </figure>
+                    </header>
+                    <section>
                         {tags && tags.length ? (
                             <ul className="taglist">
-                              {tags.map(tag => (
-                                <li key={tag + `tag`}>{tag}</li>
-                              ))}
+                                {tags.map(tag => (
+                                    <li key={tag + `tag`}>{tag}</li>
+                                ))}
                             </ul>
                         ) : null}
-                    </div>
-                </div>
+                        <PostContent content={content} />
+                        <div className="image-grid-container">
+                            <div className="col-12 image-grid-tile">
+                                <Img fluid={image1} alt="test" />
+                            </div >
+                            <div className="col-6 image-grid-tile">
+                                <Img fluid={image2} alt={"test"} />
+                            </div>
+                            <div className="col-6 image-grid-tile">
+                                <Img fluid={image3} alt={"test"} />
+                            </div>
+                            <div className="col-12 image-grid-tile">
+                                <Img fluid={image4} alt={"test"} />
+                            </div>
+                        </div>
+                    </section>
+                    {nav}
+                </article>
             </div>
         </section>
     )
@@ -61,7 +84,7 @@ const CaseStudy = ({ data, pageContext }) => {
 
     function slideCaseStudyDown(exit, node) {
         return new TimelineMax()
-            .to(node.querySelector('.case-study'), .5, {y: '120%', ease: Power1.easeInOut,})
+            .to(node.querySelector('.case-study'), .5, {y: '100%', ease: Power1.easeInOut,})
     }
 
     function fadePageIn(entry, node) {
@@ -96,8 +119,6 @@ const CaseStudy = ({ data, pageContext }) => {
     return (
         <CaseStudyTemplate
             content={post.html}
-            contentComponent={HTMLContent}
-            description={post.frontmatter.description}
             helmet={
                 <Helmet titleTemplate="%s | Blog">
                     <title>{`${post.frontmatter.title}`}</title>
@@ -107,7 +128,13 @@ const CaseStudy = ({ data, pageContext }) => {
                     />
                 </Helmet>
             }
+            featuredImage={!!post.frontmatter.featuredimage.childImageSharp ? post.frontmatter.featuredimage.childImageSharp.fluid.src : post.frontmatter.featuredimage}
             tags={post.frontmatter.tags}
+            contentComponent={HTMLContent}
+            image1={post.frontmatter.image1.childImageSharp.fluid}
+            image2={post.frontmatter.image2.childImageSharp.fluid}
+            image3={post.frontmatter.image3.childImageSharp.fluid}
+            image4={post.frontmatter.image4.childImageSharp.fluid}
             close={
                 <TransitionLink
                     to="/"
@@ -188,6 +215,7 @@ const CaseStudy = ({ data, pageContext }) => {
 CaseStudy.propTypes = {
     data: PropTypes.shape({
         markdownRemark: PropTypes.object,
+        childImageSharp: PropTypes.object,
     }),
 }
 
@@ -200,8 +228,42 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        description
         tags
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image1 {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image2 {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image3 {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image4 {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

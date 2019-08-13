@@ -74,8 +74,7 @@ CaseStudyRoll.propTypes = {
 }
 
 export default () => (
-    <StaticQuery
-        query={graphql`
+    <StaticQuery query={graphql`
       query BlogRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___order] }
@@ -108,6 +107,6 @@ export default () => (
         }
       }
     `}
-        render={(data, count) => <CaseStudyRoll data={data} count={count} />}
+     render={(data, count) => <CaseStudyRoll data={data} count={count} />}
     />
 )

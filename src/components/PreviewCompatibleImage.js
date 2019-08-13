@@ -16,10 +16,11 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
     return <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} />
   }
 
-  if (!!image && typeof image === 'string')
+  if (!!image && typeof image === 'string') {
     return <img style={imageStyle} src={image} alt={alt} />
+  }
 
-  return null
+  return <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt={alt} />
 }
 
 PreviewCompatibleImage.propTypes = {
