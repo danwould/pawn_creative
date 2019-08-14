@@ -83,11 +83,15 @@ const CaseStudy = ({ data, pageContext }) => {
     const { previous, next } = pageContext
 
     function slideCaseStudyDown(exit, node) {
+        console.log("aljoshd");
+
         return new TimelineMax()
             .to(node.querySelector('.case-study'), .5, {y: '100%', ease: Power1.easeInOut,})
     }
 
     function fadePageIn(entry, node) {
+        console.log("yeet");
+
         return new TimelineMax()
             .set(node.querySelector('.page-content'), { opacity: 0})
             .to(node.querySelector('.page-content'), .5, { opacity: 1, ease: Power1.easeInOut,})
@@ -148,7 +152,11 @@ const CaseStudy = ({ data, pageContext }) => {
                         trigger: ({ entry, node }) => fadePageIn(entry, node),
                     }}
                 >
-                    X
+                    <div className="modal-close-container">
+                        <div className="modal-close-icon">
+                            <p className="visuallyhidden">Back to home</p>
+                        </div>
+                    </div>
                 </TransitionLink>
             }
             title={post.frontmatter.title}
@@ -180,12 +188,16 @@ const CaseStudy = ({ data, pageContext }) => {
                                 trigger: ({ exit, node }) => slideCaseStudyDown(exit, node),
                             }}
                             entry={{
-                                length: 2,
+                                length: 0.5,
                                 delay: 0.5,
                                 trigger: ({ entry, node }) => fadePageIn(entry, node),
                             }}
                         >
-                            X Close
+                            <div className="modal-close-container">
+                                <div className="modal-close-icon">
+                                    <p className="visuallyhidden">Back to home</p>
+                                </div>
+                            </div>
                         </TransitionLink>
                     </li>
                     {next.frontmatter.templateKey === 'case-study' && (

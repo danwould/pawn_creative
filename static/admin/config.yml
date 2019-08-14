@@ -18,13 +18,13 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Tile Size", name: "tilesize", widget: "select", options: ["col-12", "col-11", "col-10", "col-9", "col-8", "col-7", "col-6", "col-5", "col-4", "col-3", "col-2", "col-1"]}
-      - {label: "Push Right", name: "pushright", widget: "boolean", required: "false"}
+      - {label: "Push Right", name: "pushright", widget: "boolean", required: false}
       - {label: "Body", name: "body", widget: "text"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Image 1", name: "image1", widget: image}
-      - {label: "Image 2", name: "image2", widget: image, required: "false"}
-      - {label: "Image 3", name: "image3", widget: image, required: "false"}
-      - {label: "Image 4", name: "image4", widget: image, required: "false"}
+      - {label: "Image 2", name: "image2", widget: image, required: false}
+      - {label: "Image 3", name: "image3", widget: image, required: false}
+      - {label: "Image 4", name: "image4", widget: image, required: false}
 
   - name: "pages"
     label: "Pages"
