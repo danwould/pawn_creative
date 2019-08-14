@@ -2,7 +2,7 @@
 templateKey: case-study
 client: Client 1
 title: Project Title
-featuredimage: /img/flavor_wheel.jpg
+featuredimage: /img/blob.jpg
 description: Intro blurb about client for hover state
 tilesize: col-6
 pushright: true
