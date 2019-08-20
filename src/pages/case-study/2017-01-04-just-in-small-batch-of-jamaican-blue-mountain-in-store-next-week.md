@@ -6,7 +6,7 @@ featuredimage: /img/blob.jpg
 description: >-
   We’re proud to announce that we’ll be offering a small batch of Jamaica Blue
   Mountain coffee beans in our store next week.
-tilesize: col-6
+tilesize: col-5
 tags:
   - Art director
   - Strategist
