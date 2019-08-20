@@ -16,6 +16,7 @@ export const CaseStudyTemplate = ({
                                       image3,
                                       image4,
                                       tags,
+                                      client,
                                       title,
                                       helmet,
                                       nav,
@@ -29,14 +30,11 @@ export const CaseStudyTemplate = ({
             <div className="container content case-study">
                 {close}
                 <article className="columns">
-                    <header>
+                    <header className="case-study-header">
                         <h1>{title}</h1>
-                        <figure className="case-study-img"
-                                style={{
-                                    backgroundImage: `url(${featuredImage})`,
-                                    backgroundPosition: `top left`,
-                                    backgroundSize: `cover`,
-                                }}>
+                        <h2 className="typography-caption">{client}</h2>
+                        <figure className="case-study-featured-img">
+                            <Img fluid={featuredImage} alt={"test"} />
                         </figure>
                     </header>
                     <section>
@@ -74,6 +72,7 @@ CaseStudyTemplate.propTypes = {
     content: PropTypes.node.isRequired,
     contentComponent: PropTypes.func,
     description: PropTypes.string,
+    client: PropTypes.string,
     title: PropTypes.string,
     helmet: PropTypes.object,
 }
@@ -132,7 +131,7 @@ const CaseStudy = ({ data, pageContext }) => {
                     />
                 </Helmet>
             }
-            featuredImage={!!post.frontmatter.featuredimage.childImageSharp ? post.frontmatter.featuredimage.childImageSharp.fluid.src : post.frontmatter.featuredimage}
+            featuredImage={post.frontmatter.featuredimage.childImageSharp.fluid}
             tags={post.frontmatter.tags}
             contentComponent={HTMLContent}
             image1={post.frontmatter.image1.childImageSharp.fluid}
@@ -143,11 +142,11 @@ const CaseStudy = ({ data, pageContext }) => {
                 <TransitionLink
                     to="/"
                     exit={{
-                        length: 1,
+                        length: 0.25,
                         trigger: ({ exit, node }) => slideCaseStudyDown(exit, node),
                     }}
                     entry={{
-                        length: 2,
+                        length: 0.5,
                         delay: 0.5,
                         trigger: ({ entry, node }) => fadePageIn(entry, node),
                     }}
@@ -159,6 +158,7 @@ const CaseStudy = ({ data, pageContext }) => {
                     </div>
                 </TransitionLink>
             }
+            client={post.frontmatter.client}
             title={post.frontmatter.title}
             nav={
                 <ul>
@@ -241,6 +241,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         tags
+        client
         featuredimage {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {

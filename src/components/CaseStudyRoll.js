@@ -6,11 +6,31 @@ import TransitionLink from 'gatsby-plugin-transition-link'
 import {TimelineMax, Power1} from 'gsap'
 
 class CaseStudyRoll extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { width: 0, height: 0 };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
+
   fadePageOut(exit, node) {
     return new TimelineMax()
         .to(node.querySelector('.page-content'), 1, { opacity: 0})
         .set(node.querySelector('.page-content'), { opacity: 0})
   }
+
   slideCaseStudyUp(entry, node) {
     return new TimelineMax()
         .set(node.querySelector('.case-study'), {y: '100vh', opacity: 0})
@@ -18,8 +38,23 @@ class CaseStudyRoll extends React.Component {
   }
 
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { data } = this.props;
+    const { edges: posts } = data.allMarkdownRemark;
+
+    let centerPort = this.state.width / 2;
+
+    for (let ref in this.refs) {
+      let el = this.refs[ref];
+      let elMeasurements = el.getBoundingClientRect();
+
+      if (elMeasurements.x > centerPort) {
+        this.refs[ref].classList.add('hover-left');
+
+      }
+      if (el.classList.contains('push-right') && elMeasurements.width > centerPort) {
+        this.refs[ref].classList.add('hover-left');
+      }
+    }
 
     return (
         <div className="case-studies-container">
@@ -27,17 +62,18 @@ class CaseStudyRoll extends React.Component {
             posts.map(({ node: post }, index) => (
               <div className={`${post.frontmatter.tilesize} ${post.frontmatter.pushright ? 'push-right' : ''} case-study-tile`}
                    key={post.id}
+                   ref={`case-study-tile-${index}`}
               >
-                <article className="case-study-item tile">
+                <article className="case-study-item">
                   <TransitionLink
                       className="case-study-item-link"
                       to={post.fields.slug}
                       exit={{
-                        length: 1,
+                        length: 0.15,
                         trigger: ({ exit, node }) => this.fadePageOut(exit, node),
                       }}
                       entry={{
-                        length: 3,
+                        length: 0.5,
                         delay: 0.5,
                         trigger: ({ entry, node }) => this.slideCaseStudyUp(entry, node),
                       }}
@@ -56,7 +92,7 @@ class CaseStudyRoll extends React.Component {
                       </figcaption>
                     </figure>
                   </TransitionLink>
-                  <h4>{index + 1} - {post.frontmatter.title}</h4>
+                  <h4>{index + 1} - {post.frontmatter.client}</h4>
                 </article>
               </div>
           ))}
@@ -71,7 +107,7 @@ CaseStudyRoll.propTypes = {
       edges: PropTypes.array,
     }),
   }),
-}
+};
 
 export default () => (
     <StaticQuery query={graphql`
@@ -90,6 +126,7 @@ export default () => (
               }
               frontmatter {
                 title
+                client
                 templateKey
                 tilesize
                 pushright
