@@ -1,0 +1,7 @@
+[user]
+	name = Dan Wood
+	email = danwoulddesign@gmail.com
+[core]
+	excludesfile = /Users/danw/.gitignore_global
+[hub]
+	host = github.com
