@@ -4,11 +4,11 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import CaseStudyRoll from '../components/CaseStudyRoll'
+import isSticky from '../helpers/isSticky'
 
 export const IndexPageTemplate = ({
   image,
   title,
-  //subheading,
   intro,
   manifesto,
 }) => (
@@ -43,12 +43,12 @@ export const IndexPageTemplate = ({
           </section>
       </div>
 
-    <section id="work" className="section section-work">
-        <h2 className="section-content"><span className="outline-text">/02</span> WORK</h2>
+    <section id="work" className="section section-work sticky-container">
+        <h2 className="section-content sticky-events"><span className="outline-text">/02</span> WORK</h2>
         <CaseStudyRoll />
     </section>
   </React.Fragment>
-)
+);
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -57,10 +57,14 @@ IndexPageTemplate.propTypes = {
   subheading: PropTypes.string,
   manifesto: PropTypes.object,
   intro: PropTypes.object,
-}
+};
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
+  let caseStudyContainer = document.querySelector('.case-studies-container');
+  let classToToggle = "fixed";
+
+  isSticky(caseStudyContainer, classToToggle);
 
   return (
     <Layout>
@@ -74,7 +78,7 @@ const IndexPage = ({ data }) => {
       />
     </Layout>
   )
-}
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -82,7 +86,7 @@ IndexPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
 export default IndexPage
 
@@ -111,4 +115,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

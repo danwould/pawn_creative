@@ -4,17 +4,16 @@ import { CaseStudyTemplate } from '../../templates/case-study'
 
 const CaseStudyPreview = ({ entry }) => (
   <CaseStudyTemplate
-    description={entry.getIn(['data', 'description'])}
     tags={entry.getIn(['data', 'tags'])}
     title={entry.getIn(['data', 'title'])}
+    client={entry.getIn(['data', 'client'])}
   />
-)
+);
 
 CaseStudyPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
-  }),
-  widgetFor: PropTypes.func,
-}
+  })
+};
 
 export default CaseStudyPreview
