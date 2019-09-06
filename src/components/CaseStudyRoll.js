@@ -41,25 +41,11 @@ class CaseStudyRoll extends React.Component {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
 
-    let centerPort = this.state.width / 2;
-
-    for (let ref in this.refs) {
-      let el = this.refs[ref];
-      let elMeasurements = el.getBoundingClientRect();
-
-      if (elMeasurements.x > centerPort) {
-        this.refs[ref].classList.add('hover-left');
-
-      }
-      if (el.classList.contains('push-right') && elMeasurements.width > centerPort) {
-        this.refs[ref].classList.add('hover-left');
-      }
-    }
-
     return (
         <div className="case-studies-container">
           {posts &&
             posts.map(({ node: post }, index) => (
+              <>
               <div className={`${post.frontmatter.tilesize} ${post.frontmatter.pushright ? 'push-right' : ''} case-study-tile`}
                    key={post.id}
                    ref={`case-study-tile-${index}`}
@@ -86,15 +72,16 @@ class CaseStudyRoll extends React.Component {
                               backgroundPosition: `top left`,
                               backgroundSize: `cover`,
                             }}>
-                      <figcaption>
-                        <h3>{post.frontmatter.title}</h3>
-                        {post.excerpt}
-                      </figcaption>
                     </figure>
                   </TransitionLink>
                   <h4>{index + 1} - {post.frontmatter.client}</h4>
                 </article>
               </div>
+              <div className="case-study-item-info">
+                <h3>{post.frontmatter.title}</h3>
+                {post.excerpt}
+              </div>
+              </>
           ))}
         </div>
     )

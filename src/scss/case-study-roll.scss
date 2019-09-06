@@ -10,6 +10,7 @@
 
   h2 {
     top: 0;
+    z-index: 3;
   }
 
   .case-studies-container {
@@ -32,11 +33,12 @@
         position: static;
       }
 
-      figcaption {
+      .case-study-item-info {
         position: fixed;
         top: 50%;
         transform: translateY(-50%);
-        margin-left: 5%
+        margin-left: 5%;
+        margin-top: 0;
       }
     }
 
@@ -45,15 +47,13 @@
       height: 35.250rem;
       padding-bottom: 9.250rem;
 
-      &:nth-child(even) {
+      &:nth-child(3n) {
         margin-left: 1rem;
       }
 
-      &.hover-left {
-        figcaption {
-          right: 0;
-          left: unset;
-          margin-right: 5%;
+      &:hover {
+        + .case-study-item-info {
+          opacity: 1;
         }
       }
     }
@@ -74,7 +74,7 @@
       text-decoration: none;
 
       &:hover {
-        figcaption {
+        .case-study-item-info {
           opacity: 1;
         }
       }
@@ -84,16 +84,17 @@
       height: 100%;
     }
 
-    figcaption {
+    .case-study-item-info {
       z-index: 5;
       opacity: 0;
       transition: opacity .5s ease;
-      position: sticky;
+      position: absolute;
       left: 0;
-      top: 50%;
-      margin-left: 12%;
-      padding-top: 8rem;
+      //top: 50%;
+      margin-left: 5%;
+      margin-top: 12rem;
       width: max-content;
+      max-width: 80%;
     }
   }
 }
