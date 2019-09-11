@@ -4,6 +4,7 @@ import { graphql, StaticQuery } from 'gatsby'
 //import PreviewCompatibleImage from './PreviewCompatibleImage'
 import TransitionLink from 'gatsby-plugin-transition-link'
 import {TimelineMax, Power1} from 'gsap'
+import isSticky from '../helpers/isSticky'
 
 class CaseStudyRoll extends React.Component {
   constructor(props) {
@@ -40,48 +41,50 @@ class CaseStudyRoll extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
+    let caseStudyContainer = document.querySelector('.case-studies-container');
+    let classToToggle = "fixed";
+
+    isSticky(caseStudyContainer, classToToggle);
 
     return (
         <div className="case-studies-container">
           {posts &&
             posts.map(({ node: post }, index) => (
-              <>
               <div className={`${post.frontmatter.tilesize} ${post.frontmatter.pushright ? 'push-right' : ''} case-study-tile`}
-                   key={post.id}
-                   ref={`case-study-tile-${index}`}
+                     ref={`case-study-tile-${index}`}
+                     key={post.id}
               >
-                <article className="case-study-item">
-                  <TransitionLink
-                      className="case-study-item-link"
-                      to={post.fields.slug}
-                      exit={{
-                        length: 0.15,
-                        trigger: ({ exit, node }) => this.fadePageOut(exit, node),
-                      }}
-                      entry={{
-                        length: 0.5,
-                        delay: 0.5,
-                        trigger: ({ entry, node }) => this.slideCaseStudyUp(entry, node),
-                      }}
-                  >
-                    <figure className="case-study-img"
-                            style={{
-                              backgroundImage: `url(${
-                                  !!post.frontmatter.featuredimage.childImageSharp ? post.frontmatter.featuredimage.childImageSharp.fluid.src : post.frontmatter.featuredimage
-                                  })`,
-                              backgroundPosition: `top left`,
-                              backgroundSize: `cover`,
-                            }}>
-                    </figure>
-                  </TransitionLink>
-                  <h4>{index + 1} - {post.frontmatter.client}</h4>
-                </article>
+                  <article className="case-study-item">
+                    <TransitionLink
+                        className="case-study-item-link"
+                        to={post.fields.slug}
+                        exit={{
+                          length: 0.15,
+                          trigger: ({ exit, node }) => this.fadePageOut(exit, node),
+                        }}
+                        entry={{
+                          length: 0.5,
+                          delay: 0.5,
+                          trigger: ({ entry, node }) => this.slideCaseStudyUp(entry, node),
+                        }}
+                    >
+                      <figure className="case-study-img"
+                              style={{
+                                backgroundImage: `url(${
+                                    !!post.frontmatter.featuredimage.childImageSharp ? post.frontmatter.featuredimage.childImageSharp.fluid.src : post.frontmatter.featuredimage
+                                    })`,
+                                backgroundPosition: `top left`,
+                                backgroundSize: `cover`,
+                              }}>
+                      </figure>
+                    </TransitionLink>
+                    <h4>{index + 1} - {post.frontmatter.client}</h4>
+                  </article>
+                <div className="case-study-item-info">
+                  <h3>{post.frontmatter.title}</h3>
+                  {post.excerpt}
+                </div>
               </div>
-              <div className="case-study-item-info">
-                <h3>{post.frontmatter.title}</h3>
-                {post.excerpt}
-              </div>
-              </>
           ))}
         </div>
     )

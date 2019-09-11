@@ -8,8 +8,11 @@ const isSticky = (elementToChange, className) => {
     const {stickyElements} = stickyEvents;
 
     stickyElements.forEach(sticky => {
-        sticky.addEventListener(StickyEvents.CHANGE, () => {
-            elementToChange.classList.toggle(className);
+        sticky.addEventListener(StickyEvents.STUCK, () => {
+            elementToChange.classList.add(className);
+        });
+        sticky.addEventListener(StickyEvents.UNSTUCK, () => {
+            elementToChange.classList.remove(className);
         });
     });
 };

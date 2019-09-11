@@ -52,7 +52,7 @@
       }
 
       &:hover {
-        + .case-study-item-info {
+        .case-study-item-info {
           opacity: 1;
         }
       }
@@ -90,9 +90,8 @@
       transition: opacity .5s ease;
       position: absolute;
       left: 0;
-      //top: 50%;
       margin-left: 5%;
-      margin-top: 12rem;
+      margin-top: -18%;
       width: max-content;
       max-width: 80%;
     }

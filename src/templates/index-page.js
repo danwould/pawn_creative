@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import CaseStudyRoll from '../components/CaseStudyRoll'
-import isSticky from '../helpers/isSticky'
 
 export const IndexPageTemplate = ({
   image,
@@ -61,10 +60,6 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  let caseStudyContainer = document.querySelector('.case-studies-container');
-  let classToToggle = "fixed";
-
-  isSticky(caseStudyContainer, classToToggle);
 
   return (
     <Layout>
