@@ -7,18 +7,19 @@ const CaseStudyPreview = ({ entry }) => (
     tags={entry.getIn(['data', 'tags'])}
     title={entry.getIn(['data', 'title'])}
     client={entry.getIn(['data', 'client'])}
-    featuredimage={entry.getIn(['data', 'featuredimage'])}
-    image1={entry.getIn(['data', 'image1'])}
-    image2={entry.getIn(['data', 'image2'])}
-    image3={entry.getIn(['data', 'image3'])}
-    image4={entry.getIn(['data', 'image4'])}
+    featuredimage={entry.getAsset(entry.getIn(['data', 'featuredimage', 'image']))}    
+    image1={entry.getAsset(entry.getIn(['data', 'image1', 'image']))}
+    image2={entry.getAsset(entry.getIn(['data', 'image2', 'image']))}
+    image3={entry.getAsset(entry.getIn(['data', 'image3', 'image']))}
+    image4={entry.getAsset(entry.getIn(['data', 'image4', 'image']))}           
   />
 );
 
 CaseStudyPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
-  })
+  }),
+  getAsset: PropTypes.func,
 };
 
 export default CaseStudyPreview
