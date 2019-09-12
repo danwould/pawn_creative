@@ -23,7 +23,7 @@ export const IndexPageTemplate = ({
            }}
       >
           <header className="section-hero-header section-content">
-              <h1>
+              <h1 className="typography-hero">
                   <span className="outline-text">/01</span>
                   <span className="underscore"></span>
                   <span className="headline-content">{title}</span>
@@ -43,7 +43,7 @@ export const IndexPageTemplate = ({
       </div>
 
     <section id="work" className="section section-work sticky-container">
-        <h2 className="section-content sticky-events"><span className="outline-text">/02</span> WORK</h2>
+        <h2 className="section-content sticky-events typography-headline"><span className="outline-text">/02</span> WORK</h2>
         <CaseStudyRoll />
     </section>
   </React.Fragment>

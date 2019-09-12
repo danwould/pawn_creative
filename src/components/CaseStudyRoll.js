@@ -50,11 +50,11 @@ class CaseStudyRoll extends React.Component {
         <div className="case-studies-container">
           {posts &&
             posts.map(({ node: post }, index) => (
-              <div className={`${post.frontmatter.tilesize} ${post.frontmatter.pushright ? 'push-right' : ''} case-study-tile`}
+              <article className={`${post.frontmatter.tilesize} ${post.frontmatter.pushright ? 'push-right' : ''} case-study-tile`}
                      ref={`case-study-tile-${index}`}
                      key={post.id}
               >
-                  <article className="case-study-item">
+                  <section className="case-study-item">
                     <TransitionLink
                         className="case-study-item-link"
                         to={post.fields.slug}
@@ -79,12 +79,12 @@ class CaseStudyRoll extends React.Component {
                       </figure>
                     </TransitionLink>
                     <h4>{index + 1} - {post.frontmatter.client}</h4>
-                  </article>
-                <div className="case-study-item-info">
-                  <h3>{post.frontmatter.title}</h3>
+                  </section>
+                <section className="case-study-item-info">
+                  <h3 className="typography-headline">{post.frontmatter.title}</h3>
                   {post.excerpt}
-                </div>
-              </div>
+                </section>
+              </article>
           ))}
         </div>
     )
