@@ -6,6 +6,7 @@ backend:
 # public_folder: /img
 
 media_folder: src/pages/case-study/img
+public_folder: case-study/img
 
 collections:
   - name: "case-study"
