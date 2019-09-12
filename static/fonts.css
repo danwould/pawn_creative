@@ -2,6 +2,7 @@
     font-family: 'noto_monoregular';
     src: url('fonts/NotoMono-Regular-webfont.eot');
     src: url('fonts/NotoMono-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/NotoMono-Regular-webfont.woff2') format('woff2'),
     url('fonts/NotoMono-Regular-webfont.woff') format('woff'),
     url('fonts/NotoMono-Regular-webfont.ttf') format('truetype'),
     url('fonts/NotoMono-Regular-webfont.svg#noto_monoregular') format('svg');
@@ -29,6 +30,7 @@ License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
 	font-family: 'IntegralCF-DemiBold';
 	src: url('fonts/integral-cf-demi-bold.eot');
 	src: url('fonts/integral-cf-demi-bold.eot?#iefix') format('embedded-opentype'),
+             url('fonts/integral-cf-demi-bold.woff2') format('woff2'),
 	     url('fonts/integral-cf-demi-bold.woff') format('woff'),
 	     url('fonts/integral-cf-demi-bold.ttf') format('truetype'),
 	     url('fonts/integral-cf-demi-bold.svg#youworkforthem') format('svg');

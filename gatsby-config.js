@@ -14,7 +14,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         custom: {
-          families: ['noto_monoregular'],
+          families: ['noto_monoregular','IntegralCF-DemiBold'],
           urls: ['fonts.css']
         }
       }
