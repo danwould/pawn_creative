@@ -22,10 +22,6 @@ export const IndexPageTemplate = ({
                backgroundSize: `cover`,
            }}
       >
-          <div className="font_preload" style={{opacity: 0}}>
-              <span style={{ fontFamily: "../fonts/NotoMono-Regular-webfont.woff', Arial, sans-serif;" }}></span>
-              <span style={{ fontFamily: "../fonts/integral-cf-demi-bold', Arial, sans-serif;"}}></span>
-          </div>
           <header className="section-hero-header section-content">
               <h1 className="typography-hero">
                   <span className="outline-text">/01</span>

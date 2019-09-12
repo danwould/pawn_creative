@@ -1,11 +1,25 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import FontUrl1 from "../fonts/NotoMono-Regular-webfont.woff"
-import FontUrl2 from "../fonts/integral-cf-demi-bold.woff2"
+import { createGlobalStyle } from "styled-components";
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import '../scss/main.scss'
 import useSiteMetadata from './SiteMetadata'
+
+const GlobalStyle = createGlobalStyle`
+  @import url('../fonts/NotoMono-Regular-webfont.woff');
+  @import url('../fonts/integral-cf-demi-bold.woff2');
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'noto_monoregular', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'IntegralCF-DemiBold', serif;
+  }
+`;
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -21,20 +35,6 @@ const TemplateWrapper = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
-
-        <link rel="preload"
-          as="font"
-          href={FontUrl1}
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        
-        <link rel="preload"
-          as="font"
-          href={FontUrl2}
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
 
         <link
           rel="apple-touch-icon"
@@ -65,6 +65,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
+      <GlobalStyle />
       <Navbar />
       <main>{children}</main>
       <Footer />
