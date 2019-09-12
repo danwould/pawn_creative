@@ -16,7 +16,8 @@ const TemplateWrapper = ({ children }) => {
     }
 
     return (
-    <div className="page-content">
+    <div className="page-content" style={{ fontFamily: "../fonts/NotoMono-Regular-webfont.woff', Arial, sans-serif;" }}>
+      <span style={{ fontFamily: "../fonts/integral-cf-demi-bold', Arial, sans-serif;"}}></span>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -65,7 +66,6 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
-
       <Navbar />
       <main>{children}</main>
       <Footer />
