@@ -16,6 +16,10 @@ class CaseStudyRoll extends React.Component {
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
+    let caseStudyContainer = document.querySelector('.case-studies-container');
+    let classToToggle = "fixed";
+
+    isSticky(caseStudyContainer, classToToggle);
   }
 
   componentWillUnmount() {
@@ -41,10 +45,6 @@ class CaseStudyRoll extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
-    let caseStudyContainer = document.querySelector('.case-studies-container');
-    let classToToggle = "fixed";
-
-    isSticky(caseStudyContainer, classToToggle);
 
     return (
         <div className="case-studies-container">
