@@ -4,6 +4,8 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import '../scss/main.scss'
 import useSiteMetadata from './SiteMetadata'
+import FontUrl1 from "../fonts/NotoMono-Regular-webfont.woff"
+import FontUrl2 from "../fonts/integral-cf-demi-bold.woff2"
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -19,6 +21,21 @@ const TemplateWrapper = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
+
+        <link rel="preload"
+          as="font"
+          href={FontUrl1}
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        
+        <link rel="preload"
+          as="font"
+          href="../fonts/montheavydemo.woff2"
+          href={FontUrl2}
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
 
         <link
           rel="apple-touch-icon"
@@ -43,7 +60,6 @@ const TemplateWrapper = ({ children }) => {
           href="/img/safari-pinned-tab.svg"
           color="#ff4400"
         />
-        <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />

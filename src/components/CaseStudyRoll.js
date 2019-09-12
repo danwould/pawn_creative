@@ -82,7 +82,7 @@ class CaseStudyRoll extends React.Component {
                   </section>
                 <section className="case-study-item-info">
                   <h3 className="typography-headline">{post.frontmatter.title}</h3>
-                  {post.excerpt}
+                  <p className="typography-excerpt">{post.excerpt}</p>
                 </section>
               </article>
           ))}
