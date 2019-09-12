@@ -16,8 +16,7 @@ const TemplateWrapper = ({ children }) => {
     }
 
     return (
-    <div className="page-content" style={{ fontFamily: "IntegralCF-DemiBold, Arial, sans-serif;" }}>
-      <span style={{ fontFamily: "../fonts/integral-cf-demi-bold', Arial, sans-serif;"}}></span>
+    <div className="page-content">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>

@@ -7,6 +7,7 @@ const CaseStudyPreview = ({ entry }) => (
     tags={entry.getIn(['data', 'tags'])}
     title={entry.getIn(['data', 'title'])}
     client={entry.getIn(['data', 'client'])}
+    featuredimage={entry.getIn(['data', 'featuredimage'])}
     image1={entry.getIn(['data', 'image1'])}
     image2={entry.getIn(['data', 'image2'])}
     image3={entry.getIn(['data', 'image3'])}
