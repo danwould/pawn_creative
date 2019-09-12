@@ -46,6 +46,10 @@ export const IndexPageTemplate = ({
         <h2 className="section-content sticky-events typography-headline"><span className="outline-text">/02</span> WORK</h2>
         <CaseStudyRoll />
     </section>
+
+    <section id="contact" className="section section-contact">
+        <h2 className="section-content sticky-events typography-headline"><span className="outline-text">/03</span> GET IN TOUCH.</h2>
+    </section>
   </React.Fragment>
 );
 

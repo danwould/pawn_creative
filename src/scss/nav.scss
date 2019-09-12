@@ -3,23 +3,37 @@
   z-index: 1;
 
   .main-nav-menu {
-      position: fixed;
-      display: flex;
-      right: 3%;
-      top: 35%;
-      writing-mode: vertical-rl;
-      text-orientation: mixed;
+    position: fixed;
+    display: flex;
+    right: 3%;
+    top: 35%;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
     z-index: 1;
 
-      ul {
-        display: flex;
-        list-style: none;
+    ul {
+      display: flex;
+      list-style: none;
 
-        li {
+      li {
+        margin-bottom: calc(4.45rem / 2);
+      }
 
+      a {
+        text-decoration: none;
+
+        &.is-active {
+          text-decoration: line-through;
         }
       }
     }
+
+    .social {
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+  }
 
   .nav-brand {
     position: absolute;

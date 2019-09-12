@@ -46,10 +46,7 @@
       pointer-events: none;
       height: 35.250rem;
       padding-bottom: 9.250rem;
-
-      &:nth-child(3n) {
-        margin-left: 1rem;
-      }
+      margin-right: 1rem;
 
       &:hover {
         .case-study-item-info {

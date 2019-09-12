@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import NavItem from '../components/NavBarItem'
 import logo from '../img/logo.svg'
 import facebook from "../img/social/facebook.svg";
 import twitter from "../img/social/twitter.svg";
@@ -8,32 +9,22 @@ import vimeo from "../img/social/vimeo.svg";
 
 
 const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: false,
-      navBarActiveClass: '',
-    }
-  }
+  constructor(props, context) {
+    super(props, context);
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
-      }
-    )
+    this.state = {
+      selectedTabId: 1
+    };
+  };
+  
+  isActive(index) {
+    console.log(index)
+    return this.state.selectedTabId === index;
+  }
+  
+  setActiveTab(selectedTabId) {
+    console.log(selectedTabId)
+    this.setState({ selectedTabId });
   }
 
   render() {
@@ -50,9 +41,8 @@ const Navbar = class extends React.Component {
             </Link>
             {/* Hamburger menu */}
             <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+              className={`navbar-burger burger`}
               data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
             >
               <span />
               <span />
@@ -61,24 +51,27 @@ const Navbar = class extends React.Component {
           </div>
           <div
             id="navMenu"
-            className={`main-nav-menu ${this.state.navBarActiveClass}`}
+            className="main-nav-menu"
           >
             <ul className="navbar-start has-text-centered">
-              <li>
-                <Link className="navbar-item" to="/#home">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link className="navbar-item" to="/#work">
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link className="navbar-item" to="/">
-                  Contact
-                </Link>
-              </li>
+              <NavItem url="#home" 
+                       content="Home"
+                       index="1"
+                       isActive={ this.isActive("1") } 
+                       onActiveTab={ this.setActiveTab.bind(this, "1") }
+              />
+              <NavItem url="#work"
+                       content="Gallery"
+                       index="2"
+                       isActive={ this.isActive("2") } 
+                       onActiveTab={ this.setActiveTab.bind(this, "2") }
+              />
+              <NavItem url="#home"
+                       content="Contact"
+                       index="3" 
+                       isActive={ this.isActive("3") } 
+                       onActiveTab={ this.setActiveTab.bind(this, "3") }
+              />
             </ul>
             {/* Hamburger menu */}
             <div className="navbar-end has-text-centered">
