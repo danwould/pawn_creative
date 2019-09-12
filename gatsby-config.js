@@ -11,15 +11,6 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-transition-link',
     {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        custom: {
-          families: ['noto_monoregular','IntegralCF-DemiBold'],
-          urls: ['fonts.css']
-        }
-      }
-    },
-    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {

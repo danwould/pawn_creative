@@ -1,11 +1,11 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import FontUrl1 from "../fonts/NotoMono-Regular-webfont.woff"
+import FontUrl2 from "../fonts/integral-cf-demi-bold.woff2"
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import '../scss/main.scss'
 import useSiteMetadata from './SiteMetadata'
-import FontUrl1 from "../fonts/NotoMono-Regular-webfont.woff"
-import FontUrl2 from "../fonts/integral-cf-demi-bold.woff2"
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
