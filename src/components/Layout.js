@@ -7,8 +7,8 @@ import '../scss/main.scss'
 import useSiteMetadata from './SiteMetadata'
 
 const GlobalStyle = createGlobalStyle`
-  @import url('../fonts/NotoMono-Regular-webfont.woff');
-  @import url('../fonts/integral-cf-demi-bold.woff2');
+  @import url('fonts/NotoMono-Regular-webfont.woff');
+  @import url('fonts/integral-cf-demi-bold.woff2');
   * {
     box-sizing: border-box;
   }
@@ -53,11 +53,15 @@ const TemplateWrapper = ({ children }) => {
           href="/img/favicon-16x16.png"
           sizes="16x16"
         />
-
         <link
           rel="mask-icon"
           href="/img/safari-pinned-tab.svg"
           color="#ff4400"
+        />
+        <link 
+          rel="preload"
+          as="style"
+          href="fonts.css"
         />
 
         <meta property="og:type" content="business.business" />
@@ -74,3 +78,4 @@ const TemplateWrapper = ({ children }) => {
 }
 
 export default TemplateWrapper
+
