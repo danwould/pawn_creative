@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import Helmet from 'react-helmet'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import { graphql } from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
 import {TimelineMax, Power1} from "gsap";
@@ -48,16 +49,16 @@ export const CaseStudyTemplate = ({
                         <PostContent content={content} />
                         <div className="image-grid-container">
                             <div className="col-12 image-grid-tile">
-                                <Img fluid={image1} alt="test" />
+                                <PreviewCompatibleImage imageInfo={image1} />
                             </div >
                             <div className="col-6 image-grid-tile">
-                                <Img fluid={image2} alt={"test"} />
+                                <PreviewCompatibleImage imageInfo={image2} />
                             </div>
                             <div className="col-6 image-grid-tile">
-                                <Img fluid={image3} alt={"test"} />
+                               <PreviewCompatibleImage imageInfo={image3} />
                             </div>
                             <div className="col-12 image-grid-tile">
-                                <Img fluid={image4} alt={"test"} />
+                                <PreviewCompatibleImage imageInfo={image4} />
                             </div>
                         </div>
                     </section>
@@ -75,6 +76,10 @@ CaseStudyTemplate.propTypes = {
     client: PropTypes.string,
     title: PropTypes.string,
     helmet: PropTypes.object,
+    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    image4: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 }
 
 const CaseStudy = ({ data, pageContext }) => {
@@ -134,10 +139,10 @@ const CaseStudy = ({ data, pageContext }) => {
             featuredImage={post.frontmatter.featuredimage.childImageSharp.fluid}
             tags={post.frontmatter.tags}
             contentComponent={HTMLContent}
-            image1={post.frontmatter.image1.childImageSharp.fluid}
-            image2={post.frontmatter.image2.childImageSharp.fluid}
-            image3={post.frontmatter.image3.childImageSharp.fluid}
-            image4={post.frontmatter.image4.childImageSharp.fluid}
+            image1={post.frontmatter.image1}
+            image2={post.frontmatter.image2}
+            image3={post.frontmatter.image3}
+            image4={post.frontmatter.image4}
             close={
                 <TransitionLink
                     to="/"

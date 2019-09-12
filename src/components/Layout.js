@@ -75,11 +75,6 @@ const TemplateWrapper = ({ children }) => {
           href="/img/safari-pinned-tab.svg"
           color="#ff4400"
         />
-        <link 
-          rel="preload"
-          as="style"
-          href="fonts.css"
-        />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
