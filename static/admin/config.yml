@@ -5,8 +5,8 @@ backend:
 # media_folder: static/img
 # public_folder: /img
 
-media_folder: src/pages/case-study/img
-public_folder: case-study/img
+media_folder: static/img
+public_folder: /img
 
 collections:
   - name: "case-study"
@@ -24,10 +24,10 @@ collections:
       - {label: "Push Right", name: "pushright", widget: "boolean", required: false}
       - {label: "Body", name: "body", widget: "text"}
       - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Image 1", name: "image1", widget: image}
-      - {label: "Image 2", name: "image2", widget: image, required: false}
-      - {label: "Image 3", name: "image3", widget: image, required: false}
-      - {label: "Image 4", name: "image4", widget: image, required: false}
+      - {label: "Image 1", name: "image1", fields: [ {label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string} ] }
+      - {label: "Image 2", name: "image2", fields: [ {label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string} ], required: false}
+      - {label: "Image 3", name: "image3", fields: [ {label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string} ], required: false}
+      - {label: "Image 4", name: "image4", fields: [ {label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string} ], required: false}
 
   - name: "pages"
     label: "Pages"

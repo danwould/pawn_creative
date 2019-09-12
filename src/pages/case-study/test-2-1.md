@@ -1,6 +1,7 @@
 ---
 templateKey: case-study
 title: Test 2
+client: Client 4
 date: 2019-07-09T22:10:30.018Z
 description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -14,10 +15,18 @@ tags:
   - Art director
   - Strategist
   - Director
-image1: /img/natgeo_05.jpg
-image2: /img/hand.jpg
-image3: /img/mirage.jpg
-image4: /img/blob.jpg
+image1:
+  image: /img/natgeo_05.jpg
+  alt: A green cup of a coffee on a wooden table
+image2:
+  image: /img/hand.jpg
+  alt: A green cup of a coffee on a wooden table
+image3:
+  image: /img/mirage.jpg
+  alt: A green cup of a coffee on a wooden table
+image4:
+  image: /img/blob.jpg
+  alt: A green cup of a coffee on a wooden table
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 

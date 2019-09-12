@@ -255,31 +255,43 @@ export const pageQuery = graphql`
           }
         }
         image1 {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-            }
+          alt
+          image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                }
+              }
           }
         }
         image2 {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-            }
+          alt
+          image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                }
+              }
           }
         }
         image3 {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-            }
+          alt
+          image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                }
+              }
           }
         }
         image4 {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-            }
+          alt
+          image {
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                }
+              }
           }
         }
       }

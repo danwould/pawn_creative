@@ -11,10 +11,18 @@ tags:
   - Art director
   - Strategist
   - Director
-image1: /img/natgeo_05.jpg
-image2: /img/hand.jpg
-image3: /img/mirage.jpg
-image4: /img/blob.jpg
+image1:
+  image: /img/natgeo_05.jpg
+  alt: A green cup of a coffee on a wooden table
+image2:
+  image: /img/hand.jpg
+  alt: A green cup of a coffee on a wooden table
+image3:
+  image: /img/mirage.jpg
+  alt: A green cup of a coffee on a wooden table
+image4:
+  image: /img/blob.jpg
+  alt: A green cup of a coffee on a wooden table
 ---
 
 We expect the shipment of a limited quantity of green beans next Monday. We’ll be offering the roasted beans from Tuesday, but quantities are limited, so be quick.
