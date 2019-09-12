@@ -18,12 +18,10 @@ const Navbar = class extends React.Component {
   };
   
   isActive(index) {
-    console.log(index)
     return this.state.selectedTabId === index;
   }
   
   setActiveTab(selectedTabId) {
-    console.log(selectedTabId)
     this.setState({ selectedTabId });
   }
 

@@ -65,6 +65,10 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
+      <div className="font_preload" style={{opacity: 0}}>
+          <span style={{ fontFamily: "../fonts/NotoMono-Regular-webfont.woff', Arial, sans-serif;" }}></span>
+          <span style={{ fontFamily: "../fonts/integral-cf-demi-bold', Arial, sans-serif;"}}></span>
+      </div>
       <Navbar />
       <main>{children}</main>
       <Footer />
