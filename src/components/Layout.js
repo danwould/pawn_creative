@@ -7,10 +7,27 @@ import '../scss/main.scss'
 import useSiteMetadata from './SiteMetadata'
 
 const GlobalStyle = createGlobalStyle`
-  @import url('fonts/NotoMono-Regular-webfont.woff');
-  @import url('fonts/integral-cf-demi-bold.woff2');
-  * {
-    box-sizing: border-box;
+  @font-face {
+    font-family: 'noto_monoregular';
+    src: url('fonts/NotoMono-Regular-webfont.woff') format('woff');
+    src: url('fonts/NotoMono-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/NotoMono-Regular-webfont.eot'),
+    url('fonts/NotoMono-Regular-webfont.ttf') format('truetype'),
+    url('fonts/NotoMono-Regular-webfont.svg#noto_monoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'IntegralCF-DemiBold';
+    src: url('fonts/integral-cf-demi-bold.woff2') format('woff2');
+    src: url('fonts/integral-cf-demi-bold.eot?#iefix') format('embedded-opentype'),
+           url('fonts/integral-cf-demi-bold.eot'),
+         url('fonts/integral-cf-demi-bold.woff') format('woff'),
+         url('fonts/integral-cf-demi-bold.ttf') format('truetype'),
+         url('fonts/integral-cf-demi-bold.svg#youworkforthem') format('svg');
+    font-weight: normal;
+    font-style: normal;
   }
   body {
     margin: 0;
