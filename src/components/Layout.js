@@ -31,7 +31,6 @@ const TemplateWrapper = ({ children }) => {
         
         <link rel="preload"
           as="font"
-          href="../fonts/montheavydemo.woff2"
           href={FontUrl2}
           type="font/woff2"
           crossOrigin="anonymous"
