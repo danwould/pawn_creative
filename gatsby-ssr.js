@@ -1,7 +1,7 @@
 const React = require('react')
 const fs = require('fs')
 
-exports.onPreRenderHTML = ({ setHeadComponents }) => {
+exports.onRenderBody = ({ setHeadComponents }) => {
 
   const files = getFilesFromPath("./public/static", ".woff2")
   const preload = [
