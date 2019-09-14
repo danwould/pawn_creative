@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
+import Layout from '../components/CaseStudyLayout'
 import Img from 'gatsby-image'
-import Helmet from 'react-helmet'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import { graphql } from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
@@ -27,7 +28,6 @@ export const CaseStudyTemplate = ({
 
     return (
         <section className={`section section-case-study + ${title}`}>
-            {helmet || ''}
             <div className="container content case-study">
                 {close}
                 <article className="columns">
@@ -75,7 +75,6 @@ CaseStudyTemplate.propTypes = {
     description: PropTypes.string,
     client: PropTypes.string,
     title: PropTypes.string,
-    helmet: PropTypes.object,
     image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -125,107 +124,109 @@ const CaseStudy = ({ data, pageContext }) => {
 
 
     return (
-        <CaseStudyTemplate
-            content={post.html}
-            helmet={
-                <Helmet titleTemplate="%s | Blog">
-                    <title>{`${post.frontmatter.title}`}</title>
-                    <meta
-                        name="description"
-                        content={`${post.frontmatter.description}`}
-                    />
-                </Helmet>
-            }
-            featuredImage={post.frontmatter.featuredimage.childImageSharp.fluid}
-            tags={post.frontmatter.tags}
-            contentComponent={HTMLContent}
-            image1={post.frontmatter.image1}
-            image2={post.frontmatter.image2}
-            image3={post.frontmatter.image3}
-            image4={post.frontmatter.image4}
-            close={
-                <TransitionLink
-                    to="/"
-                    exit={{
-                        length: 0.25,
-                        trigger: ({ exit, node }) => slideCaseStudyDown(exit, node),
-                    }}
-                    entry={{
-                        length: 0.5,
-                        delay: 0.5,
-                        trigger: ({ entry, node }) => fadePageIn(entry, node),
-                    }}
-                >
-                    <div className="modal-close-container">
-                        <div className="modal-close-icon">
-                            <p className="visuallyhidden">Back to home</p>
-                        </div>
-                    </div>
-                </TransitionLink>
-            }
-            client={post.frontmatter.client}
-            title={post.frontmatter.title}
-            nav={
-                <ul>
-                    {previous && (
-                        <li>
-                            <TransitionLink
-                                to={previous.fields.slug}
-                                rel="prev"
-                                exit={{
-                                    length: 1,
-                                    trigger: ({ exit, node }) => slideCaseStudyToRight(exit, node),
-                                }}
-                                entry={{
-                                    delay: 0.5,
-                                    trigger: ({ entry, node }) => slideCaseStudyFromRight(entry, node),
-                                }}
-                            >
-                                ← Previous {previous.frontmatter.title}
-                            </TransitionLink>
-                        </li>
-                    )}
-                    <li>
-                        <TransitionLink
-                            to="/"
-                            exit={{
-                                length: 1,
-                                trigger: ({ exit, node }) => slideCaseStudyDown(exit, node),
-                            }}
-                            entry={{
-                                length: 0.5,
-                                delay: 0.5,
-                                trigger: ({ entry, node }) => fadePageIn(entry, node),
-                            }}
-                        >
-                            <div className="modal-close-container">
-                                <div className="modal-close-icon">
-                                    <p className="visuallyhidden">Back to home</p>
-                                </div>
+        <Layout>
+            <CaseStudyTemplate
+                content={post.html}
+                helmet={
+                    <Helmet titleTemplate="%s | Case Study">
+                        <title>{`${post.frontmatter.title}`}</title>
+                        <meta
+                            name="description"
+                            content={`${post.frontmatter.description}`}
+                        />
+                    </Helmet>
+                }
+                featuredImage={post.frontmatter.featuredimage.childImageSharp.fluid}
+                tags={post.frontmatter.tags}
+                contentComponent={HTMLContent}
+                image1={post.frontmatter.image1}
+                image2={post.frontmatter.image2}
+                image3={post.frontmatter.image3}
+                image4={post.frontmatter.image4}
+                close={
+                    <TransitionLink
+                        to="/"
+                        exit={{
+                            length: 0.25,
+                            trigger: ({ exit, node }) => slideCaseStudyDown(exit, node),
+                        }}
+                        entry={{
+                            length: 0.5,
+                            delay: 0.5,
+                            trigger: ({ entry, node }) => fadePageIn(entry, node),
+                        }}
+                    >
+                        <div className="modal-close-container">
+                            <div className="modal-close-icon">
+                                <p className="visuallyhidden">Back to home</p>
                             </div>
-                        </TransitionLink>
-                    </li>
-                    {next.frontmatter.templateKey === 'case-study' && (
+                        </div>
+                    </TransitionLink>
+                }
+                client={post.frontmatter.client}
+                title={post.frontmatter.title}
+                nav={
+                    <ul>
+                        {previous && (
+                            <li>
+                                <TransitionLink
+                                    to={previous.fields.slug}
+                                    rel="prev"
+                                    exit={{
+                                        length: 1,
+                                        trigger: ({ exit, node }) => slideCaseStudyToRight(exit, node),
+                                    }}
+                                    entry={{
+                                        delay: 0.5,
+                                        trigger: ({ entry, node }) => slideCaseStudyFromRight(entry, node),
+                                    }}
+                                >
+                                    ← Previous {previous.frontmatter.title}
+                                </TransitionLink>
+                            </li>
+                        )}
                         <li>
                             <TransitionLink
-                                to={next.fields.slug}
-                                rel="next"
+                                to="/"
                                 exit={{
                                     length: 1,
-                                    trigger: ({ exit, node }) => slideCaseStudyToLeft(exit, node),
+                                    trigger: ({ exit, node }) => slideCaseStudyDown(exit, node),
                                 }}
                                 entry={{
+                                    length: 0.5,
                                     delay: 0.5,
-                                    trigger: ({ entry, node }) => slideCaseStudyFromLeft(entry, node),
+                                    trigger: ({ entry, node }) => fadePageIn(entry, node),
                                 }}
                             >
-                                Next {next.frontmatter.title} →
+                                <div className="modal-close-container">
+                                    <div className="modal-close-icon">
+                                        <p className="visuallyhidden">Back to home</p>
+                                    </div>
+                                </div>
                             </TransitionLink>
                         </li>
-                    )}
-                </ul>
-            }
-        />
+                        {next.frontmatter.templateKey === 'case-study' && (
+                            <li>
+                                <TransitionLink
+                                    to={next.fields.slug}
+                                    rel="next"
+                                    exit={{
+                                        length: 1,
+                                        trigger: ({ exit, node }) => slideCaseStudyToLeft(exit, node),
+                                    }}
+                                    entry={{
+                                        delay: 0.5,
+                                        trigger: ({ entry, node }) => slideCaseStudyFromLeft(entry, node),
+                                    }}
+                                >
+                                    Next {next.frontmatter.title} →
+                                </TransitionLink>
+                            </li>
+                        )}
+                    </ul>
+                }
+            />
+        </Layout>
     )
 }
 
