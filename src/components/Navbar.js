@@ -13,8 +13,10 @@ const Navbar = class extends React.Component {
     super(props, context);
 
     this.state = {
-      selectedTabId: 1
+      selectedTabId: "1"
     };
+
+    this._handleScroll = this._handleScroll.bind(this);
   };
   
   isActive(index) {
@@ -23,6 +25,34 @@ const Navbar = class extends React.Component {
   
   setActiveTab(selectedTabId) {
     this.setState({ selectedTabId });
+  }
+
+  _handleScroll(e) {
+
+    let topHome = document.documentElement.querySelector('#home');
+    let topWork = document.documentElement.querySelector('#work');
+    let topContact = document.documentElement.querySelector('#contact');
+
+    const offset = 200;
+    const offset1 = -300;
+
+    if (topHome.getBoundingClientRect().top > offset1) {
+      this.setState({ selectedTabId: "1" });
+    } 
+    if (topWork.getBoundingClientRect().top < offset) {
+      this.setState({ selectedTabId: "2" });
+    } 
+    if (topContact.getBoundingClientRect().top < offset) {
+      this.setState({ selectedTabId: "3" });      
+    }
+  }
+  
+  componentDidMount() {
+    window.addEventListener('scroll', this._handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._handleScroll);
   }
 
   render() {
@@ -51,7 +81,7 @@ const Navbar = class extends React.Component {
             id="navMenu"
             className="main-nav-menu"
           >
-            <ul className="navbar-start has-text-centered">
+            <ul className="navbar-start has-text-centered" onScroll={this._handleScroll}>
               <NavItem url="#home" 
                        content="Home"
                        index="1"
@@ -64,7 +94,7 @@ const Navbar = class extends React.Component {
                        isActive={ this.isActive("2") } 
                        onActiveTab={ this.setActiveTab.bind(this, "2") }
               />
-              <NavItem url="#home"
+              <NavItem url="#contact"
                        content="Contact"
                        index="3" 
                        isActive={ this.isActive("3") } 

@@ -8,8 +8,7 @@ const Navbar = class extends React.Component {
         <a
           data-index-number={this.props.index}
           className={ this.props.isActive ? 'is-active': '' } 
-          href={ this.props.url }
-          onClick={ this.props.onActiveTab }>
+          href={ this.props.url }>
             { this.props.content }
         </a>
       </li>
