@@ -1,8 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { createGlobalStyle } from "styled-components";
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
 import '../scss/main.scss'
 import useSiteMetadata from './SiteMetadata'
 
