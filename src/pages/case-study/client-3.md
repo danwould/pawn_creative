@@ -1,29 +1,29 @@
 ---
 templateKey: case-study
-title: Project Title 3
 client: Client 3
-date: 2017-01-04T15:04:10.000Z
-featuredpost: false
+title: Project Title 3
+featuredimage: /img/client-3.png
+description: >-
+  Brewing with a Chemex probably seems like a complicated, time-consuming
+  ordeal, but once you get used to the process, it becomes a soothing ritual
+  that's worth the effort every time.
 tilesize: col-4
-featuredimage: /img/flavor_wheel.jpg
-order: 4
-description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - Art director
   - Strategist
   - Director
 image1:
+  alt: A green cup of a coffee on a wooden table
   image: /img/natgeo_05.jpg
-  alt: A green cup of a coffee on a wooden table
 image2:
+  alt: A green cup of a coffee on a wooden table
   image: /img/hand.jpg
-  alt: A green cup of a coffee on a wooden table
 image3:
+  alt: A green cup of a coffee on a wooden table
   image: /img/mirage.jpg
-  alt: A green cup of a coffee on a wooden table
 image4:
-  image: /img/blob.jpg
   alt: A green cup of a coffee on a wooden table
+  image: /img/blob.jpg
 ---
 
 I was all of history's great robot actors - Acting Unit 0.8; Thespomat; David Duchovny! I had more, but you go ahead. I'm a thing. I decline the title of Iron Cook and accept the lesser title of Zinc Saucier, which I just made up. Uhh… also, comes with double prize money.
