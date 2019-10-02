@@ -8,10 +8,22 @@ const CaseStudyPreview = ({ entry, getAsset }) => (
     title={entry.getIn(['data', 'title'])}
     client={entry.getIn(['data', 'client'])}
     featuredimage={getAsset(entry.getIn(['data', 'featuredimage', 'image']))}    
-    image1={getAsset(entry.getIn(['data', 'image1', 'image']))}
-    image2={getAsset(entry.getIn(['data', 'image2', 'image']))}
-    image3={getAsset(entry.getIn(['data', 'image3', 'image']))}
-    image4={getAsset(entry.getIn(['data', 'image4', 'image']))}           
+    image1={{
+      image: getAsset(entry.getIn(['data', 'image1', 'image'])),
+      alt: entry.getIn(['data', 'image1', 'alt']),
+    }}
+    image2={{
+      image: getAsset(entry.getIn(['data', 'image2', 'image'])),
+      alt: entry.getIn(['data', 'image2', 'alt']),
+    }}
+    image3={{
+      image: getAsset(entry.getIn(['data', 'image3', 'image'])),
+      alt: entry.getIn(['data', 'image3', 'alt']),
+    }}
+    image4={{
+      image: getAsset(entry.getIn(['data', 'image4', 'image'])),
+      alt: entry.getIn(['data', 'image4', 'alt']),
+    }}           
   />
 );
 
