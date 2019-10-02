@@ -13,10 +13,7 @@ export const CaseStudyTemplate = ({
                                       content,
                                       contentComponent,
                                       featuredImage,
-                                      image1,
-                                      image2,
-                                      image3,
-                                      image4,
+                                      main,
                                       tags,
                                       client,
                                       title,
@@ -49,16 +46,16 @@ export const CaseStudyTemplate = ({
                         <PostContent content={content} className="col-9 case-study-content"/>
                         <div className="image-grid-container col-12">
                             <div className="col-12 image-grid-tile">
-                                <PreviewCompatibleImage imageInfo={image1} />
+                                <PreviewCompatibleImage imageInfo={main.image1} />
                             </div>
                             <div className="col-6 image-grid-tile">
-                                <PreviewCompatibleImage imageInfo={image2} />
+                                <PreviewCompatibleImage imageInfo={main.image2} />
                             </div>
                             <div className="col-6 image-grid-tile">
-                               <PreviewCompatibleImage imageInfo={image3} />
+                               <PreviewCompatibleImage imageInfo={main.image3} />
                             </div>
                             <div className="col-12 image-grid-tile">
-                                <PreviewCompatibleImage imageInfo={image4} />
+                                <PreviewCompatibleImage imageInfo={main.image4} />
                             </div>
                         </div>
                     </section>
@@ -75,10 +72,12 @@ CaseStudyTemplate.propTypes = {
     description: PropTypes.string,
     client: PropTypes.string,
     title: PropTypes.string,
-    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image4: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    main: PropTypes.shape({
+        image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        image4: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    }),
 }
 
 const CaseStudy = ({ data, pageContext }) => {
@@ -137,10 +136,7 @@ const CaseStudy = ({ data, pageContext }) => {
                 featuredImage={post.frontmatter.featuredimage.childImageSharp.fluid}
                 tags={post.frontmatter.tags}
                 contentComponent={HTMLContent}
-                image1={post.frontmatter.image1}
-                image2={post.frontmatter.image2}
-                image3={post.frontmatter.image3}
-                image4={post.frontmatter.image4}
+                main={post.frontmatter.main}
                 close={
                     <TransitionLink
                         to="/"
@@ -281,44 +277,46 @@ export const pageQuery = graphql`
             }
           }
         }
-        image1 {
-          alt
-          image {
+        main {
+          image1 {
+            alt
+            image {
               childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                    ...GatsbyImageSharpFluid
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
                 }
               }
+            }
           }
-        }
-        image2 {
-          alt
-          image {
+          image2 {
+            alt
+            image {
               childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                    ...GatsbyImageSharpFluid
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
                 }
               }
+            }
           }
-        }
-        image3 {
-          alt
-          image {
+          image3 {
+            alt
+            image {
               childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                    ...GatsbyImageSharpFluid
+                fluid(maxWidth: 1075, quality: 72) {
+                  ...GatsbyImageSharpFluid
                 }
               }
+            }
           }
-        }
-        image4 {
-          alt
-          image {
+          image4 {
+            alt
+            image {
               childImageSharp {
-                fluid(maxWidth: 2048, quality: 100) {
-                    ...GatsbyImageSharpFluid
+                fluid(maxWidth: 1075, quality: 72) {
+                  ...GatsbyImageSharpFluid
                 }
               }
+            }
           }
         }
       }
