@@ -36,15 +36,20 @@ h1, h2  {
 }
 
 .typography-hero {
-	font-family: 'IntegralCF-DemiBold';
+	font-family: 'IntegralCF-DemiBold', Arial, sans-serif;
 	font-size: 7.143rem;
 }
 
 .typography-headline {
-	font-family: 'IntegralCF-DemiBold';
+	font-family: 'IntegralCF-DemiBold', Arial, sans-serif;
 	font-size: 5.714em;
 	line-height: 4.75rem;
   margin-bottom: 2rem;
+}
+
+.typography-subhead {
+  font-family: 'IntegralCF-DemiBold', Arial, sans-serif;
+  font-size: 3.5em;
 }
 
 .typography-caption {

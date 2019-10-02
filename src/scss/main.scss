@@ -3,12 +3,14 @@
 @import "grid";
 @import "typography";
 @import "layout";
+@import "form";
 
 @import "nav";
 @import "hero";
 @import "case-study-roll";
 @import "case-study";
 @import "contact";
+@import "footer";
 
 
 html {
@@ -22,10 +24,6 @@ main {
   position: relative;
 }
 
-.section-case-study {
-  min-height: 100vh;
-  background: black;
-}
 
 a {
   color: white;

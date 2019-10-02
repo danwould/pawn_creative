@@ -6,7 +6,7 @@
     position: fixed;
     display: flex;
     right: 3%;
-    top: 35%;
+    top: 28%;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     z-index: 1;
@@ -14,6 +14,7 @@
     ul {
       display: flex;
       list-style: none;
+      margin-bottom: 4rem;
 
       li {
         margin-bottom: calc(4.45rem / 2);

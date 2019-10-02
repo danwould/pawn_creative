@@ -30,7 +30,7 @@ export const CaseStudyTemplate = ({
         <section className={`section section-case-study + ${title}`}>
             <div className="container content case-study">
                 {close}
-                <article className="columns">
+                <article className="columns"> 
                     <header className="case-study-header">
                         <h1>{title}</h1>
                         <h2 className="typography-caption">{client}</h2>
@@ -38,19 +38,19 @@ export const CaseStudyTemplate = ({
                             <Img fluid={featuredImage} alt={"test"} />
                         </figure>
                     </header>
-                    <section>
+                    <section className="case-study-content-wrapper">
                         {tags && tags.length ? (
-                            <ul className="taglist">
+                            <ul className="taglist col-3">
                                 {tags.map(tag => (
                                     <li key={tag + `tag`}>{tag}</li>
                                 ))}
                             </ul>
                         ) : null}
-                        <PostContent content={content} />
-                        <div className="image-grid-container">
+                        <PostContent content={content} className="col-9 case-study-content"/>
+                        <div className="image-grid-container col-12">
                             <div className="col-12 image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={image1} />
-                            </div >
+                            </div>
                             <div className="col-6 image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={image2} />
                             </div>
@@ -85,16 +85,14 @@ const CaseStudy = ({ data, pageContext }) => {
     const { markdownRemark: post } = data
     const { previous, next } = pageContext
 
-    function slideCaseStudyDown(exit, node) {
-        console.log("aljoshd");
+    console.log(pageContext);
 
+    function slideCaseStudyDown(exit, node) {
         return new TimelineMax()
             .to(node.querySelector('.case-study'), .5, {y: '100%', ease: Power1.easeInOut,})
     }
 
     function fadePageIn(entry, node) {
-        console.log("yeet");
-
         return new TimelineMax()
             .set(node.querySelector('.page-content'), { opacity: 0})
             .to(node.querySelector('.page-content'), .5, { opacity: 1, ease: Power1.easeInOut,})
@@ -166,9 +164,11 @@ const CaseStudy = ({ data, pageContext }) => {
                 client={post.frontmatter.client}
                 title={post.frontmatter.title}
                 nav={
-                    <ul>
+                    <ul className="pagination-nav">
                         {previous && (
-                            <li>
+                            <li 
+                                className="col-3 previous-page"
+                            >
                                 <TransitionLink
                                     to={previous.fields.slug}
                                     rel="prev"
@@ -181,11 +181,22 @@ const CaseStudy = ({ data, pageContext }) => {
                                         trigger: ({ entry, node }) => slideCaseStudyFromRight(entry, node),
                                     }}
                                 >
-                                    ← Previous {previous.frontmatter.title}
+                                    <figure 
+                                        className="nav-image"
+                                        style={{
+                                            backgroundImage: `url(${
+                                                !!previous.frontmatter.featuredimage.childImageSharp ? previous.frontmatter.featuredimage.childImageSharp.fluid.src : previous.frontmatter.featuredimage
+                                            })`,
+                                    }}>
+                                    </figure>
+                                    <div className="section-content nav-content">
+                                        <div className="typography-subhead">Previous</div>
+                                        <div>{previous.frontmatter.title}</div>
+                                    </div>
                                 </TransitionLink>
                             </li>
                         )}
-                        <li>
+                        <li className="col-6 modal-close-nav">
                             <TransitionLink
                                 to="/"
                                 exit={{
@@ -202,11 +213,14 @@ const CaseStudy = ({ data, pageContext }) => {
                                     <div className="modal-close-icon">
                                         <p className="visuallyhidden">Back to home</p>
                                     </div>
+                                    <p>CLOSE</p>
                                 </div>
                             </TransitionLink>
                         </li>
                         {next.frontmatter.templateKey === 'case-study' && (
-                            <li>
+                            <li 
+                                className="col-3 next-page"
+                            >
                                 <TransitionLink
                                     to={next.fields.slug}
                                     rel="next"
@@ -219,7 +233,19 @@ const CaseStudy = ({ data, pageContext }) => {
                                         trigger: ({ entry, node }) => slideCaseStudyFromLeft(entry, node),
                                     }}
                                 >
-                                    Next {next.frontmatter.title} →
+                                    <figure 
+                                        className="nav-image"
+                                        style={{
+                                            backgroundImage: `url(${
+                                                !!next.frontmatter.featuredimage.childImageSharp ? next.frontmatter.featuredimage.childImageSharp.fluid.src : next.frontmatter.featuredimage
+                                            })`,
+                                        }}
+                                    >
+                                    </figure>
+                                    <div className="section-content nav-content">
+                                        <div className="typography-subhead">Next</div>
+                                        <div>{next.frontmatter.title}</div>
+                                    </div>
                                 </TransitionLink>
                             </li>
                         )}

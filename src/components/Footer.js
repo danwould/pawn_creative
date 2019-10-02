@@ -6,9 +6,10 @@ import React from 'react'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
+      <footer className="footer section-content">
         <ul>
-          <li>test</li>
+          <li>BizDev@pawncreative.com</li>
+          <li>1998 Road St. Meaball, OH</li>
         </ul>
       </footer>
     )

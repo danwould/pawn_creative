@@ -33,8 +33,12 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: 'noto_monoregular', sans-serif;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3 {
     font-family: 'IntegralCF-DemiBold', serif;
+  }
+  .title {
+    font-family: 'noto_monoregular', sans-serif;
+    font-weight: normal;
   }
 `;
 

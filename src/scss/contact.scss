@@ -1,3 +1,38 @@
 .section-contact {
-	height: 70rem;
+	.typography-headline {
+		max-width: 25rem;
+	}
+
+	.contact-form {
+		width: 50%;
+		margin-left: 41.66%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.form-element {
+		&:nth-child(3) {
+			padding-right: .25rem;
+
+			.input {
+				padding-right: 1rem;
+			}
+		}
+
+		&:nth-child(4) {
+			order: 5;
+		}
+		
+		&:nth-child(5) {
+			order: 4;
+
+			.input {
+				padding-right: 1rem;
+			}
+		}
+		
+		&:last-child {
+			order: 7;
+		}
+	}
 }

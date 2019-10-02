@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import CaseStudyRoll from '../components/CaseStudyRoll'
+import ContactForm from '../components/Form'
 
 export const IndexPageTemplate = ({
   image,
@@ -42,13 +43,14 @@ export const IndexPageTemplate = ({
           </section>
       </div>
 
-    <section id="work" className="section section-work sticky-container">
+    <section id="work" className="section section-work sticky-container section-padding-top">
         <h2 className="section-content sticky-events typography-headline"><span className="outline-text">/02</span> WORK</h2>
         <CaseStudyRoll />
     </section>
 
-    <section id="contact" className="section section-contact">
+    <section id="contact" className="section section-contact section-padding-top">
         <h2 className="section-content sticky-events typography-headline"><span className="outline-text">/03</span> GET IN TOUCH.</h2>
+        <ContactForm/>
     </section>
   </React.Fragment>
 );
