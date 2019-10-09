@@ -50,6 +50,11 @@ const TemplateWrapper = ({ children }) => {
     <div className="page-content">
       <Helmet>
         <html lang="en" />
+        <link 
+          rel="stylesheet"
+          type="text/css"
+          href="../../fonts.css" 
+        />
 
         <title>{title}</title>
         <meta name="description" content={description} />
