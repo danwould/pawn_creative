@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/CaseStudyLayout'
-import Img from 'gatsby-image'
+//import Img from 'gatsby-image'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import { graphql } from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
@@ -31,8 +31,13 @@ export const CaseStudyTemplate = ({
                     <header className="case-study-header">
                         <h1>{title}</h1>
                         <h2 className="typography-caption">{client}</h2>
-                        <figure className="case-study-featured-img">
-                            <Img fluid={featuredImage} alt={"test"} />
+                        <figure className="case-study-featured-img"
+                                style={{
+                                    backgroundImage: `url(${featuredImage})`,
+                                    backgroundPosition: `top left`,
+                                    backgroundSize: `cover`,
+                                }}
+                        >        
                         </figure>
                     </header>
                     <section className="case-study-content-wrapper">
@@ -133,7 +138,7 @@ const CaseStudy = ({ data, pageContext }) => {
                         />
                     </Helmet>
                 }
-                featuredImage={post.frontmatter.featuredimage.childImageSharp.fluid}
+                featuredImage={post.frontmatter.featuredimage.childImageSharp.fluid.src}
                 tags={post.frontmatter.tags}
                 contentComponent={HTMLContent}
                 main={post.frontmatter.main}
@@ -161,10 +166,8 @@ const CaseStudy = ({ data, pageContext }) => {
                 title={post.frontmatter.title}
                 nav={
                     <ul className="pagination-nav">
+                        <li className="col-3 previous-page">
                         {previous && (
-                            <li 
-                                className="col-3 previous-page"
-                            >
                                 <TransitionLink
                                     to={previous.fields.slug}
                                     rel="prev"
@@ -190,8 +193,8 @@ const CaseStudy = ({ data, pageContext }) => {
                                         <div>{previous.frontmatter.title}</div>
                                     </div>
                                 </TransitionLink>
-                            </li>
                         )}
+                        </li>
                         <li className="col-6 modal-close-nav">
                             <TransitionLink
                                 to="/"
@@ -213,10 +216,8 @@ const CaseStudy = ({ data, pageContext }) => {
                                 </div>
                             </TransitionLink>
                         </li>
+                        <li className="col-3 next-page">
                         {next.frontmatter.templateKey === 'case-study' && (
-                            <li 
-                                className="col-3 next-page"
-                            >
                                 <TransitionLink
                                     to={next.fields.slug}
                                     rel="next"
@@ -243,8 +244,8 @@ const CaseStudy = ({ data, pageContext }) => {
                                         <div>{next.frontmatter.title}</div>
                                     </div>
                                 </TransitionLink>
-                            </li>
                         )}
+                        </li>
                     </ul>
                 }
             />
