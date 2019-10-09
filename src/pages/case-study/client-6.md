@@ -2,7 +2,7 @@
 templateKey: case-study
 client: Client 6
 title: Project Name 6
-featuredimage: /img/pawn_mirror.png
+featuredimage: /img/client-6.png
 order: 6
 description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -11,8 +11,8 @@ description: >-
   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
   eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
   in culpa qui officia deserunt mollit anim id est laborum.
-tilesize: col-10
-pushright: true
+tilesize: col-6
+pushright: false
 tags:
   - Art director
   - Strategist
