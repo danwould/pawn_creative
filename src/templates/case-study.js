@@ -215,7 +215,7 @@ const CaseStudy = ({ data, pageContext }) => {
                             </TransitionLink>
                         </li>
                         <li className="col-3 next-page">
-                        {next.frontmatter.templateKey === 'case-study' && (
+                        {next && (
                                 <TransitionLink
                                     to={next.fields.slug}
                                     rel="next"
