@@ -19,6 +19,7 @@ collections:
       - {label: "Client", name: "client", widget: "string"}
       - {label: "Project Title", name: "title", widget: "string"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Order", name: "order", widget: "number"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Tile Size", name: "tilesize", widget: "select", options: ["col-12", "col-11", "col-10", "col-9", "col-8", "col-7", "col-6", "col-5", "col-4", "col-3", "col-2", "col-1"]}
       - {label: "Push Right", name: "pushright", widget: "boolean", required: false}
