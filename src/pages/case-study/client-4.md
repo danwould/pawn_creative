@@ -3,6 +3,7 @@ templateKey: case-study
 client: Client 4
 title: Project Title 4
 featuredimage: /img/client-4.png
+order: 4
 description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
