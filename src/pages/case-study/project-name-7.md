@@ -1,8 +1,9 @@
 ---
 templateKey: case-study
-client: Project Name 7
-title: Client 7
+client: Client 7
+title: Project Name 7
 featuredimage: /img/client-6.png
+order: 7
 description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
