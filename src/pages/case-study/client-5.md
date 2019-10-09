@@ -2,7 +2,7 @@
 templateKey: case-study
 client: Client 5
 title: Project Name 5
-featuredimage: /img/flavor_wheel.jpg
+featuredimage: /img/pawn_gun.png
 description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
