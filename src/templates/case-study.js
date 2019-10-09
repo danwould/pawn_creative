@@ -89,8 +89,6 @@ const CaseStudy = ({ data, pageContext }) => {
     const { markdownRemark: post } = data
     const { previous, next } = pageContext
 
-    console.log(pageContext);
-
     function slideCaseStudyDown(exit, node) {
         return new TimelineMax()
             .to(node.querySelector('.case-study'), .5, {y: '100%', ease: Power1.easeInOut,})
