@@ -2,7 +2,7 @@
 templateKey: case-study
 client: Client 6
 title: Project Name 6
-featuredimage: /img/pawn_gun.png
+featuredimage: /img/pawn_mirror.png
 order: 6
 description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
