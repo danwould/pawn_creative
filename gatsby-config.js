@@ -18,6 +18,7 @@ module.exports = {
           families: ['IntegralCF-DemiBold', 'noto_monoregular'],
           urls: ['fonts.css'],
         }
+      }
     },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
