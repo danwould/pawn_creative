@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
     url('../../fonts/NotoMono-Regular-webfont.svg#noto_monoregular') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: fallback;
   }
 
   @font-face {
@@ -26,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
          url('../../fonts/integral-cf-demi-bold.svg#youworkforthem') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: fallback;
   }
   body, .typography-caption {
     margin: 0;

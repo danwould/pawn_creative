@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
-//import Layout from '../components/CaseStudyLayout'
+import Layout from '../components/CaseStudyLayout'
 //import Img from 'gatsby-image'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import { graphql } from 'gatsby'
@@ -124,6 +124,7 @@ const CaseStudy = ({ data, pageContext }) => {
 
 
     return (
+        <Layout>
             <CaseStudyTemplate
                 content={post.html}
                 helmet={
@@ -246,6 +247,7 @@ const CaseStudy = ({ data, pageContext }) => {
                     </ul>
                 }
             />
+        </Layout>
     )
 }
 
