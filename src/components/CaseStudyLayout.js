@@ -1,42 +1,42 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { createGlobalStyle } from "styled-components";
+//import { createGlobalStyle } from "styled-components";
 import '../scss/main.scss'
 import useSiteMetadata from './SiteMetadata'
 
-const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'noto_monoregular';
-    src: url('../../fonts/NotoMono-Regular-webfont.woff') format('woff');
-    src: url('../../fonts/NotoMono-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../../fonts/NotoMono-Regular-webfont.eot'),
-    url('../../fonts/NotoMono-Regular-webfont.ttf') format('truetype'),
-    url('../../fonts/NotoMono-Regular-webfont.svg#noto_monoregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: fallback;
-  }
+// const GlobalStyle = createGlobalStyle`
+//   @font-face {
+//     font-family: 'noto_monoregular';
+//     src: url('../../fonts/NotoMono-Regular-webfont.woff') format('woff');
+//     src: url('../../fonts/NotoMono-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+//     url('../../fonts/NotoMono-Regular-webfont.eot'),
+//     url('../../fonts/NotoMono-Regular-webfont.ttf') format('truetype'),
+//     url('../../fonts/NotoMono-Regular-webfont.svg#noto_monoregular') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: fallback;
+//   }
 
-  @font-face {
-    font-family: 'IntegralCF-DemiBold';
-    src: url('../../fonts/integral-cf-demi-bold.woff2') format('woff2');
-    src: url('../../fonts/integral-cf-demi-bold.eot?#iefix') format('embedded-opentype'),
-           url('../../fonts/integral-cf-demi-bold.eot'),
-         url('../../fonts/integral-cf-demi-bold.woff') format('woff'),
-         url('../../fonts/integral-cf-demi-bold.ttf') format('truetype'),
-         url('../../fonts/integral-cf-demi-bold.svg#youworkforthem') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: fallback;
-  }
-  body, .typography-caption {
-    margin: 0;
-    font-family: 'noto_monoregular', sans-serif;
-  }
-  h1, h2, h3 {
-    font-family: 'IntegralCF-DemiBold', serif;
-  }
-`;
+//   @font-face {
+//     font-family: 'IntegralCF-DemiBold';
+//     src: url('../../fonts/integral-cf-demi-bold.woff2') format('woff2');
+//     src: url('../../fonts/integral-cf-demi-bold.eot?#iefix') format('embedded-opentype'),
+//            url('../../fonts/integral-cf-demi-bold.eot'),
+//          url('../../fonts/integral-cf-demi-bold.woff') format('woff'),
+//          url('../../fonts/integral-cf-demi-bold.ttf') format('truetype'),
+//          url('../../fonts/integral-cf-demi-bold.svg#youworkforthem') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: fallback;
+//   }
+//   body, .typography-caption {
+//     margin: 0;
+//     font-family: 'noto_monoregular', sans-serif;
+//   }
+//   h1, h2, h3 {
+//     font-family: 'IntegralCF-DemiBold', serif;
+//   }
+// `;
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -50,6 +50,12 @@ const TemplateWrapper = ({ children }) => {
     <div className="page-content">
       <Helmet>
         <html lang="en" />
+        <link 
+          rel="stylesheet"
+          type="text/css"
+          href="../../fonts.css" 
+        />
+
         <title>{title}</title>
         <meta name="description" content={description} />
 
@@ -81,7 +87,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
-      <GlobalStyle />
+      
       <main>{children}</main>
     </div>
   )

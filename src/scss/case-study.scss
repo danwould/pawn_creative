@@ -7,6 +7,15 @@
 .case-study {
   height: 100%;
 
+  .typography-caption {
+    margin: 0;
+    font-family: 'noto_monoregular', sans-serif;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'IntegralCF-DemiBold', serif;
+  }
+
   &-header {
     display: flex;
     flex-wrap: wrap;
