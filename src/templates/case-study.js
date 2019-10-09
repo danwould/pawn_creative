@@ -165,7 +165,7 @@ const CaseStudy = ({ data, pageContext }) => {
                 nav={
                     <ul className="pagination-nav">
                         <li className="col-3 previous-page">
-                        {previous && (
+                        {previous.frontmatter.templateKey === 'case-study' && (
                                 <TransitionLink
                                     to={previous.fields.slug}
                                     rel="prev"
@@ -182,7 +182,7 @@ const CaseStudy = ({ data, pageContext }) => {
                                         className="nav-image"
                                         style={{
                                             backgroundImage: `url(${
-                                                !!previous.frontmatter.featuredimage.childImageSharp ? previous.frontmatter.featuredimage.childImageSharp.fluid.src : previous.frontmatter.featuredimage
+                                                previous.frontmatter.featuredimage.childImageSharp.fluid.src
                                             })`,
                                     }}>
                                     </figure>
