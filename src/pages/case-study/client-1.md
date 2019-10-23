@@ -12,18 +12,21 @@ tags:
   - Strategist
   - Director
 main:
-  image1:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/natgeo_05.jpg
-  image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/hand.jpg
-  image3:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/mirage.jpg
-  image4:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/blob.jpg
+  row1:
+    rowLayout: row-layout-1
+    image1: /img/natgeo_05.jpg
+  row2:
+    rowLayout: row-layout-2
+    image1: /img/hand.jpg
+    image2: /img/mirage.jpg
+  row3:
+    rowLayout: row-layout-1
+    image1: /img/blob.jpg   
+  row4:
+    rowLayout: row-layout-3
+    image1: /img/hand.jpg
+    image2: /img/mirage.jpg
+    image3: /img/hand.jpg     
 ---
 I was all of history's great robot actors - Acting Unit 0.8; Thespomat; David Duchovny! I had more, but you go ahead. I'm a thing. I decline the title of Iron Cook and accept the lesser title of Zinc Saucier, which I just made up. Uhh… also, comes with double prize money.
 

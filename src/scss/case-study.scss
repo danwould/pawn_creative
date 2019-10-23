@@ -79,17 +79,36 @@
 
   .image-grid-tile {
     margin-bottom: 1rem;
-    max-height: 40rem;
     overflow: hidden;
+  }
 
-    &:nth-child(2) {
-      padding-right: .5rem;
-    }
-
-    &:nth-child(3) {
-      padding-left: .5rem;
+  .row-layout-1 {
+    .image-grid-tile {
+      width: 100%;
     }
   }
+
+  .row-layout-2 {
+    .image-grid-tile {
+      width: 50%;
+
+      &:nth-child(1) {
+        padding-right: .5rem;
+      }
+
+      &:nth-child(2) {
+        padding-left: .5rem;
+      }
+    }
+  }
+
+  .row-layout-3 {
+    justify-content: space-between;
+
+    .image-grid-tile {
+      width: calc(33.33% - .7rem);
+    }
+  }  
 
   .modal-close-container {
     position: absolute;

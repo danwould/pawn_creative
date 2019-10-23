@@ -49,20 +49,208 @@ export const CaseStudyTemplate = ({
                             </ul>
                         ) : null}
                         <PostContent content={content} className="col-9 case-study-content"/>
-                        <div className="image-grid-container col-12">
-                            <div className="col-12 image-grid-tile">
-                                <PreviewCompatibleImage imageInfo={main.image1} />
+                        <div className={`image-grid-container col-12 ${main.row1.rowLayout}`}>
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row1.image1} />
                             </div>
-                            <div className="col-6 image-grid-tile">
-                                <PreviewCompatibleImage imageInfo={main.image2} />
+                            {main.row1.image2 && (
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row1.image2} />
                             </div>
-                            <div className="col-6 image-grid-tile">
-                               <PreviewCompatibleImage imageInfo={main.image3} />
+                            )}
+                            {main.row1.image3 && (
+                            <div className="image-grid-tile">
+                               <PreviewCompatibleImage imageInfo={main.row1.image3} />
                             </div>
-                            <div className="col-12 image-grid-tile">
-                                <PreviewCompatibleImage imageInfo={main.image4} />
+                            )}
+                        </div> 
+                        {main.row2 && (
+                        <div className={`image-grid-container col-12 ${main.row2.rowLayout}`}>
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row2.image1} />
                             </div>
+                            {main.row2.image2 && (
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row2.image2} />
+                            </div>
+                            )}
+                            {main.row2.image3 && (
+                            <div className="image-grid-tile">
+                               <PreviewCompatibleImage imageInfo={main.row2.image3} />
+                            </div>
+                            )}
                         </div>
+                        )}
+                        {main.row3 && (
+                        <div className={`image-grid-container col-12 ${main.row3.rowLayout}`}>
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row3.image1} />
+                            </div>
+                            {main.row3.image2 && (
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row3.image2} />
+                            </div>
+                            )}
+                            {main.row3.image3 && (
+                            <div className="image-grid-tile">
+                               <PreviewCompatibleImage imageInfo={main.row3.image3} />
+                            </div>
+                            )}
+                        </div>
+                        )}
+                        {main.row4 && (
+                        <div className={`image-grid-container col-12 ${main.row4.rowLayout}`}>
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row4.image1} />
+                            </div>
+                            {main.row4.image2 && (
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row4.image2} />
+                            </div>
+                            )}
+                            {main.row4.image3 && (
+                            <div className="image-grid-tile">
+                               <PreviewCompatibleImage imageInfo={main.row4.image3} />
+                            </div>
+                            )}
+                        </div>
+                        )}
+                        {main.row5 && (
+                        <div className={`image-grid-container col-12 ${main.row5.rowLayout}`}>
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row5.image1} />
+                            </div>
+                            {main.row5.image2 && (
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row5.image2} />
+                            </div>
+                            )}
+                            {main.row5.image3 && (
+                            <div className="image-grid-tile">
+                               <PreviewCompatibleImage imageInfo={main.row5.image3} />
+                            </div>
+                            )}
+                        </div>
+                        )}
+                        {main.row6 && (
+                        <div className={`image-grid-container col-12 ${main.row6.rowLayout}`}>
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row6.image1} />
+                            </div>
+                            {main.row6.image2 && (
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row6.image2} />
+                            </div>
+                            )}
+                            {main.row6.image3 && (
+                            <div className="image-grid-tile">
+                               <PreviewCompatibleImage imageInfo={main.row6.image3} />
+                            </div>
+                            )}
+                        </div>
+                        )}
+                        {main.row7 && (
+                        <div className={`image-grid-container col-12 ${main.row7.rowLayout}`}>
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row7.image1} />
+                            </div>
+                            {main.row7.image2 && (
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row7.image2} />
+                            </div>
+                            )}
+                            {main.row7.image3 && (
+                            <div className="image-grid-tile">
+                               <PreviewCompatibleImage imageInfo={main.row7.image3} />
+                            </div>
+                            )}
+                        </div>
+                        )}
+                        {main.row8 && (
+                        <div className={`image-grid-container col-12 ${main.row8.rowLayout}`}>
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row8.image1} />
+                            </div>
+                            {main.row8.image2 && (
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row8.image2} />
+                            </div>
+                            )}
+                            {main.row8.image3 && (
+                            <div className="image-grid-tile">
+                               <PreviewCompatibleImage imageInfo={main.row8.image3} />
+                            </div>
+                            )}
+                        </div>
+                        )}
+                        {main.row9 && (
+                        <div className={`image-grid-container col-12 ${main.row9.rowLayout}`}>
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row9.image1} />
+                            </div>
+                            {main.row9.image2 && (
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row9.image2} />
+                            </div>
+                            )}
+                            {main.row9.image3 && (
+                            <div className="image-grid-tile">
+                               <PreviewCompatibleImage imageInfo={main.row9.image3} />
+                            </div>
+                            )}
+                        </div>
+                        )}
+                        {main.row10 && (
+                        <div className={`image-grid-container col-12 ${main.row10.rowLayout}`}>
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row10.image1} />
+                            </div>
+                            {main.row10.image2 && (
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row10.image2} />
+                            </div>
+                            )}
+                            {main.row10.image3 && (
+                            <div className="image-grid-tile">
+                               <PreviewCompatibleImage imageInfo={main.row10.image3} />
+                            </div>
+                            )}
+                        </div>
+                        )}
+                        {main.row11 && (
+                        <div className={`image-grid-container col-12 ${main.row11.rowLayout}`}>
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row11.image1} />
+                            </div>
+                            {main.row11.image8 && (
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row11.image2} />
+                            </div>
+                            )}
+                            {main.row11.image8 && (
+                            <div className="image-grid-tile">
+                               <PreviewCompatibleImage imageInfo={main.row11.image3} />
+                            </div>
+                            )}
+                        </div>
+                        )}
+                        {main.row12 && (
+                        <div className={`image-grid-container col-12 ${main.row12.rowLayout}`}>
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row12.image1} />
+                            </div>
+                            {main.row12.image9 && (
+                            <div className="image-grid-tile">
+                                <PreviewCompatibleImage imageInfo={main.row12.image2} />
+                            </div>
+                            )}
+                            {main.row12.image9 && (
+                            <div className="image-grid-tile">
+                               <PreviewCompatibleImage imageInfo={main.row12.image3} />
+                            </div>
+                            )}
+                        </div>
+                        )}                                                                                     
                     </section>
                     {nav}
                 </article>
@@ -78,10 +266,18 @@ CaseStudyTemplate.propTypes = {
     client: PropTypes.string,
     title: PropTypes.string,
     main: PropTypes.shape({
-        image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-        image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-        image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-        image4: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        row1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        row2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        row3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        row4: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        row5: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        row6: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        row7: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        row8: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        row9: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        row10: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        row11: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        row12: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),                
     }),
 }
 
@@ -165,7 +361,7 @@ const CaseStudy = ({ data, pageContext }) => {
                 nav={
                     <ul className="pagination-nav">
                         <li className="col-3 previous-page">
-                        {previous.frontmatter.templateKey === 'case-study' && (
+                            {previous.frontmatter.templateKey === 'case-study' && (
                                 <TransitionLink
                                     to={previous.fields.slug}
                                     rel="prev"
@@ -191,7 +387,7 @@ const CaseStudy = ({ data, pageContext }) => {
                                         <div>{previous.frontmatter.title}</div>
                                     </div>
                                 </TransitionLink>
-                        )}
+                            )}
                         </li>
                         <li className="col-6 modal-close-nav">
                             <TransitionLink
@@ -215,7 +411,7 @@ const CaseStudy = ({ data, pageContext }) => {
                             </TransitionLink>
                         </li>
                         <li className="col-3 next-page">
-                        {next && (
+                            {next && (
                                 <TransitionLink
                                     to={next.fields.slug}
                                     rel="next"
@@ -242,7 +438,7 @@ const CaseStudy = ({ data, pageContext }) => {
                                         <div>{next.frontmatter.title}</div>
                                     </div>
                                 </TransitionLink>
-                        )}
+                            )}
                         </li>
                     </ul>
                 }
@@ -277,9 +473,23 @@ export const pageQuery = graphql`
           }
         }
         main {
-          image1 {
-            alt
-            image {
+          row1 {
+            rowLayout
+            image1 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image2 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image3 {
               childImageSharp {
                 fluid(maxWidth: 526, quality: 92) {
                   ...GatsbyImageSharpFluid
@@ -287,9 +497,23 @@ export const pageQuery = graphql`
               }
             }
           }
-          image2 {
-            alt
-            image {
+          row2 {
+            rowLayout
+            image1 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image2 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image3 {
               childImageSharp {
                 fluid(maxWidth: 526, quality: 92) {
                   ...GatsbyImageSharpFluid
@@ -297,26 +521,246 @@ export const pageQuery = graphql`
               }
             }
           }
-          image3 {
-            alt
-            image {
+          row3 {
+            rowLayout
+            image1 {
               childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image2 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image3 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
           }
-          image4 {
-            alt
-            image {
+          row4 {
+            rowLayout
+            image1 {
               childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image2 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image3 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
           }
+          row5 {
+            rowLayout
+            image1 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image2 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image3 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          row6 {
+            rowLayout
+            image1 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image2 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image3 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          row7 {
+            rowLayout
+            image1 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image2 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image3 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          row8 {
+            rowLayout
+            image1 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image2 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image3 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          row9 {
+            rowLayout
+            image1 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image2 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image3 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          row10 {
+            rowLayout
+            image1 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image2 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image3 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          row11 {
+            rowLayout
+            image1 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image2 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image3 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          row12 {
+            rowLayout
+            image1 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image2 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            image3 {
+              childImageSharp {
+                fluid(maxWidth: 526, quality: 92) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }                                             
         }
       }
     }
