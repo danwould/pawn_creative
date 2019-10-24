@@ -1,4 +1,5 @@
 ---
+slug: project-name-1
 templateKey: case-study
 client: Client 1
 title: Project Title
