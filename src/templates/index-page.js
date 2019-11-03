@@ -29,6 +29,9 @@ export const IndexPageTemplate = ({
                   <span className="underscore"></span>
                   <span className="headline-content">{title}</span>
               </h1>
+              <div className="section-social">
+                <a href="https://www.instagram.com/pawncreative/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+              </div>
           </header>
 
           <section className="section section-intro section-content">
