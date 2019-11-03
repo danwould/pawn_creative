@@ -22,13 +22,28 @@ main:
     image1: /img/hand.jpg
     image2: /img/mirage.jpg
   row3:
-    rowLayout: row-layout-1
-    image1: /img/blob.jpg   
-  row4:
     rowLayout: row-layout-3
     image1: /img/hand.jpg
     image2: /img/mirage.jpg
-    image3: /img/hand.jpg     
+    image3: /img/hand.jpg
+  row4:
+    rowLayout: row-layout-4
+    image1: /img/mirage.jpg
+    image2: /img/01_AA_YTW_KeyArtMural2_V.jpg
+  row5:
+    rowLayout: row-layout-5
+    image1: /img/01_AA_YTW_KeyArtMural2_V.jpg
+    image2: /img/hand.jpg
+  row6:
+    rowLayout: row-layout-6
+    image1: /img/hand.jpg
+    image2: /img/01_AA_YTW_KeyArtMural2_V.jpg
+    image3: /img/hand.jpg
+  row7:
+    rowLayout: row-layout-7
+    image1: /img/01_AA_YTW_KeyArtMural2_V.jpg
+    image2: /img/hand.jpg
+    image3: /img/hand.jpg              
 ---
 I was all of history's great robot actors - Acting Unit 0.8; Thespomat; David Duchovny! I had more, but you go ahead. I'm a thing. I decline the title of Iron Cook and accept the lesser title of Zinc Saucier, which I just made up. Uhh… also, comes with double prize money.
 

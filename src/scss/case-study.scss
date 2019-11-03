@@ -108,7 +108,73 @@
     .image-grid-tile {
       width: calc(33.33% - .7rem);
     }
+  }
+
+  .row-layout-4 {
+    .image-grid-tile {
+
+      &:nth-child(1) {
+        width: 66.66%;
+        padding-right: .5rem;
+      }
+
+      &:nth-child(2) {
+        width: 33.33%;
+        padding-left: .5rem;
+      }
+    }
   }  
+
+  .row-layout-5 {
+    .image-grid-tile {
+
+      &:nth-child(1) {
+        width: 33.33%;
+        padding-right: .5rem;
+      }
+
+      &:nth-child(2) {
+        width: 66.66%;        
+        padding-left: .5rem;
+      }
+    }
+  }
+
+  .row-layout-6 {
+    display: block;
+
+    .image-grid-tile {
+      width: 50%;
+
+      &:nth-child(odd) {
+        padding-right: .5rem;
+        float: left;
+      }
+
+      &:nth-child(even) {
+        padding-left: .5rem;
+        float: right;
+      }
+    }
+  }
+
+   .row-layout-7 {
+    display: block;
+
+    .image-grid-tile {
+      width: 50%;
+
+      &:nth-child(1) {
+        padding-right: .5rem;
+        float: left;
+      }
+
+      &:nth-child(2), &:nth-child(3) {
+        padding-left: .5rem;
+        float: right;
+      }
+    }
+  } 
 
   .modal-close-container {
     position: absolute;
