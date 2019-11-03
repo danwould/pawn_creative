@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
-//import PreviewCompatibleImage from './PreviewCompatibleImage'
 import TransitionLink from 'gatsby-plugin-transition-link'
 import {TimelineMax, Power1} from 'gsap'
 import isSticky from '../helpers/isSticky'
@@ -71,7 +70,7 @@ class CaseStudyRoll extends React.Component {
                       <figure className="case-study-img"
                               style={{
                                 backgroundImage: `url(${
-                                    !!post.frontmatter.featuredimage.childImageSharp ? post.frontmatter.featuredimage.childImageSharp.fluid.src : post.frontmatter.featuredimage
+                                    !!post.frontmatter.thumbnailimage.childImageSharp ? post.frontmatter.thumbnailimage.childImageSharp.fluid.src : post.frontmatter.thumbnailimage
                                     })`,
                                 backgroundPosition: `top left`,
                                 backgroundSize: `cover`,
@@ -121,7 +120,7 @@ export default () => (
                 tilesize
                 pushright
                 order
-                featuredimage {
+                thumbnailimage {
                   childImageSharp {
                     fluid(maxWidth: 2048, quality: 100) {
                       ...GatsbyImageSharpFluid

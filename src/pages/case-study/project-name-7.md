@@ -2,6 +2,7 @@
 templateKey: case-study
 client: Client 7
 title: Project Name 7
+thumbnailimage: /img/pawn_mirror.png
 featuredimage: /img/pawn_mirror.png
 order: 6
 description: >-

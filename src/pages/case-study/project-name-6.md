@@ -2,6 +2,7 @@
 templateKey: case-study
 client: Client 6
 title: Project Name 6
+thumbnailimage: /img/client-6.png
 featuredimage: /img/client-6.png
 order: 6
 description: >-

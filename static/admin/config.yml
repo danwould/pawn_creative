@@ -18,8 +18,8 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "case-study"}
       - {label: "Project Title", name: "title", widget: "string"}
       - {label: "Client", name: "client", widget: "string"}
+      - {label: "Thumbnail Image", name: "thumbnailimage", widget: image}      
       - {label: "Featured Image", name: "featuredimage", widget: image}
-      - {label: "Thumbnail Image", name: "thumbimage", widget: image}
       - {label: "Order", name: "order", widget: "number"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Tile Size", name: "tilesize", widget: "select", options: ["col-12", "col-11", "col-10", "col-9", "col-8", "col-7", "col-6", "col-5", "col-4", "col-3", "col-2", "col-1"]}

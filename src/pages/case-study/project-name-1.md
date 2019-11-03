@@ -3,6 +3,7 @@ slug: project-name-1
 templateKey: case-study
 client: Client 1
 title: Project Title
+thumbnailimage: /img/client-1.jpg
 featuredimage: /img/client-1.jpg
 order: 1
 description: Intro blurb about client for hover state
