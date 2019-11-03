@@ -67,7 +67,7 @@ class Form extends React.Component {
   render() {
     return (
         <form 
-          name="Contact Form" 
+          name="PawnCreative.com - Contact Form" 
           method="POST"
           className="col-6 contact-form" 
           data-netlify="true" 
