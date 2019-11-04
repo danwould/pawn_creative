@@ -19,6 +19,7 @@ main:
     image2: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
     video1: ''
   row2:
+    image1: ''
     rowLayout: row-layout-1
     video1: 'https://player.vimeo.com/video/370802071'
 ---
