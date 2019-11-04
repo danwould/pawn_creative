@@ -51,9 +51,11 @@ export const CaseStudyTemplate = ({
                         ) : null}
                         <PostContent content={content} className="col-9 case-study-content"/>
                         <div className={`image-grid-container col-12 ${main.row1.rowLayout}`}>
+                            {main.row1.image1 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row1.image1} />
                             </div>
+                            )}
                             {main.row1.image2 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row1.image2} />
@@ -65,18 +67,18 @@ export const CaseStudyTemplate = ({
                             </div>
                             )}
                             {main.row1.video1 && (        
-                                <div className="image-grid-tile">    
-                                    <Video
-                                      videoSrcURL={main.row1.video1}
-                                    />
-                                </div>
+                            <div className="image-grid-tile">    
+                                <Video videoSrcURL={main.row2.video1} />
+                            </div>
                             )}
                         </div> 
                         {main.row2 && (
                         <div className={`image-grid-container col-12 ${main.row2.rowLayout}`}>
+                            {main.row2.image1 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row2.image1} />
                             </div>
+                            )}
                             {main.row2.image2 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row2.image2} />
@@ -88,19 +90,19 @@ export const CaseStudyTemplate = ({
                             </div>
                             )}
                             {main.row2.video1 && (        
-                                <div className="image-grid-tile">    
-                                    <Video
-                                      videoSrcURL={main.row2.video1}
-                                    />
-                                </div>
+                            <div className="image-grid-tile">    
+                                <Video videoSrcURL={main.row2.video1} />
+                            </div>
                             )}
                         </div>
                         )}
                         {main.row3 && (
                         <div className={`image-grid-container col-12 ${main.row3.rowLayout}`}>
+                            {main.row3.image1 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row3.image1} />
                             </div>
+                            )}
                             {main.row3.image2 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row3.image2} />
@@ -111,13 +113,20 @@ export const CaseStudyTemplate = ({
                                <PreviewCompatibleImage imageInfo={main.row3.image3} />
                             </div>
                             )}
+                            {main.row3.video1 && (        
+                            <div className="image-grid-tile">    
+                                <Video videoSrcURL={main.row2.video1} />
+                            </div>
+                            )}                            
                         </div>
                         )}
                         {main.row4 && (
                         <div className={`image-grid-container col-12 ${main.row4.rowLayout}`}>
+                            {main.row4.image1 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row4.image1} />
                             </div>
+                            )}
                             {main.row4.image2 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row4.image2} />
@@ -128,13 +137,20 @@ export const CaseStudyTemplate = ({
                                <PreviewCompatibleImage imageInfo={main.row4.image3} />
                             </div>
                             )}
+                            {main.row4.video1 && (        
+                            <div className="image-grid-tile">    
+                                <Video videoSrcURL={main.row2.video1} />
+                            </div>
+                            )}                            
                         </div>
                         )}
                         {main.row5 && (
                         <div className={`image-grid-container col-12 ${main.row5.rowLayout}`}>
+                            {main.row5.image1 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row5.image1} />
                             </div>
+                            )}
                             {main.row5.image2 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row5.image2} />
@@ -145,13 +161,20 @@ export const CaseStudyTemplate = ({
                                <PreviewCompatibleImage imageInfo={main.row5.image3} />
                             </div>
                             )}
+                            {main.row5.video1 && (        
+                            <div className="image-grid-tile">    
+                                <Video videoSrcURL={main.row2.video1} />
+                            </div>
+                            )}                            
                         </div>
                         )}
                         {main.row6 && (
                         <div className={`image-grid-container col-12 ${main.row6.rowLayout}`}>
+                            {main.row6.image1 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row6.image1} />
                             </div>
+                            )}
                             {main.row6.image2 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row6.image2} />
@@ -162,13 +185,20 @@ export const CaseStudyTemplate = ({
                                <PreviewCompatibleImage imageInfo={main.row6.image3} />
                             </div>
                             )}
+                            {main.row6.video1 && (        
+                            <div className="image-grid-tile">    
+                                <Video videoSrcURL={main.row2.video1} />
+                            </div>
+                            )}                            
                         </div>
                         )}
                         {main.row7 && (
                         <div className={`image-grid-container col-12 ${main.row7.rowLayout}`}>
+                            {main.row7.image1 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row7.image1} />
                             </div>
+                            )}
                             {main.row7.image2 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row7.image2} />
@@ -179,13 +209,20 @@ export const CaseStudyTemplate = ({
                                <PreviewCompatibleImage imageInfo={main.row7.image3} />
                             </div>
                             )}
+                            {main.row7.video1 && (        
+                            <div className="image-grid-tile">    
+                                <Video videoSrcURL={main.row2.video1} />
+                            </div>
+                            )}                            
                         </div>
                         )}
                         {main.row8 && (
                         <div className={`image-grid-container col-12 ${main.row8.rowLayout}`}>
+                            {main.row8.image1 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row8.image1} />
                             </div>
+                            )}
                             {main.row8.image2 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row8.image2} />
@@ -196,13 +233,20 @@ export const CaseStudyTemplate = ({
                                <PreviewCompatibleImage imageInfo={main.row8.image3} />
                             </div>
                             )}
+                            {main.row8.video1 && (        
+                            <div className="image-grid-tile">    
+                                <Video videoSrcURL={main.row2.video1} />
+                            </div>
+                            )}                            
                         </div>
                         )}
                         {main.row9 && (
                         <div className={`image-grid-container col-12 ${main.row9.rowLayout}`}>
+                            {main.row9.image1 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row9.image1} />
                             </div>
+                            )}
                             {main.row9.image2 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row9.image2} />
@@ -213,13 +257,20 @@ export const CaseStudyTemplate = ({
                                <PreviewCompatibleImage imageInfo={main.row9.image3} />
                             </div>
                             )}
+                            {main.row9.video1 && (        
+                            <div className="image-grid-tile">    
+                                <Video videoSrcURL={main.row2.video1} />
+                            </div>
+                            )}                            
                         </div>
                         )}
                         {main.row10 && (
                         <div className={`image-grid-container col-12 ${main.row10.rowLayout}`}>
+                            {main.row10.image1 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row10.image1} />
                             </div>
+                            )}
                             {main.row10.image2 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row10.image2} />
@@ -230,40 +281,59 @@ export const CaseStudyTemplate = ({
                                <PreviewCompatibleImage imageInfo={main.row10.image3} />
                             </div>
                             )}
+                            {main.row10.video1 && (        
+                            <div className="image-grid-tile">    
+                                <Video videoSrcURL={main.row2.video1} />
+                            </div>
+                            )}                            
                         </div>
                         )}
                         {main.row11 && (
                         <div className={`image-grid-container col-12 ${main.row11.rowLayout}`}>
+                            {main.row11.image1 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row11.image1} />
                             </div>
-                            {main.row11.image8 && (
+                            )}
+                            {main.row11.image2 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row11.image2} />
                             </div>
                             )}
-                            {main.row11.image8 && (
+                            {main.row11.image3 && (
                             <div className="image-grid-tile">
                                <PreviewCompatibleImage imageInfo={main.row11.image3} />
                             </div>
                             )}
+                            {main.row11.video1 && (        
+                            <div className="image-grid-tile">    
+                                <Video videoSrcURL={main.row2.video1} />
+                            </div>
+                            )}                            
                         </div>
                         )}
                         {main.row12 && (
                         <div className={`image-grid-container col-12 ${main.row12.rowLayout}`}>
+                            {main.row12.image1 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row12.image1} />
                             </div>
-                            {main.row12.image9 && (
+                            )}
+                            {main.row12.image2 && (
                             <div className="image-grid-tile">
                                 <PreviewCompatibleImage imageInfo={main.row12.image2} />
                             </div>
                             )}
-                            {main.row12.image9 && (
+                            {main.row12.image3 && (
                             <div className="image-grid-tile">
                                <PreviewCompatibleImage imageInfo={main.row12.image3} />
                             </div>
                             )}
+                            {main.row12.video1 && (        
+                            <div className="image-grid-tile">    
+                                <Video videoSrcURL={main.row2.video1} />
+                            </div>
+                            )}                            
                         </div>
                         )}                                                                                     
                     </section>
@@ -496,6 +566,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image2 {
               childImageSharp {
@@ -503,6 +574,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image3 {
               childImageSharp {
@@ -510,17 +582,19 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             video1
           }
           row2 {
             rowLayout
             image1 {
-              childImageSharp {
+               childImageSharp {
                 fluid(maxWidth: 526, quality: 92) {
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image2 {
               childImageSharp {
@@ -528,6 +602,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image3 {
               childImageSharp {
@@ -535,6 +610,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             video1  
           }
@@ -546,6 +622,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image2 {
               childImageSharp {
@@ -553,6 +630,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image3 {
               childImageSharp {
@@ -560,7 +638,9 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
+            video1
           }
           row4 {
             rowLayout
@@ -570,6 +650,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image2 {
               childImageSharp {
@@ -577,6 +658,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image3 {
               childImageSharp {
@@ -584,7 +666,9 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
+            video1
           }
           row5 {
             rowLayout
@@ -594,6 +678,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image2 {
               childImageSharp {
@@ -601,6 +686,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image3 {
               childImageSharp {
@@ -608,7 +694,9 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
+            video1
           }
           row6 {
             rowLayout
@@ -618,6 +706,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image2 {
               childImageSharp {
@@ -625,6 +714,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image3 {
               childImageSharp {
@@ -632,7 +722,9 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
+            video1
           }
           row7 {
             rowLayout
@@ -642,6 +734,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image2 {
               childImageSharp {
@@ -649,6 +742,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image3 {
               childImageSharp {
@@ -656,7 +750,9 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
+            video1
           }
           row8 {
             rowLayout
@@ -666,6 +762,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image2 {
               childImageSharp {
@@ -673,6 +770,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image3 {
               childImageSharp {
@@ -680,7 +778,9 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
+            video1
           }
           row9 {
             rowLayout
@@ -690,6 +790,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image2 {
               childImageSharp {
@@ -697,6 +798,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image3 {
               childImageSharp {
@@ -704,7 +806,9 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
+            video1
           }
           row10 {
             rowLayout
@@ -714,6 +818,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image2 {
               childImageSharp {
@@ -721,6 +826,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image3 {
               childImageSharp {
@@ -728,7 +834,9 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
+            video1
           }
           row11 {
             rowLayout
@@ -738,6 +846,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image2 {
               childImageSharp {
@@ -745,6 +854,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image3 {
               childImageSharp {
@@ -752,7 +862,9 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
+            video1
           }
           row12 {
             rowLayout
@@ -762,6 +874,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image2 {
               childImageSharp {
@@ -769,6 +882,7 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
             image3 {
               childImageSharp {
@@ -776,7 +890,9 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+              publicURL
             }
+            video1
           }                                             
         }
       }

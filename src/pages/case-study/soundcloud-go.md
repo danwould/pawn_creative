@@ -15,12 +15,11 @@ tags:
 main:
   row1:
     rowLayout: row-layout-2
-    image1: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
+    image1: /img/02_AA_SoundCloudGo_Gif1.gif
     image2: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
     video1: ''
   row2:
     rowLayout: row-layout-1
-    image1: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
     video1: 'https://player.vimeo.com/video/370802071'
 ---
 
