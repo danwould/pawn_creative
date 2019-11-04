@@ -2,7 +2,8 @@
 templateKey: case-study
 client: Client 7
 title: Project Name 7
-featuredimage: /img/client-6.png
+thumbnailimage: /img/pawn_mirror.png
+featuredimage: /img/pawn_mirror.png
 order: 7
 description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -14,18 +15,12 @@ tags:
   - Strategist
   - Director
 main:
-  image1:
-    alt: Image 1
-    image: /img/natgeo_05.jpg
-  image2:
-    alt: Image 2
-    image: /img/hand.jpg
-  image3:
-    alt: Image 3
-    image: /img/mirage.jpg
-  image4:
-    alt: Image 4
-    image: /img/blob.jpg
+  row1:
+    rowLayout: row-layout-1
+    image1: /img/natgeo_05.jpg
+    image2:
+    image3:    
+    video1: ''
 ---
 I was all of history's great robot actors - Acting Unit 0.8; Thespomat; David Duchovny! I had more, but you go ahead. I'm a thing. I decline the title of Iron Cook and accept the lesser title of Zinc Saucier, which I just made up. Uhh… also, comes with double prize money.
 
