@@ -67,7 +67,7 @@ export const CaseStudyTemplate = ({
                             {main.row1.video1 && (        
                                 <div className="image-grid-tile">    
                                     <Video
-                                      videoSrcURL={main.row1.video1.videoSourceURL}
+                                      videoSrcURL={main.row1.video1}
                                     />
                                 </div>
                             )}
@@ -86,6 +86,13 @@ export const CaseStudyTemplate = ({
                             <div className="image-grid-tile">
                                <PreviewCompatibleImage imageInfo={main.row2.image3} />
                             </div>
+                            )}
+                            {main.row2.video1 && (        
+                                <div className="image-grid-tile">    
+                                    <Video
+                                      videoSrcURL={main.row2.video1}
+                                    />
+                                </div>
                             )}
                         </div>
                         )}
@@ -504,9 +511,7 @@ export const pageQuery = graphql`
                 }
               }
             }
-            video1 {
-                videoSourceURL
-            }
+            video1
           }
           row2 {
             rowLayout
@@ -531,9 +536,7 @@ export const pageQuery = graphql`
                 }
               }
             }
-            video1 {
-                videoSourceURL
-            }            
+            video1  
           }
           row3 {
             rowLayout
