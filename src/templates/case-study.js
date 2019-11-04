@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/CaseStudyLayout'
+import Video from '../components/Video'
 //import Img from 'gatsby-image'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import { graphql } from 'gatsby'
@@ -62,6 +63,13 @@ export const CaseStudyTemplate = ({
                             <div className="image-grid-tile">
                                <PreviewCompatibleImage imageInfo={main.row1.image3} />
                             </div>
+                            )}
+                            {main.row1.video1 && (        
+                                <div className="image-grid-tile">    
+                                    <Video
+                                      videoSrcURL={main.row1.video1.videoSourceURL}
+                                    />
+                                </div>
                             )}
                         </div> 
                         {main.row2 && (
@@ -496,6 +504,9 @@ export const pageQuery = graphql`
                 }
               }
             }
+            video1 {
+                videoSourceURL
+            }
           }
           row2 {
             rowLayout
@@ -520,6 +531,9 @@ export const pageQuery = graphql`
                 }
               }
             }
+            video1 {
+                videoSourceURL
+            }            
           }
           row3 {
             rowLayout
