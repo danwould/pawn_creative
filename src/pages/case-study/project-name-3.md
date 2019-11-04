@@ -18,6 +18,8 @@ main:
   row1:
     rowLayout: row-layout-1
     image1: /img/natgeo_05.jpg
+    image2:
+    image3:
     video1: ''
 ---
 
