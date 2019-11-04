@@ -2,8 +2,8 @@
 templateKey: case-study
 title: Sound Cloud Go
 client: Souncloud
-thumbnailimage: /img/blob.jpg
-featuredimage: /img/blob.jpg
+thumbnailimage: /img/02_AA_SoundCloudGo_Photo3_H.jpg
+featuredimage: /img/02_AA_SoundCloudGo_Mural_H.jpg
 order: 2
 description: Soundcloud Go Stuff here.
 tilesize: col-5
@@ -14,12 +14,13 @@ tags:
   - Director
 main:
   row1:
-    image1: /img/natgeo_05.jpg
     rowLayout: row-layout-2
+    image1: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
+    image2: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
     video1: ''
   row2:
-    image1: /img/natgeo_05.jpg
-    rowLayout: row-layout-4
+    rowLayout: row-layout-1
+    image1: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
     video1: 'https://player.vimeo.com/video/370802071'
 ---
 
