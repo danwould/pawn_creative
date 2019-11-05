@@ -44,7 +44,7 @@ main:
   row3:
     image1: /img/02_AA_SoundCloudGo_Gif1.gif
     image2: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
-    image3: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
+    image3: ''
     rowLayout: row-layout-2
     video1: ''
   row4:
