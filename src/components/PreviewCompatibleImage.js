@@ -20,6 +20,11 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
     return <img style={imageStyle} src={publicURL} alt="Case Study Image" title="test 4"/>
   }
 
+
+  if (!childImageSharp || !publicURL) {
+    return ''
+  }
+
   return <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt="Case Study Image" title="test 3"/>
 }
 

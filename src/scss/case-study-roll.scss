@@ -17,6 +17,10 @@
     flex-wrap: wrap;
     pointer-events: none;
 
+    .schema {
+      display: none;
+    }
+
     &:hover {
       .case-study-img {
         opacity: 0.5;
