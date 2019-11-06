@@ -5,7 +5,7 @@ client: Mark Normand
 thumbnailimage: /img/10_AA_MarkNormand_Poster1_V.jpg
 featuredimage: /img/10_AA_MarkNormand_Billboard1_H.jpg
 order: 10
-description: Bon Jovi Stuff here.
+description: Mark Normand Stuff here.
 tilesize: col-3
 pushright: false
 tags:
