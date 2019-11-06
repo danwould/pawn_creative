@@ -81,7 +81,7 @@ class CaseStudyRoll extends React.Component {
                   </section>
                 <section className="case-study-item-info">
                   <h3 className="typography-headline">{post.frontmatter.title}</h3>
-                  <p className="typography-excerpt">{post.excerpt}</p>
+                  <p className="typography-excerpt">{post.frontmatter.description}</p>
                 </section>
               </article>
           ))}
@@ -116,6 +116,7 @@ export default () => (
               frontmatter {
                 title
                 client
+                description
                 templateKey
                 tilesize
                 pushright

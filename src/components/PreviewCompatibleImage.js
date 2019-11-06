@@ -4,20 +4,20 @@ import Img from 'gatsby-image'
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
   const imageStyle = { borderRadius: '0' }
-  const { alt = '', childImageSharp, image, publicURL } = imageInfo
+  const {childImageSharp, image, publicURL } = imageInfo
 
   if (!!image && !!image.childImageSharp) {
     return (
-      <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt="Case Study Image" title="test 1"/>
+      <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt="Case Study" title="test 1"/>
     )
   }
 
   if (!!childImageSharp) {
-    return <Img style={imageStyle} fluid={childImageSharp.fluid} alt="Case Study Image" title="test 2"/>
+    return <Img style={imageStyle} fluid={childImageSharp.fluid} alt="Case Study" title="test 2"/>
   }
 
   if (!childImageSharp) {
-    return <img style={imageStyle} src={publicURL} alt="Case Study Image" title="test 4"/>
+    return <img style={imageStyle} src={publicURL} alt="Case Study" title="test 4"/>
   }
 
 
@@ -25,7 +25,7 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
     return ''
   }
 
-  return <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt="Case Study Image" title="test 3"/>
+  return <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt="Case Study" title="test 3"/>
 }
 
 PreviewCompatibleImage.propTypes = {

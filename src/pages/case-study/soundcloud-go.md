@@ -32,17 +32,17 @@ main:
     image3: 
     video1: ''
   row4:
-    rowLayout: row-layout-2
-    image1: /img/02_AA_SoundCloudGo_Gif1.gif
-    image2: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
+    rowLayout: row-layout-5
+    image1: /img/02_AA_SoundCloudGo_Photo1_V.jpg
+    image2: /img/02_AA_SoundCloudGo_Photo5_H.jpg
     image3: 
     video1: ''
   row5:
-    rowLayout: row-layout-2
-    image1: /img/02_AA_SoundCloudGo_Gif1.gif
-    image2: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
+    rowLayout: row-layout-4
+    image1: /img/02_AA_SoundCloudGo_Photo5_H.jpg
+    image2: 
     image3: 
-    video1: ''
+    video1: 'https://player.vimeo.com/video/371310119'
   row6:
     rowLayout: row-layout-2
     image1: /img/02_AA_SoundCloudGo_Gif1.gif
