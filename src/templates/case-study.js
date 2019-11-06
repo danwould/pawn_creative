@@ -384,12 +384,12 @@ const CaseStudy = ({ data, pageContext }) => {
     function slideCaseStudyFromLeft(entry, node) {
         return new TimelineMax()
             .set(node.querySelector('.case-study'), {x: '100vh'})
-            .to(node.querySelector('.case-study'), .5, {x: '0%', ease: Power1.easeInOut,})
+            .to(node.querySelector('.case-study'), .5, {x: '0', ease: Power1.easeInOut,})
     }
 
     function slideCaseStudyToLeft(exit, node) {
         return new TimelineMax()
-            .to(node.querySelector('.case-study'), .5, {x: '-100vh', ease: Power1.easeInOut,})
+            .to(node.querySelector('.case-study'), .5, {x: '-100vw', ease: Power1.easeInOut,})
     }
 
     function slideCaseStudyFromRight(entry, node) {
@@ -400,7 +400,7 @@ const CaseStudy = ({ data, pageContext }) => {
 
     function slideCaseStudyToRight(exit, node) {
         return new TimelineMax()
-            .to(node.querySelector('.case-study'), .5, {x: '100vh', ease: Power1.easeInOut,})
+            .to(node.querySelector('.case-study'), .5, {x: '100vw', ease: Power1.easeInOut,})
     }
 
 
@@ -496,7 +496,7 @@ const CaseStudy = ({ data, pageContext }) => {
                             </TransitionLink>
                         </li>
                         <li className="col-3 next-page">
-                            {next && (
+                            {next.frontmatter.templateKey === 'case-study' && (
                                 <TransitionLink
                                     to={next.fields.slug}
                                     rel="next"
