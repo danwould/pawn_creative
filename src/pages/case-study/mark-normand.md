@@ -8,7 +8,6 @@ order: 10
 description: Bon Jovi Stuff here.
 tilesize: col-3
 pushright: false
->>>>>>> temp
 tags:
   - Art director
   - Strategist
