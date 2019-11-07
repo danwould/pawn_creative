@@ -7,7 +7,7 @@ featuredimage: /img/14_AA_Tidal_Posters1_H.jpg
 order: 14
 description: Tidal stuff here.
 tilesize: col-3
-pushright: true
+pushright: false
 tags:
   - Art director
   - Strategist
