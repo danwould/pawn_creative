@@ -1,7 +1,7 @@
 ---
 templateKey: case-study
 client: Bon Jovi
-title: Bon Jovi - What About Now
+title: What About Now
 thumbnailimage: /img/09_AA_BonJovi_BTS1_V.jpg
 featuredimage: /img/09_AA_BonJovi_BTS2_H.jpg
 order: 9
