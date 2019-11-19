@@ -45,14 +45,14 @@ main:
     video1: 'https://player.vimeo.com/video/371310119'
   row6:
     rowLayout: row-layout-2
-    image1: /img/02_AA_SoundCloudGo_Gif1.gif
+    image1: /img/02_AA_SoundCloudGo_Photo3_SQ.jpg
     image2: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
     image3: 
     video1: ''
   row7:
     rowLayout: row-layout-2
-    image1: /img/02_AA_SoundCloudGo_Gif1.gif
-    image2: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
+    image1: /img/02_AA_SoundCloudGo_Gif3.gif
+    image2: /img/02_AA_SoundCloudGo_Gif4.gif
     image3: 
     video1: ''
   row8:

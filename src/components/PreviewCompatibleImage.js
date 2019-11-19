@@ -17,7 +17,7 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
   }
 
   if (!childImageSharp) {
-    return <img style={imageStyle} src={publicURL} alt="Case Study" title="test 4"/>
+    return <div className="static-img-wrapper"><div className="static-img-placeholder"></div><img style={imageStyle} src={publicURL} alt="Case Study" title="test 4"/></div>
   }
 
 
