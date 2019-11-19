@@ -136,12 +136,12 @@
     .image-grid-tile {
 
       &:nth-child(1) {
-        width: 66.66%;
+        width: calc(66.1% + .5rem);
         padding-right: .5rem;
       }
 
       &:nth-child(2) {
-        width: 33.33%;
+        width: calc(32.5% + .5rem);
         padding-left: .5rem;
       }
     }
@@ -155,12 +155,12 @@
     .image-grid-tile {
 
       &:nth-child(1) {
-        width: 33.33%;
+        width: calc(32.5% + .5rem);
         padding-right: .5rem;
       }
 
       &:nth-child(2) {
-        width: 66.66%;        
+        width: calc(66.1% + .5rem);        
         padding-left: .5rem;
       }
     }
