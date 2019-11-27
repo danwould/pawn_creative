@@ -67,7 +67,7 @@ export const CaseStudyTemplate = ({
                             </div>
                             )}
                             {main.row1.video1 && (        
-                            <div className="image-grid-tile">    
+                            <div className="image-grid-tile video-tile">    
                                 <Video videoSrcURL={main.row1.video1} />
                             </div>
                             )}
@@ -90,7 +90,7 @@ export const CaseStudyTemplate = ({
                             </div>
                             )}
                             {main.row2.video1 && (        
-                            <div className="image-grid-tile">    
+                            <div className="image-grid-tile video-tile">    
                                 <Video videoSrcURL={main.row2.video1} />
                             </div>
                             )}
@@ -114,7 +114,7 @@ export const CaseStudyTemplate = ({
                             </div>
                             )}
                             {main.row3.video1 && (        
-                            <div className="image-grid-tile">    
+                            <div className="image-grid-tile video-tile">    
                                 <Video videoSrcURL={main.row3.video1} />
                             </div>
                             )}                            
@@ -138,7 +138,7 @@ export const CaseStudyTemplate = ({
                             </div>
                             )}
                             {main.row4.video1 && (        
-                            <div className="image-grid-tile">    
+                            <div className="image-grid-tile video-tile">    
                                 <Video videoSrcURL={main.row4.video1} />
                             </div>
                             )}                            
@@ -162,7 +162,7 @@ export const CaseStudyTemplate = ({
                             </div>
                             )}
                             {main.row5.video1 && (        
-                            <div className="image-grid-tile">    
+                            <div className="image-grid-tile video-tile">    
                                 <Video videoSrcURL={main.row5.video1} />
                             </div>
                             )}                            
@@ -186,7 +186,7 @@ export const CaseStudyTemplate = ({
                             </div>
                             )}
                             {main.row6.video1 && (        
-                            <div className="image-grid-tile">    
+                            <div className="image-grid-tile video-tile">    
                                 <Video videoSrcURL={main.row6.video1} />
                             </div>
                             )}                            
@@ -210,7 +210,7 @@ export const CaseStudyTemplate = ({
                             </div>
                             )}
                             {main.row7.video1 && (        
-                            <div className="image-grid-tile">    
+                            <div className="image-grid-tile video-tile">    
                                 <Video videoSrcURL={main.row7.video1} />
                             </div>
                             )}                            
@@ -234,7 +234,7 @@ export const CaseStudyTemplate = ({
                             </div>
                             )}
                             {main.row8.video1 && (        
-                            <div className="image-grid-tile">    
+                            <div className="image-grid-tile video-tile">    
                                 <Video videoSrcURL={main.row8.video1} />
                             </div>
                             )}                            
@@ -258,7 +258,7 @@ export const CaseStudyTemplate = ({
                             </div>
                             )}
                             {main.row9.video1 && (        
-                            <div className="image-grid-tile">    
+                            <div className="image-grid-tile video-tile">    
                                 <Video videoSrcURL={main.row9.video1} />
                             </div>
                             )}                            
@@ -282,7 +282,7 @@ export const CaseStudyTemplate = ({
                             </div>
                             )}
                             {main.row10.video1 && (        
-                            <div className="image-grid-tile">    
+                            <div className="image-grid-tile video-tile">    
                                 <Video videoSrcURL={main.row10.video1} />
                             </div>
                             )}                            
@@ -306,7 +306,7 @@ export const CaseStudyTemplate = ({
                             </div>
                             )}
                             {main.row11.video1 && (        
-                            <div className="image-grid-tile">    
+                            <div className="image-grid-tile video-tile">    
                                 <Video videoSrcURL={main.row11.video1} />
                             </div>
                             )}                            
@@ -330,7 +330,7 @@ export const CaseStudyTemplate = ({
                             </div>
                             )}
                             {main.row12.video1 && (        
-                            <div className="image-grid-tile">    
+                            <div className="image-grid-tile video-tile">    
                                 <Video videoSrcURL={main.row12.video1} />
                             </div>
                             )}                            

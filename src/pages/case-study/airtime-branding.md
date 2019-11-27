@@ -26,7 +26,7 @@ main:
     image3: /img/06_AA_Airtime_Color3_H.jpg
     video1: ''
   row3:
-    rowLayout: row-layout-4
+    rowLayout: row-layout-8
     image1: /img/06_AA_Airtime_Color1_H.jpg
     image2: 
     image3: 
