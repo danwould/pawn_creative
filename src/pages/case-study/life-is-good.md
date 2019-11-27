@@ -15,11 +15,17 @@ tags:
   - Director
 main:
   row1:
-    rowLayout: row-layout-1
-    image1: /img/natgeo_05.jpg
-    image2:
+    rowLayout: row-layout-2
+    image1: /img/05_AA_NAS_Single1_SQ.jpg
+    image2: /img/05_AA_NAS_Single2_SQ.jpg
     image3:    
-    video1: ''
+    video1: '' 
+  row2:
+    rowLayout: row-layout-3
+    image1: /img/05_AA_NAS_Single3_SQ.jpg
+    image2: /img/05_AA_NAS_Single4_SQ.jpg
+    image3: /img/05_AA_NAS_Single5_SQ.jpg   
+    video1: '' 
 ---
 I was all of history's great robot actors - Acting Unit 0.8; Thespomat; David Duchovny! I had more, but you go ahead. I'm a thing. I decline the title of Iron Cook and accept the lesser title of Zinc Saucier, which I just made up. Uhh… also, comes with double prize money.
 

@@ -1,6 +1,6 @@
 ---
 templateKey: case-study
-title: Sound Cloud Go
+title: SoundCloud Go
 client: Souncloud
 thumbnailimage: /img/02_AA_SoundCloudGo_Photo3_H.jpg
 featuredimage: /img/02_AA_SoundCloudGo_Mural_H.jpg
@@ -21,7 +21,7 @@ main:
     video1: ''
   row2:
     rowLayout: row-layout-1
-    video1: 'https://player.vimeo.com/video/370802071'
+    video1: 'https://player.vimeo.com/video/375786132'
     image1:
     image2:
     image3: 

@@ -89,7 +89,6 @@
 
     .static-img-placeholder {
       width: 100%;
-      padding-bottom: 100%;
       position: relative;
     }
 
@@ -108,6 +107,10 @@
     .image-grid-tile {
       width: 100%;
     }
+
+    .static-img-placeholder {
+      padding-bottom: 50%;
+    }
   }
 
   .row-layout-2 {
@@ -121,6 +124,10 @@
       &:nth-child(2) {
         padding-left: .5rem;
       }
+    }
+
+    .static-img-placeholder {
+      padding-bottom: 100%;
     }
   }
 
