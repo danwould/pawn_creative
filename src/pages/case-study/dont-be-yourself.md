@@ -14,61 +14,15 @@ tags:
   - Director
 main:
   row1:
-    image1: /img/02_AA_SoundCloudGo_Gif1.gif
-    image2: /img/02_AA_SoundCloudGo_Photo1_SQ.jpg
-    rowLayout: row-layout-2
-    video1: ''
-  row10:
-    image1: /img/02_AA_SoundCloudGo_Gif1.gif
-    image2: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
-    rowLayout: row-layout-2
-    video1: ''
-  row11:
-    image1: /img/02_AA_SoundCloudGo_Gif1.gif
-    image2: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
-    rowLayout: row-layout-2
-    video1: ''
-  row12:
-    image1: /img/02_AA_SoundCloudGo_Gif1.gif
-    image2: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
-    rowLayout: row-layout-2
-    video1: ''
+    rowLayout: row-layout-1    
+    image1: 
+    image2: 
+    video1: 'https://player.vimeo.com/video/375796247'
   row2:
-    rowLayout: row-layout-1
-    video1: 'https://player.vimeo.com/video/370802071'
-  row3:
-    image1: /img/02_AA_SoundCloudGo_Photo2_SQ.jpg
-    image2: /img/02_AA_SoundCloudGo_Gif2.gif
-    rowLayout: row-layout-2
-    video1: ''
-  row4:
-    image1: /img/02_AA_SoundCloudGo_Photo1_V.jpg
-    image2: /img/02_AA_SoundCloudGo_Photo5_H.jpg
-    rowLayout: row-layout-5
-    video1: ''
-  row5:
-    image1: /img/02_AA_SoundCloudGo_Photo5_H.jpg
-    rowLayout: row-layout-4
-    video1: 'https://player.vimeo.com/video/371310119'
-  row6:
-    image1: /img/02_AA_SoundCloudGo_Gif1.gif
-    image2: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
-    rowLayout: row-layout-2
-    video1: ''
-  row7:
-    image1: /img/02_AA_SoundCloudGo_Gif1.gif
-    image2: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
-    rowLayout: row-layout-2
-    video1: ''
-  row8:
-    image1: /img/02_AA_SoundCloudGo_Gif1.gif
-    image2: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
-    rowLayout: row-layout-2
-    video1: ''
-  row9:
-    image1: /img/02_AA_SoundCloudGo_Gif1.gif
-    image2: /img/02_AA_SoundCloudGo_Photo4_SQ.jpg
-    rowLayout: row-layout-2
+    rowLayout: row-layout-6
+    image1: /img/10_AA_MarkNormand_Billboard1_H.jpg
+    image2: /img/10_AA_MarkNormand_Poster1_V.jpg
+    image3: /img/10_AA_MarkNormand_Billboard2_H.jpg
     video1: ''
 ---
 

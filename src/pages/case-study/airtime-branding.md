@@ -14,20 +14,20 @@ tags:
   - Director
 main:
   row1:
-    rowLayout: row-layout-1
-    image1: /img/06_AA_Airtime_Social_H.jpg
-    image2:
-    image3:    
-    video1: ''
-  row2:
     rowLayout: row-layout-3
     image1: /img/06_AA_Airtime_Color1_H.jpg
     image2: /img/06_AA_Airtime_Color2_H.jpg 
     image3: /img/06_AA_Airtime_Color3_H.jpg
     video1: ''
+  row2:
+    rowLayout: row-layout-1
+    image1: 
+    image2:
+    image3:    
+    video1: 'https://player.vimeo.com/video/375792582'    
   row3:
     rowLayout: row-layout-8
-    image1: /img/06_AA_Airtime_Color1_H.jpg
+    image1: /img/06_AA_Airtime_Social_H.jpg
     image2: 
     image3: 
     video1: 'https://player.vimeo.com/video/375792516'

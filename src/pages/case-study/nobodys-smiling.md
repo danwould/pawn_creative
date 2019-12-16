@@ -13,13 +13,19 @@ tags:
   - Director
 main:
   row1:
-    image1: /img/13_AA_Common_Cover1_SQ.jpg
-    image2: /img/13_AA_Common_Photo1_V.jpg
-    image3: /img/13_AA_Common_Photo2_SQ.jpg
     rowLayout: row-layout-6
-  row2:
     image1: /img/13_AA_Common_Billboard1_H.jpg
-    rowLayout: row-layout-1
+    image2: /img/13_AA_Common_Photo1_V.jpg
+    image3: /img/13_AA_Common_Billboard2_H.jpg
+  row2:
+    rowLayout: row-layout-3
+    image1: /img/13_AA_Common_Photo1_SQ.jpg
+    image2: /img/13_AA_Common_Cover1_SQ.jpg
+    image3: /img/13_AA_Common_Photo2_SQ.jpg
+  row3:
+    rowLayout: row-layout-2
+    image1: /img/13_AA_Common_Photo1_V.jpg
+    image2: /img/13_AA_Common_Promo1_V.jpg  
 ---
 I was all of history's great robot actors - Acting Unit 0.8; Thespomat; David Duchovny! I had more, but you go ahead. I'm a thing. I decline the title of Iron Cook and accept the lesser title of Zinc Saucier, which I just made up. Uhh… also, comes with double prize money.
 

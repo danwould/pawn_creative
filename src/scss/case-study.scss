@@ -205,6 +205,15 @@
         padding-left: .5rem;
         float: right;
       }
+
+
+      &:nth-child(2) {
+        .gatsby-image-wrapper {
+          div {
+            padding-bottom: 152.65% !important;
+          }
+        }
+      }     
     }
   }
 
@@ -217,6 +226,12 @@
       &:nth-child(1) {
         padding-right: .5rem;
         float: left;
+
+        .gatsby-image-wrapper {
+          div {
+            padding-bottom: 152.65% !important;
+          }
+        }
       }
 
       &:nth-child(2), &:nth-child(3) {

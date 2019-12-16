@@ -4,7 +4,7 @@ title: WuMassacre
 client: Wu-Tang Clan
 thumbnailimage: /img/17_AA_WuMassacre_Sketch1_V.jpg
 featuredimage: /img/17_AA_WuMassacre_Mural1_H.jpg
-order: 17
+order: 16
 description: WuMassacres Stuff here
 tilesize: col-3
 tags:

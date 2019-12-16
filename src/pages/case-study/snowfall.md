@@ -14,10 +14,10 @@ tags:
   - Director
 main:
   row1:
-    rowLayout: row-layout-1
+    rowLayout: row-layout-6
     image1: /img/07_AB_Snowfall_BillboardB1_H.jpg
-    image2:
-    image3:    
+    image2: /img/07_AB_Snowfall_PosterB2_V.jpg
+    image3: /img/07_AA_Snowfall_BillboardA2_H.jpg   
     video1: ''
 ---
 I was all of history's great robot actors - Acting Unit 0.8; Thespomat; David Duchovny! I had more, but you go ahead. I'm a thing. I decline the title of Iron Cook and accept the lesser title of Zinc Saucier, which I just made up. Uhh… also, comes with double prize money.
