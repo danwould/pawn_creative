@@ -4,6 +4,15 @@
   display: flex;
   align-items: center;
 
+  @include viewport-s {
+    height: 85vh;
+    background-position: center !important; 
+
+    .outline-text {
+      display: none;
+    }
+  }
+
   .section-intro {
     display: flex;
     position: absolute;
@@ -11,16 +20,50 @@
     padding: 0 8.33% 0 13.33%;
     justify-content: space-between;
 
+    @include viewport-m {
+      padding: 0 3.33%;
+    }
+
+    @include viewport-s {
+      flex-wrap: wrap;
+    }
+
     .blurbs {
       flex-basis: 41.66%;
+
+      @include viewport-m {
+        flex-basis: 100%;
+        width: 100%;
+      }
     }
   }
 
   &-header {
     width: 100%;
 
+    @include viewport-s {
+      position: relative;
+    }
+
+    &.section-content {
+      margin: 0 0 0 -1rem;
+    }
+
     .typography-hero {
       margin-bottom: 0;
+
+      @include viewport-s {
+        &:after {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 83%;
+          content: "Pawn Creative";
+          width: 100%;
+          line-height: 3rem;
+          margin-left: 1rem;
+        }
+      }  
     }
 
     .underscore {
@@ -29,12 +72,21 @@
       background-color: white;
       display: inline-block;
       margin-right: 2%;
+
+      @include viewport-s {
+        display: none;
+      }
     }
 
     .headline-content {
       width: 42rem;
       display: inline-block;
       line-height: 7rem;
+
+      @include viewport-s {
+        width: 100%;
+        line-height: 3rem;
+      }
     }
 
     .section-social {

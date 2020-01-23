@@ -40,5 +40,10 @@
     position: absolute;
     left: 5%;
     margin-top: 3%;
+
+    @include viewport-s {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }

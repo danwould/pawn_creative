@@ -32,11 +32,11 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 6.250em;
+  font-size: 6.250rem;
 }
 
 h2 {
-  font-size: 3.500em;
+  font-size: 3.500rem;
 }
 
 h1, h2  {
@@ -59,6 +59,10 @@ h1, h2  {
 .typography-hero {
 	font-family: 'IntegralCF-DemiBold', Arial, sans-serif;
 	font-size: 7.143rem;
+
+  @include viewport-s {
+    font-size: 3.500rem;
+  }
 }
 
 .typography-hero-link {
@@ -68,14 +72,14 @@ h1, h2  {
 
 .typography-headline {
 	font-family: 'IntegralCF-DemiBold', Arial, sans-serif;
-	font-size: 5.714em;
+	font-size: 5.714rem;
 	line-height: 4.75rem;
   margin-bottom: 2rem;
 }
 
 .typography-subhead {
   font-family: 'IntegralCF-DemiBold', Arial, sans-serif;
-  font-size: 3.5em;
+  font-size: 3.5rem;
 }
 
 .typography-caption {

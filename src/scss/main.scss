@@ -23,6 +23,10 @@ html {
 main {
   min-height: 100vh;
   position: relative;
+
+  @include viewport-s {
+  	overflow: hidden;
+  }
 }
 
 

@@ -1,8 +1,16 @@
 .section {
 	margin-top: 20rem;
+
+	@include viewport-s {
+		margin-top: 38rem;
+	}
 }
 
 
 .section-content {
 	margin: 0 4.250rem;
+
+	@include viewport-s {
+		margin: 0 1.25rem;
+	}
 }
