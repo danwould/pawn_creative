@@ -49,7 +49,7 @@ class CaseStudyRoll extends React.Component {
         <div className="case-studies-container">
           {posts &&
             posts.map(({ node: post }, index) => (
-              <article className={`${post.frontmatter.client} ${post.frontmatter.tilesize} ${post.frontmatter.pushright ? 'push-right' : ''} case-study-tile`}
+              <article className={`${post.frontmatter.client} ${post.frontmatter.tilesize} ${post.frontmatter.pushright ? 'push-right' : ''} case-study-tile col-12-sm`}
                      ref={`case-study-tile-${index}`}
                      key={post.id}
               >

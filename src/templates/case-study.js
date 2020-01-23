@@ -41,15 +41,17 @@ export const CaseStudyTemplate = ({
                         >        
                         </figure>
                     </header>
-                    <section className="case-study-content-wrapper">
-                        {tags && tags.length ? (
-                            <ul className="taglist col-3">
-                                {tags.map(tag => (
-                                    <li key={tag + `tag`}>{tag}</li>
-                                ))}
-                            </ul>
-                        ) : null}
-                        <PostContent content={content} className="col-9 case-study-content"/>
+                    <section>
+                        <div className="case-study-content-wrapper">
+                            {tags && tags.length ? (
+                                <ul className="taglist col-3 col-12-sm">
+                                    {tags.map(tag => (
+                                        <li key={tag + `tag`}>{tag}</li>
+                                    ))}
+                                </ul>
+                            ) : null}
+                            <PostContent content={content} className="col-9 col-12-sm case-study-content"/>
+                        </div>
                         <div className={`image-grid-container col-12 ${main.row1.rowLayout}`}>
                             {main.row1.image1 && (
                             <div className="image-grid-tile">
@@ -445,7 +447,7 @@ const CaseStudy = ({ data, pageContext }) => {
                 title={post.frontmatter.title}
                 nav={
                     <ul className="pagination-nav">
-                        <li className="col-3 previous-page">
+                        <li className="col-3 col-12-sm previous-page">
                             {previous.frontmatter.templateKey === 'case-study' && (
                                 <TransitionLink
                                     to={previous.fields.slug}
@@ -474,7 +476,7 @@ const CaseStudy = ({ data, pageContext }) => {
                                 </TransitionLink>
                             )}
                         </li>
-                        <li className="col-6 modal-close-nav">
+                        <li className="col-6 col-12-sm modal-close-nav">
                             <TransitionLink
                                 to="/"
                                 exit={{
@@ -495,7 +497,7 @@ const CaseStudy = ({ data, pageContext }) => {
                                 </div>
                             </TransitionLink>
                         </li>
-                        <li className="col-3 next-page">
+                        <li className="col-3 col-12-sm next-page">
                             {next.frontmatter.templateKey === 'case-study' && (
                                 <TransitionLink
                                     to={next.fields.slug}

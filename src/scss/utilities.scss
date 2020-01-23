@@ -1,0 +1,15 @@
+@mixin viewport-m {
+  @media only screen and (max-width: 1068px) { @content; }
+}
+
+@mixin viewport-s {
+  @media only screen and (max-width: 735px) { @content; }
+}
+
+@mixin clearfix {
+  &::after {
+	  content: "";
+	  clear: both;
+	  display: table;
+  }
+}

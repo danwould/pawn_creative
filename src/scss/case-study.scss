@@ -23,6 +23,13 @@
     text-align: center;
     margin-top: 3rem;
 
+    @include viewport-s {
+      overflow: hidden;
+      text-align: left;
+      justify-content: left;
+      margin-top: 2rem;
+    }
+
     h1 {
       order: 2;
       flex-basis: 100%;
@@ -34,6 +41,17 @@
       order: 1;
       margin-top: 3rem;
       width: 100%;
+
+      @include viewport-s {
+        margin-left: 8.335%;
+        margin-top: .5rem;
+      }
+    }
+  }
+
+  &-featured-img {
+    @include viewport-s {
+      display: none;
     }
   }
 
@@ -52,6 +70,10 @@
   &-content {
     display: flex;
 
+    @include viewport-s {
+      flex-wrap: wrap;
+    }
+
     p {
       flex-basis: 50%;
 
@@ -61,6 +83,18 @@
 
       &:last-child {
         margin-left: 1rem;
+      }
+
+      @include viewport-s {
+        flex-basis: 100%;
+
+        &:first-child {
+          margin-right: 0;
+        }
+
+        &:last-child {
+          margin-left: 0;
+        }
       }
     }
   }
@@ -74,12 +108,19 @@
 
   .image-grid-container {
     display: flex;
-    flex-wrap: wrap;
+    
+    @include viewport-s {
+      flex-wrap: wrap;
+    }
   }
 
   .image-grid-tile {
     margin-bottom: 1rem;
     overflow: hidden;
+
+    @include viewport-s {
+      margin-bottom: 0;
+    }
   }
 
   .static-img-wrapper {
@@ -199,11 +240,13 @@
       &:nth-child(odd) {
         padding-right: .5rem;
         float: left;
+        @include clearfix;
       }
 
       &:nth-child(even) {
         padding-left: .5rem;
         float: right;
+        @include clearfix;
       }
 
 
@@ -226,6 +269,7 @@
       &:nth-child(1) {
         padding-right: .5rem;
         float: left;
+        @include clearfix;
 
         .gatsby-image-wrapper {
           div {
@@ -237,6 +281,7 @@
       &:nth-child(2), &:nth-child(3) {
         padding-left: .5rem;
         float: right;
+        @include clearfix;
       }
     }
   }
@@ -269,6 +314,17 @@
         }
       }
     }
+  }
+
+  .row-layout-1, .row-layout-2, .row-layout-3, .row-layout-4, .row-layout-5, .row-layout-6, .row-layout-7, .row-layout-8 {
+    .image-grid-tile { 
+      @include viewport-s {
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        float: none !important;
+      }
+    }
   }     
 
   .modal-close-container {
@@ -276,6 +332,10 @@
     margin: auto;
     left: 50%;
     transform: translateX(-50%);
+
+    @include viewport-s {
+      left: 92%;
+    }
   }
 
   .modal-close-icon {
@@ -324,10 +384,19 @@
   list-style-type: none;
   margin-left: 0;
   align-items: center;
+  overflow: hidden;
+
+  @include viewport-s {
+    flex-wrap: wrap;
+  }
 
   .col-3 {
     width: 25%;
     flex-basis: auto;
+
+    @include viewport-s {
+      width: 100%;
+    }
   }
 
   li {
@@ -336,6 +405,11 @@
     display: flex;
     align-items: center;
     position: relative;
+
+    @include viewport-s {
+      margin-bottom: 0;
+      height: 15.375rem;
+    }
   }
 
   a {
@@ -348,6 +422,10 @@
 
   .nav-content {
     z-index: 2;
+
+    @include viewport-s {
+      margin: 0px 1.25rem;
+    }
   }
 
   .nav-image {
@@ -355,13 +433,41 @@
     width: 58%;
     position: absolute;
     z-index: -1;
+
+    @include viewport-s {
+      width: 21%;
+      height: 15.375rem;
+    }
   }
 
   .next-page {
     justify-content: flex-end;
 
+    @include viewport-s {
+      order: 1;
+    }
+
     .nav-image {
       right: 0;
+    }
+  }
+
+  .previous-page {
+    @include viewport-s {
+      order: 2;
+    }
+  }
+
+  .modal-close-nav {
+    @include viewport-s {
+      order: 3;
+      left: 50%;
+    }
+  }
+
+  .modal-close-container {
+    @include viewport-s {
+      left: 0;
     }
   }
 }
