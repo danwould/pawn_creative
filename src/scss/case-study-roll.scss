@@ -16,6 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     pointer-events: none;
+    margin-top: -5.9rem;
 
     .schema {
       display: none;
@@ -47,7 +48,7 @@
 
     .case-study-tile {
       pointer-events: none;
-      height: 35.250rem;
+      height: 35.38rem;
       padding-bottom: 9.250rem;
       padding-right: 1rem;
 
@@ -55,6 +56,19 @@
         .case-study-item-info {
           opacity: 1;
         }
+      }
+
+      @include viewport-s {
+        padding-right: 0;
+
+        &:nth-child(odd) {
+          margin: 0 1.25rem 0 auto;
+        }
+
+
+        &:nth-child(even) {
+          margin: 0 auto 0 1.25rem;
+        }        
       }
     }
 

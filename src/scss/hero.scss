@@ -17,8 +17,7 @@
     display: flex;
     position: absolute;
     top: 90%;
-    padding: 0 8.33% 0 13.33%;
-    justify-content: space-between;
+    //justify-content: space-between;
 
     @include viewport-m {
       padding: 0 3.33%;
@@ -29,7 +28,16 @@
     }
 
     .blurbs {
-      flex-basis: 41.66%;
+      flex-basis: 33.33%;
+
+      &:first-child {
+        margin-left: 8.33%;
+        margin-right: calc(8.33% + 2rem);
+      }
+
+      &:last-child {
+        margin-right: 8.33%;
+      }
 
       @include viewport-m {
         flex-basis: 100%;
@@ -45,9 +53,9 @@
       position: relative;
     }
 
-    &.section-content {
-      margin: 0 0 0 -1rem;
-    }
+    // &.section-content {
+    //   margin: 0 0 0 -1rem;
+    // }
 
     .typography-hero {
       margin-bottom: 0;
@@ -67,11 +75,11 @@
     }
 
     .underscore {
-      width: 8.33%;
+      width: calc(8.33% - 1rem);
       height: 1rem;
       background-color: white;
       display: inline-block;
-      margin-right: 2%;
+      margin-right: 1rem;
 
       @include viewport-s {
         display: none;
@@ -90,7 +98,7 @@
     }
 
     .section-social {
-      margin-left: 10.33%;
+      margin-left: 8.33%;
       font-style: italic;
       margin-top: 1.5000rem;
     }
