@@ -4,9 +4,9 @@ client: Bon Jovi
 title: What About Now
 thumbnailimage: /img/09_AA_BonJovi_BTS1_V.jpg
 featuredimage: /img/09_AA_BonJovi_BTS2_H.jpg
-order: 9
+order: 17
 description: Bon Jovi Stuff here
-tilesize: col-2
+tilesize: col-10
 tags:
   - Art director
   - Strategist

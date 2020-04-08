@@ -9,6 +9,7 @@ import { graphql } from 'gatsby'
 import Content, { HTMLContent } from '../components/Content'
 import {TimelineMax, Power1} from "gsap";
 import TransitionLink from "gatsby-plugin-transition-link"
+import closeIcon from '../img/close-icon.svg'
 
 export const CaseStudyTemplate = ({
                                       content,
@@ -438,6 +439,7 @@ const CaseStudy = ({ data, pageContext }) => {
                     >
                         <div className="modal-close-container">
                             <div className="modal-close-icon">
+                                <img src={closeIcon} alt="Pawn Creative" style={{ width: '88px' }} />
                                 <p className="visuallyhidden">Back to home</p>
                             </div>
                         </div>
@@ -469,7 +471,7 @@ const CaseStudy = ({ data, pageContext }) => {
                                             })`,
                                     }}>
                                     </figure>
-                                    <div className="section-content nav-content">
+                                    <div className="nav-content">
                                         <div className="typography-subhead">Previous</div>
                                         <div>{previous.frontmatter.title}</div>
                                     </div>
@@ -491,9 +493,10 @@ const CaseStudy = ({ data, pageContext }) => {
                             >
                                 <div className="modal-close-container">
                                     <div className="modal-close-icon">
+                                        <img src={closeIcon} alt="Pawn Creative" style={{ width: '88px' }} />
                                         <p className="visuallyhidden">Back to home</p>
                                     </div>
-                                    <p>CLOSE</p>
+                                    <p>Close</p>
                                 </div>
                             </TransitionLink>
                         </li>
@@ -520,7 +523,7 @@ const CaseStudy = ({ data, pageContext }) => {
                                         }}
                                     >
                                     </figure>
-                                    <div className="section-content nav-content">
+                                    <div className="nav-content">
                                         <div className="typography-subhead">Next</div>
                                         <div>{next.frontmatter.title}</div>
                                     </div>

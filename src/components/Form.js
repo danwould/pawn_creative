@@ -69,29 +69,29 @@ class Form extends React.Component {
         <form 
           name="PawnCreative.com - Contact Form" 
           method="POST"
-          className="col-6 contact-form" 
+          className="col-6 section-content contact-form" 
           data-netlify="true" 
           data-netlify-honeypot="bot-field"
         >
           <input type="hidden" name="bot-field" />
           <input ref="form-name" type="hidden" name="form-name" value="Contact Form" />
-          <div className="form-element input col-6">
+          <div className="form-element input col-3">
             <input ref={this.nameRef} type="name" name="name" onKeyUp={this.handleKeyPress}/>
             <label htmlFor="name">name</label>
           </div>
-          <div className="form-element input col-6">
+          <div className="form-element input col-3">
             <input ref={this.emailRef} type="email" name="email" onKeyUp={this.handleKeyPress}/>
             <label htmlFor="email">email</label>
           </div>
-          <div className="form-element input col-6">
+          <div className="form-element input col-3">
             <input ref={this.emailRef} type="text" name="company" onKeyUp={this.handleKeyPress}/>
             <label htmlFor="email">company</label>
           </div>
-          <div className="form-element input col-6">
+          <div className="form-element input col-3">
             <input ref={this.emailRef} type="phone" name="phone" onKeyUp={this.handleKeyPress}/>
             <label htmlFor="email">phone</label>
           </div>
-          <div className="form-element button col-6">
+          <div className="form-element button col-3">
             <button type='submit'>SUBMIT</button>
           </div>
         </form>

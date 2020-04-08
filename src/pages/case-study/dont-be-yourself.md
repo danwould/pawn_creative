@@ -6,7 +6,7 @@ thumbnailimage: /img/10_AA_MarkNormand_Poster1_V.jpg
 featuredimage: /img/10_AA_MarkNormand_Billboard1_H.jpg
 order: 10
 description: Mark Normand Stuff here.
-tilesize: col-3
+tilesize: col-4
 pushright: false
 tags:
   - Art director

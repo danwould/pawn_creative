@@ -7,7 +7,7 @@ featuredimage: /img/03_AA_UberFreightBrand_Action3_H.jpg
 order: 8
 description: >-
   Soundcloud Genre Stuff here
-tilesize: col-4
+tilesize: col-5
 tags:
   - Art director
   - Strategist
