@@ -38,8 +38,10 @@ $magic-number-padding-bottom: calc(150% + .4rem) !important;
 
     h1 {
       order: 2;
+      max-width: 70%;
       flex-basis: 100%;
       margin-bottom: -3rem;
+      line-height: 6rem;
       z-index: 2;
     }
 
