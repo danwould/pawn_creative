@@ -1,53 +1,29 @@
 .section-hero {
-  height: 100vh;
   position: relative;
-  display: flex;
-  align-items: center;
+  min-height: 100vh;
 
   @include viewport-s {
-    height: 85vh;
-    background-position: center !important; 
-
     .outline-text {
       display: none;
     }
   }
 
-  .section-intro {
-    display: flex;
+  &-bg {
+    height: 100vh;
+    width: 100%;
     position: absolute;
-    top: 90%;
-    //justify-content: space-between;
-
-    @include viewport-m {
-      padding: 0 3.33%;
-    }
 
     @include viewport-s {
-      flex-wrap: wrap;
-    }
-
-    .blurbs {
-      flex-basis: calc(33.33% - #{$gutters-for-flexbasis});
-
-      &:first-child {
-        margin-left: 8.33%;
-        margin-right: calc(8.33% + 1rem);
-      }
-
-      &:last-child {
-        margin-right: 8.33%;
-      }
-
-      @include viewport-m {
-        flex-basis: 100%;
-        width: 100%;
-      }
+      height: 85vh;
+      background-position: center !important; 
     }
   }
 
   &-header {
-    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
 
     @include viewport-s {
       position: relative;
@@ -57,15 +33,22 @@
     //   margin: 0 0 0 -1rem;
     // }
 
+    .content-wrapper {
+      width: 100%;
+    }
+
     .typography-hero {
       margin-bottom: 0;
 
       @include viewport-s {
+        position: relative;
+        margin-left: -2rem;
+
         &:after {
           display: block;
           position: absolute;
           top: 0;
-          left: 83%;
+          left: calc(83.33% + 1.25rem);
           content: "Pawn Creative";
           width: 100%;
           line-height: 3rem;
@@ -103,4 +86,59 @@
       margin-top: 1.5000rem;
     }
   }
+
+  .section-intro {
+    display: flex;
+    margin-top: -6rem;
+    position: relative;
+
+    @include viewport-m {
+      padding: 0 3.33%;
+    }
+
+    @include viewport-s {
+      flex-wrap: wrap;
+      margin-top: -10rem;
+      padding: 0;
+    }
+
+    .blurbs {
+      flex-basis: calc(33.33% - #{$gutters-for-flexbasis});
+
+      .copy {
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        margin-left: 8.33%;
+        margin-right: calc(8.33% + 1rem);
+        
+        @include viewport-s {
+          margin-bottom: 1.875em;
+        }
+      }
+
+      &:last-child {
+        margin-right: 8.33%;
+      }
+
+      &:first-child, &:last-child {
+        @include viewport-s {
+          margin-left: 0;
+          margin-right: 0;
+
+          .copy {
+            margin-left: 8.33%;
+            margin-right: 8.33%;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      @include viewport-m {
+        flex-basis: 100%;
+        width: 100%;
+      }
+    }
+  }  
 }

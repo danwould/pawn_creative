@@ -13,40 +13,42 @@ export const IndexPageTemplate = ({
   manifesto,
 }) => (
   <React.Fragment>
-      <div id="home" className="section-hero"
-           style={{
+      <div id="home" className="section-hero">
+          <div className="section-hero-bg" style={{
                backgroundImage: `url(${
                    !!image.childImageSharp ? image.childImageSharp.fluid.src : image
                    })`,
                backgroundPosition: `top left`,
                backgroundAttachment: `fixed`,
                backgroundSize: `cover`,
-           }}
-      >
+           }}>
+          </div>
           <header className="section-hero-header section-content">
-              <h1 className="typography-hero">
-                  <span className="outline-text">/01</span>
-                  <span className="underscore"></span>
-                  <span className="headline-content">{title}</span>
-              </h1>
-              <div class="section-social">
-                <a href="https://www.instagram.com/pawncreative/" 
-                   className="typography-hero-link"
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                   INSTAGRAM
-                </a>
+              <div className="content-wrapper">
+                <h1 className="typography-hero">
+                    <span className="outline-text">/01</span>
+                    <span className="underscore"></span>
+                    <span className="headline-content">{title}</span>
+                </h1>
+                <div class="section-social">
+                  <a href="https://www.instagram.com/pawncreative/" 
+                     className="typography-hero-link"
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                     INSTAGRAM
+                  </a>
+                </div>
               </div>
           </header>
 
           <section className="section section-intro section-content">
               <div className="blurbs intro-blurb">
-                  <h3 className="title">{intro.title}</h3>
-                  <p className="subtitle">{intro.description}</p>
+                  <h3 className="subtitle">{intro.title}</h3>
+                  <p className="copy">{intro.description}</p>
               </div>
               <div className="blurbs manifesto-blurb">
-                  <h3 className="title">{manifesto.title}</h3>
-                  <p className="subtitle">{manifesto.description}</p>
+                  <h3 className="subtitle">{manifesto.title}</h3>
+                  <p className="copy">{manifesto.description}</p>
               </div>
           </section>
       </div>

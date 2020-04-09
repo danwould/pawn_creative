@@ -4,6 +4,14 @@
 	@include viewport-s {
 		margin-top: 38rem;
 	}
+
+	&-work {
+		margin-top: 8.125em;
+
+		@include viewport-s {
+			margin-top: 4.500em;
+		}
+	}
 }
 
 
