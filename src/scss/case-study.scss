@@ -43,14 +43,29 @@ $magic-number-padding-bottom: calc(150% + .75rem) !important;
       margin-bottom: -3rem;
       line-height: 6rem;
       z-index: 2;
+      position: relative;
       //hyphens: auto;
 
       @include viewport-s {
         font-size: 3.500rem;
-        line-height: 3rem;
         max-width: 100%;
+        line-height: 3rem;
         margin-bottom: 0;
+        margin-left: -1.125rem;
+
+        .headline-content {
+          max-width: 81%;
+          display: block;
+        }
       }
+    }
+
+    .wraparound-text {
+      position: absolute;
+      top: 0;
+      width: 81%;
+      left: calc(83.33% + 1.25rem);
+      width: 100%;
     }
 
     h2 {

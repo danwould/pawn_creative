@@ -31,7 +31,10 @@ export const CaseStudyTemplate = ({
                 {close}
                 <article className="columns"> 
                     <header className="case-study-header">
-                        <h1>{title}</h1>
+                        <h1 className="typography-headline">
+                            <span className="headline-content">{title}</span>
+                            <span className="typography-headline wraparound-text">{title}</span>
+                        </h1>
                         <h2 className="typography-caption">{client}</h2>
                         <figure className="case-study-featured-img"
                                 style={{
