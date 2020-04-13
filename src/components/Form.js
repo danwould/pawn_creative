@@ -75,23 +75,23 @@ class Form extends React.Component {
         >
           <input type="hidden" name="bot-field" />
           <input ref="form-name" type="hidden" name="form-name" value="Contact Form" />
-          <div className="form-element input col-3">
+          <div className="form-element input col-3 col-12-sm">
             <input ref={this.nameRef} type="name" name="name" onKeyUp={this.handleKeyPress}/>
             <label htmlFor="name">name</label>
           </div>
-          <div className="form-element input col-3">
+          <div className="form-element input col-3 col-12-sm">
             <input ref={this.emailRef} type="email" name="email" onKeyUp={this.handleKeyPress}/>
             <label htmlFor="email">email</label>
           </div>
-          <div className="form-element input col-3">
+          <div className="form-element input col-3 col-12-sm">
             <input ref={this.emailRef} type="text" name="company" onKeyUp={this.handleKeyPress}/>
             <label htmlFor="email">company</label>
           </div>
-          <div className="form-element input col-3">
+          <div className="form-element input col-3 col-12-sm">
             <input ref={this.emailRef} type="phone" name="phone" onKeyUp={this.handleKeyPress}/>
             <label htmlFor="email">phone</label>
           </div>
-          <div className="form-element button col-3">
+          <div className="form-element button col-3 col-12-sm">
             <button type='submit'>SUBMIT</button>
           </div>
         </form>

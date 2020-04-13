@@ -18,6 +18,10 @@
     pointer-events: none;
     margin-top: -5.9rem;
 
+    @include viewport-s {
+      margin-top: -1.2rem;
+    }
+
     .schema {
       display: none;
     }

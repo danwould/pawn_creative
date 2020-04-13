@@ -43,6 +43,10 @@ h1, h2  {
   .outline-text {
     display: block;
     font-size: 5.714rem;
+
+    @include viewport-s {
+      font-size: 3.500rem;
+    }
   }
 }
 
@@ -75,6 +79,11 @@ h1, h2  {
 	font-size: 5.714rem;
 	line-height: 4.75rem;
   margin-bottom: 2rem;
+
+  @include viewport-s {
+    font-size: 3.500rem;
+    line-height: 3rem;
+  }
 }
 
 .typography-subhead {

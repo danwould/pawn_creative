@@ -12,7 +12,7 @@
     text-orientation: mixed;
     z-index: 1;
 
-    @include viewport-s{
+    @include viewport-s {
       display: none;
     }
 

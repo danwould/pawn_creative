@@ -3,6 +3,11 @@
 	padding: 1.275rem 0 2.5rem;
 	margin-top: 16rem;
 
+	@include viewport-s {
+		text-align: right;
+		margin-top: 9rem;
+	}
+
 	ul {
 		list-style-type: none;
 		margin-bottom: 0;
@@ -10,6 +15,22 @@
 
 		li {
 			display: inline-block;
+		}
+	}
+
+	.social-nav-bar {
+		display: none;
+
+		@include viewport-s {
+			display: block;
+		}
+
+		li {
+			margin-right: 1rem;
+
+			&:last-child {
+				margin-right: 0;
+			}
 		}
 	}
 }

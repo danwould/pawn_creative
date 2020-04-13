@@ -12,6 +12,12 @@
 			margin-top: 4.500em;
 		}
 	}
+
+	&-contact {
+		@include viewport-s {
+			margin-top: 0;
+		}
+	}
 }
 
 
