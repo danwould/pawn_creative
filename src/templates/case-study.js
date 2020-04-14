@@ -378,35 +378,35 @@ const CaseStudy = ({ data, pageContext }) => {
 
     function slideCaseStudyDown(exit, node) {
         return new TimelineMax()
-            .to(node.querySelector('.case-study'), .5, {y: '100vh', ease: Power1.easeInOut,})
+            .to(node.querySelector('.case-study-content'), .5, {y: '100vw', ease: Power1.easeInOut,})
     }
 
     function fadePageIn(entry, node) {
         return new TimelineMax()
-            .set(node.querySelector('.page-content'), { opacity: 0})
-            .to(node.querySelector('.page-content'), .5, { opacity: 1, ease: Power1.easeInOut,})
+            .set(node.querySelector('.home-page-content'), { opacity: 0})
+            .to(node.querySelector('.home-page-content'), .75, { opacity: 1, ease: Power1.easeInOut,})
     }
 
     function slideCaseStudyFromLeft(entry, node) {
         return new TimelineMax()
-            .set(node.querySelector('.case-study'), {x: '100vh'})
-            .to(node.querySelector('.case-study'), .5, {x: '0', ease: Power1.easeInOut,})
+            .set(node.querySelector('.case-study-content'), {x: '100vh'})
+            .to(node.querySelector('.case-study-content'), .5, {x: '0', ease: Power1.easeInOut,})
     }
 
     function slideCaseStudyToLeft(exit, node) {
         return new TimelineMax()
-            .to(node.querySelector('.case-study'), .5, {x: '-100vw', ease: Power1.easeInOut,})
+            .to(node.querySelector('.case-study-content'), .5, {x: '-100vw', ease: Power1.easeInOut,})
     }
 
     function slideCaseStudyFromRight(entry, node) {
         return new TimelineMax()
-            .set(node.querySelector('.case-study'), {x: '-100vh'})
-            .to(node.querySelector('.case-study'), .5, {x: '0', ease: Power1.easeInOut,})
+            .set(node.querySelector('.case-study-content'), {x: '-100vh'})
+            .to(node.querySelector('.case-study-content'), .5, {x: '0', ease: Power1.easeInOut,})
     }
 
     function slideCaseStudyToRight(exit, node) {
         return new TimelineMax()
-            .to(node.querySelector('.case-study'), .5, {x: '100vw', ease: Power1.easeInOut,})
+            .to(node.querySelector('.case-study-content'), .5, {x: '100vw', ease: Power1.easeInOut,})
     }
 
 
@@ -428,25 +428,27 @@ const CaseStudy = ({ data, pageContext }) => {
                 contentComponent={HTMLContent}
                 main={post.frontmatter.main}
                 close={
-                    <TransitionLink
-                        to="/"
-                        exit={{
-                            length: 0.25,
-                            trigger: ({ exit, node }) => slideCaseStudyDown(exit, node),
-                        }}
-                        entry={{
-                            length: 0.5,
-                            delay: 0.5,
-                            trigger: ({ entry, node }) => fadePageIn(entry, node),
-                        }}
-                    >
-                        <div className="modal-close-container">
-                            <div className="modal-close-icon">
-                                <img src={closeIcon} alt="Pawn Creative" style={{ width: '88px' }} />
-                                <p className="visuallyhidden">Back to home</p>
-                            </div>
+                        <div>
+                            <TransitionLink
+                                to="/"
+                                exit={{
+                                    length: 1,
+                                    trigger: ({ exit, node }) => slideCaseStudyDown(exit, node),
+                                }}
+                                entry={{
+                                    length: 0.5,
+                                    delay: 0.5,
+                                    trigger: ({ entry, node }) => fadePageIn(entry, node),
+                                }}
+                            >
+                                <div className="modal-close-container">
+                                    <div className="modal-close-icon">
+                                        <img src={closeIcon} alt="Pawn Creative" style={{ width: '88px' }} />
+                                        <p className="visuallyhidden">Back to home</p>
+                                    </div>
+                                </div>
+                            </TransitionLink>
                         </div>
-                    </TransitionLink>
                 }
                 client={post.frontmatter.client}
                 title={post.frontmatter.title}

@@ -31,14 +31,14 @@ class CaseStudyRoll extends React.Component {
 
   fadePageOut(exit, node) {
     return new TimelineMax()
-        .to(node.querySelector('.page-content'), 1, { opacity: 0})
-        .set(node.querySelector('.page-content'), { opacity: 0})
+        .to(node.querySelector('.home-page-content'), .5, { opacity: 0})
+        .set(node.querySelector('.home-page-content'), { opacity: 0})
   }
 
   slideCaseStudyUp(entry, node) {
     return new TimelineMax()
-        .set(node.querySelector('.case-study'), {y: '100vh', opacity: 0})
-        .to(node.querySelector('.case-study'), .5, {y: '0', opacity: 1, ease: Power1.easeInOut,})
+        .set(node.querySelector('.case-study-content'), {y: '100vh', opacity: 0})
+        .to(node.querySelector('.case-study-content'), .5, {y: '0', opacity: 1, ease: Power1.easeInOut, delay: .25})
   }
 
   render() {
@@ -59,11 +59,13 @@ class CaseStudyRoll extends React.Component {
                         to={post.fields.slug}
                         exit={{
                           length: 0.15,
+                          zIndex: 2,
                           trigger: ({ exit, node }) => this.fadePageOut(exit, node),
                         }}
                         entry={{
                           length: 0.5,
                           delay: 0.5,
+                          zIndex: 0,
                           trigger: ({ entry, node }) => this.slideCaseStudyUp(entry, node),
                         }}
                     >

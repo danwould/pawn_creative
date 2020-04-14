@@ -1,5 +1,12 @@
 .tl-edges {
   overflow-x: visible;
+  min-height: 100vh;
+  background-color: #000;
+}
+
+.tl-wrapper {
+    float: none;
+    background: black;
 }
 
 .section-work {

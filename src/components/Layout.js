@@ -53,7 +53,7 @@ const TemplateWrapper = ({ children }) => {
     }
 
     return (
-    <div className="page-content">
+    <div className="page-content home-page-content">
     <link rel="stylesheet" type="text/css" href="../../fonts.css" />
       <Helmet>
         <html lang="en" />

@@ -53,6 +53,15 @@ $magic-number-padding-bottom: calc(150% + .75rem) !important;
         .headline-content {
           max-width: 81%;
           display: block;
+
+          &:after {
+            display: block;
+            content: '';
+            width: 5rem;
+            background: white;
+            height: .75rem;
+            margin-top: 1rem;
+          }
         }
       }
     }
@@ -67,6 +76,15 @@ $magic-number-padding-bottom: calc(150% + .75rem) !important;
         width: 81%;
         left: calc(83.33% + 1.25rem);
         width: 82%;
+
+        &:after {
+          display: block;
+          content: '';
+          width: 5rem;
+          background: white;
+          height: .75rem;
+          margin-top: 1rem;
+        }
       }
     }
 
@@ -237,10 +255,6 @@ $magic-number-padding-bottom: calc(150% + .75rem) !important;
   }
 
   .row-layout-4 {
-    // display: grid;
-    // grid-template-columns: calc(66.66% - .55rem) calc(33.33% - .55rem);
-    // grid-column-gap: 1rem;
-
     .image-grid-tile {
 
       &:nth-child(1) {
@@ -250,13 +264,8 @@ $magic-number-padding-bottom: calc(150% + .75rem) !important;
       &:nth-child(2) {
         grid-column: col 9 / span 4;
 
-        // &.video-tile {
-        //   width: calc(28.5% + .5rem);
-        // }
-
         .gatsby-image-wrapper {
           div {
-            //padding-bottom: 152.65% !important;
             padding-bottom: $magic-number-padding-bottom;
           }
         }
@@ -270,18 +279,9 @@ $magic-number-padding-bottom: calc(150% + .75rem) !important;
   }  
 
   .row-layout-5 {
-      // display: grid;
-      // grid-template-columns: calc(33.33% - .55rem) calc(66.66% - .55rem);
-      // grid-column-gap: 1rem;
-
     .image-grid-tile {
 
       &:nth-child(1) {
-        // //width: calc(32.5% + .5rem);
-        // width: 33.33%;
-        // //padding-right: .5rem;
-        // border-right: $border-as-padding;
-
         grid-column: col / span 4;
 
         .gatsby-image-wrapper {
@@ -298,10 +298,6 @@ $magic-number-padding-bottom: calc(150% + .75rem) !important;
   }
 
   .row-layout-6 {
-    //display: block;
-    //@include clearfix;
-
-    // display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: auto;
     grid-column-gap: 1rem;
@@ -309,19 +305,13 @@ $magic-number-padding-bottom: calc(150% + .75rem) !important;
     "pic1 pic1 pic2 pic2"
     "pic3 pic3 pic2 pic2";
 
-    //grid-template-rows: 2;
-
     .image-grid-tile {
-    //   width: 50%;
       &:first-child {
         grid-area: pic1;
-        //grid-column: col / span 6;
       }
       
       &:nth-child(2) {
         grid-area: pic2;
-
-        //grid-column: col 7 / span 6;
 
         .gatsby-image-wrapper {
           div {
@@ -332,35 +322,11 @@ $magic-number-padding-bottom: calc(150% + .75rem) !important;
 
       &:last-child {
         grid-area: pic3;
-        //grid-column: col / span 6;
-      }
-    //   &:nth-child(odd) {
-    //     //padding-right: .5rem;
-    //     border-right: $border-as-padding;
-    //     float: left;
-    //   }
-
-    //   &:nth-child(even) {
-    //     //padding-left: .5rem;
-    //     border-left: $border-as-padding;
-    //     float: right;
-    //   }
-
-
-      // &:nth-child(2) {
-      //   .gatsby-image-wrapper {
-      //     div {
-      //       padding-bottom: calc(150% + .98rem) !important;
-      //     }
-      //   }
-      // }     
+      }  
     }
   }
 
    .row-layout-7 {
-    // display: block;
-    // @include clearfix;
-
     grid-template-columns: repeat(2, auto);
     grid-template-rows: auto;
     grid-column-gap: 1rem;
@@ -369,12 +335,7 @@ $magic-number-padding-bottom: calc(150% + .75rem) !important;
     "pic1 pic1 pic3 pic3";
 
     .image-grid-tile {
-      //width: 50%;
-
       &:nth-child(1) {
-        //padding-right: .5rem;
-        // border-right: $border-as-padding;
-        // float: left;
         grid-area: pic1;
 
         .gatsby-image-wrapper {
@@ -391,12 +352,6 @@ $magic-number-padding-bottom: calc(150% + .75rem) !important;
       &:nth-child(3) {
         grid-area: pic3;
       }
-
-      // &:nth-child(2), &:nth-child(3) {
-      //   //padding-left: .5rem;
-      //   //border-left: $border-as-padding;
-      //   //float: right;
-      // }
     }
   }
 
@@ -404,9 +359,6 @@ $magic-number-padding-bottom: calc(150% + .75rem) !important;
     .image-grid-tile {
 
       &:nth-child(1) {
-        // width: calc(68.1% + .5rem);
-        // //padding-right: .5rem;
-        // border-right: $border-as-padding;
         grid-column: col / span 9;
 
         .gatsby-image-wrapper {
@@ -417,14 +369,6 @@ $magic-number-padding-bottom: calc(150% + .75rem) !important;
       }
 
       &:nth-child(2) {
-        // width: calc(32.5% + .5rem);
-        // //padding-left: .5rem;
-        // border-left: $border-as-padding;
-
-        // &.video-tile {
-        //   width: calc(30.5% + .5rem);
-        // }
-
         grid-column: col 10 / span 3;
 
         .video-wrapper {
@@ -517,6 +461,12 @@ $magic-number-padding-bottom: calc(150% + .75rem) !important;
     }
   }
 
+  p {
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+
   .col-3 {
     width: 25%;
     flex-basis: auto;
@@ -546,7 +496,7 @@ $magic-number-padding-bottom: calc(150% + .75rem) !important;
     height: 30.825rem;
     width: 50%;
     position: absolute;
-    z-index: -1;
+    //z-index: -1;
 
     @include viewport-s {
       width: 3.688em;

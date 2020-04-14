@@ -12,7 +12,7 @@ const TemplateWrapper = ({ children }) => {
     }
 
     return (
-    <div className="page-content">
+    <div className="page-content case-study-content">
       <Helmet>
         <html lang="en" />
         <link 
