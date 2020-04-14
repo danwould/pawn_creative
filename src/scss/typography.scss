@@ -89,6 +89,10 @@ h1, h2  {
 .typography-subhead {
   font-family: 'IntegralCF-DemiBold', Arial, sans-serif;
   font-size: 3.5rem;
+
+  @include viewport-s {
+    font-size: 2rem;
+  }
 }
 
 .typography-caption {
