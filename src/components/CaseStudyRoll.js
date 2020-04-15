@@ -16,7 +16,12 @@ class CaseStudyRoll extends React.Component {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
     let caseStudyContainer = document.querySelector('.case-studies-container');
+    let socialNavContainer = document.querySelector('.footer');
     let classToToggle = "fixed";
+
+    let topPos = socialNavContainer.offsetTop;
+
+    console.log(topPos);
 
     isSticky(caseStudyContainer, classToToggle);
   }

@@ -8,16 +8,16 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
 
   if (!!image && !!image.childImageSharp) {
     return (
-      <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt="Case Study" title="test 1"/>
+      <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt="Case Study"/>
     )
   }
 
   if (!!childImageSharp) {
-    return <Img style={imageStyle} fluid={childImageSharp.fluid} alt="Case Study" title="test 2"/>
+    return <Img style={imageStyle} fluid={childImageSharp.fluid} alt="Case Study"/>
   }
 
   if (!childImageSharp) {
-    return <div className="static-img-wrapper"><div className="static-img-placeholder"></div><img style={imageStyle} src={publicURL} alt="Case Study" title="test 4"/></div>
+    return <div className="static-img-wrapper"><div className="static-img-placeholder"></div><img style={imageStyle} src={publicURL} alt="Case Study"/></div>
   }
 
 
@@ -25,7 +25,7 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
     return ''
   }
 
-  return <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt="Case Study" title="test 3"/>
+  return <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt="Case Study"/>
 }
 
 PreviewCompatibleImage.propTypes = {

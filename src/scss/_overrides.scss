@@ -1,0 +1,13 @@
+.Souncloud {
+	padding-right: 0;
+}
+
+.section-work {
+	.case-studies-container {
+		.case-study-tile {
+			&.Souncloud, &.Nas, &.Typecon, &.Wu-Tang {
+				padding-right: 0;
+			}
+		}
+	}
+}
