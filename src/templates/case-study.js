@@ -39,7 +39,7 @@ export const CaseStudyTemplate = ({
                         <figure className="case-study-featured-img"
                                 style={{
                                     backgroundImage: `url(${featuredImage})`,
-                                    backgroundPosition: `top left`,
+                                    backgroundPosition: `center center`,
                                     backgroundSize: `cover`,
                                 }}
                         >        

@@ -79,7 +79,7 @@ class CaseStudyRoll extends React.Component {
                                 backgroundImage: `url(${
                                     !!post.frontmatter.thumbnailimage.childImageSharp ? post.frontmatter.thumbnailimage.childImageSharp.fluid.src : post.frontmatter.thumbnailimage
                                     })`,
-                                backgroundPosition: `top left`,
+                                backgroundPosition: `center center`,
                                 backgroundSize: `cover`,
                               }}>
                       </figure>
