@@ -22,6 +22,10 @@
   h4 {
     padding-top: 2.125em;
     margin-left: 8.33%;
+
+    @include viewport-s {
+      display: none;
+    }
   }
 
   .case-studies-container {
@@ -29,6 +33,14 @@
     flex-wrap: wrap;
     pointer-events: none;
     margin-top: -5.9rem;
+
+    .typography-headline {
+      @include viewport-s {
+        font-size: 1.750rem;
+        line-height: 1.750rem;
+        margin-bottom: .5rem;
+      }
+    }
 
     @include viewport-s {
       margin-top: -1.2rem;
@@ -59,6 +71,13 @@
         transform: translateY(-50%);
         margin-left: 5%;
         margin-top: 0;
+
+        @include viewport-s {
+          position: absolute;
+          margin-left: 8.333%;
+          top: 70%;
+          transform: translateY(0);
+        }
       }
     }
 
@@ -79,12 +98,16 @@
       }
 
       @include viewport-s {
+        position: relative;
         padding-right: 0;
 
         &:nth-child(odd) {
           margin: 0 1.25rem 0 auto;
-        }
 
+          .case-study-item-info {
+            margin-left: calc(8.33% + 1.25rem);
+          }          
+        }
 
         &:nth-child(even) {
           margin: 0 auto 0 1.25rem;
@@ -130,8 +153,21 @@
       width: max-content;
       max-width: 80%;
 
+      @include viewport-s {
+        opacity: 1;
+        margin-left: 8.333%;
+        max-width: 90%;
+        position: absolute;
+        top: 80%;
+        transform: translateY(0);
+      }
+
       .typography-excerpt {
         width: 40%;
+
+        @include viewport-s {
+          width: 100%;
+        }
       }
     }
   }
