@@ -4,7 +4,7 @@ title: Test
 client: Test
 thumbnailimage: /img/client-6.png
 featuredimage: /img/natgeo_05.jpg
-order: 2
+order: 1
 description: Test
 tilesize: col-3
 tags:
