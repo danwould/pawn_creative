@@ -10,6 +10,9 @@ class CaseStudyRoll extends React.Component {
     super(props);
     this.state = { width: 0, height: 0 };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+
+    this.fadePageOut = this.fadePageOut.bind(this);
+    this.slideCaseStudyUp = this.slideCaseStudyUp.bind(this);
   }
 
   componentDidMount() {
